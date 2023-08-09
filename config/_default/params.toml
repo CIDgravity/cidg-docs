@@ -1,18 +1,8 @@
 ## Homepage
-<<<<<<< HEAD
-title = "CIDgravity"
-titleSeparator = "-"
-titleAddition = "Documentation"
-description = "A powerful pricing and client management for Filecoin storage providers"
-
-## Documentation
-# docsVersion = "0.3"
-=======
 title = "CIDgravity documentation"
 titleSeparator = "-"
 titleAddition = "Home"
 description = "Documentation for CIDgravity - a powerful pricing and client management for Filecoin storage providers"
->>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 
 ## Open Graph
 images = ["lotus.png"]
@@ -20,13 +10,10 @@ ogLocale = "en_US"
 domainTLD = "lotus.filecoin.io"
 titleHome = "CIDgravity documentation"
 
-<<<<<<< HEAD
-=======
 ## Twitter Cards
 twitterSite = "@CiDgravity"
 twitterCreator = "@CiDgravity"
 
->>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
@@ -70,18 +57,6 @@ copyRight = ""
 # Alert
 alert = false
 alertDismissable = true
-<<<<<<< HEAD
-
-# Edit Page
-repoHost = "GitHub"
-docsRepo = "https://github.com/CIDgravity/cidg-docs"
-docsRepoBranch = "main"
-docsRepoSubPath = ""
-editPage = true
-
-[sections]
-  sectionNav = ["docs", "guides"]
-=======
 alertText = ""
 
 # Edit Page
@@ -89,7 +64,6 @@ docsRepo = "https://github.com/CIDgravity/cidg-docs"
 docsRepoBranch = "main"
 editPage = true
 repoHost = "GitHub"
->>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 
 [options]
     lazySizes = true
@@ -102,15 +76,5 @@ repoHost = "GitHub"
     highLight = true
     kaTex = false
     progressBar = true
-<<<<<<< HEAD
-    collapsibleSidebar = true
-    multilingualMode = true
-    docsVersioning = false
-
-[menu]
-  [menu.section]
-    auto = true
-=======
->>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
     collapsibleSidebar = true
     multilingualMode = true
