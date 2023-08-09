@@ -1,4 +1,4 @@
-baseurl = "https://doks.netlify.app/"
+baseurl = "/"
 canonifyURLs = false
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -10,8 +10,6 @@ rssLimit = 10
 
 # Multilingual
 defaultContentLanguage = "en"
-disableLanguages = ["de", "nl"]
-# defaultContentLanguageInSubdir = true
 
 # add redirects/headers
 [outputs]
@@ -61,26 +59,8 @@ rel  = "sitemap"
   category = "categories"
   tag = "tags"
 
-[permalinks]
-  blog = "/blog/:title/"
-# docs = "/docs/1.0/:sections[1:]/:title/"
-
 [minify.tdewolff.html]
   keepWhitespace = false
-
-[related]
-  threshold = 80
-  includeNewer = true
-  toLower = false
-    [[related.indices]]
-    name = "categories"
-    weight = 100
-    [[related.indices]]
-    name = "tags"
-    weight = 80
-    [[related.indices]]
-    name = "date"
-    weight = 10
 
 [module]
   [module.hugoVersion]

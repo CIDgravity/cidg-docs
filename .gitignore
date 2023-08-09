@@ -1,0 +1,4 @@
+node_modules
+*.code-workspace
+*.hugo_*
+resources/

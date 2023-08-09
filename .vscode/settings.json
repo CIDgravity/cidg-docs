@@ -1,0 +1,6 @@
+{
+    "GitHooks.hooksDirectory": "/home/florian/CIDgravity/docs/.git/hooks",
+    "prettier.bracketSameLine": true,
+    "prettier.requireConfig": true,
+    "prettier.useTabs": true
+}

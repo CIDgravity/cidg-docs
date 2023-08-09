@@ -1,6 +1,5 @@
-# Meta Data for SEO
-
 ## Homepage
+<<<<<<< HEAD
 title = "CIDgravity"
 titleSeparator = "-"
 titleAddition = "Documentation"
@@ -8,31 +7,44 @@ description = "A powerful pricing and client management for Filecoin storage pro
 
 ## Documentation
 # docsVersion = "0.3"
+=======
+title = "CIDgravity documentation"
+titleSeparator = "-"
+titleAddition = "Home"
+description = "Documentation for CIDgravity - a powerful pricing and client management for Filecoin storage providers"
+>>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 
 ## Open Graph
-images = ["doks.png"]
+images = ["lotus.png"]
 ogLocale = "en_US"
-domainTLD = "doks.netlify.app"
-titleHome = "Doks Theme"
+domainTLD = "lotus.filecoin.io"
+titleHome = "CIDgravity documentation"
 
+<<<<<<< HEAD
+=======
+## Twitter Cards
+twitterSite = "@CiDgravity"
+twitterCreator = "@CiDgravity"
+
+>>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 ## JSON-LD
 # schemaType = "Person"
 schemaType = "Organization"
-schemaName = "Doks"
-schemaAuthor = "Henk Verlinde"
-schemaAuthorTwitter = "https://twitter.com/henkverlinde"
-schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaAuthorGitHub = "https://github.com/h-enk"
+schemaName = "CIDgravity documentation"
+schemaAuthor = "CIDgravity"
+schemaAuthorTwitter = "https://twitter.com/CiDgravity"
+schemaAuthorLinkedIn = "https://www.linkedin.com/company/cidgravity"
+schemaAuthorGitHub = "https://github.com/CIDgravity"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "lotus.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "doks.png"
+schemaImage = "lotus.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
+schemaTwitter = "https://twitter.com/CiDgravity"
 schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaGitHub = "https://github.com/CIDgravity/cidg-docs"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -47,18 +59,6 @@ bgColor = "#fff"
 landscapePhotoWidths = [900, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
-smallLimit = "300"
-
-# Images
-imageResponsive = true
-imageConvertTo = "webp"
-imageImageSizes = ["480","720","1080","1280","1600","2048"]
-singleSize = false
-imageAddClass = "img-fluid lazyload blur-up"
-
-### Image template
-defaultImage = "default-image.png" # put in `./assets/images/`
-fillImage = "1270x740 Center" # normalize image size
 
 # Footer
 footer = "Built by CIDgravity."
@@ -70,6 +70,7 @@ copyRight = ""
 # Alert
 alert = false
 alertDismissable = true
+<<<<<<< HEAD
 
 # Edit Page
 repoHost = "GitHub"
@@ -80,6 +81,15 @@ editPage = true
 
 [sections]
   sectionNav = ["docs", "guides"]
+=======
+alertText = ""
+
+# Edit Page
+docsRepo = "https://github.com/CIDgravity/cidg-docs"
+docsRepoBranch = "main"
+editPage = true
+repoHost = "GitHub"
+>>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
 
 [options]
     lazySizes = true
@@ -92,6 +102,7 @@ editPage = true
     highLight = true
     kaTex = false
     progressBar = true
+<<<<<<< HEAD
     collapsibleSidebar = true
     multilingualMode = true
     docsVersioning = false
@@ -99,4 +110,7 @@ editPage = true
 [menu]
   [menu.section]
     auto = true
+=======
+>>>>>>> b2d3b1b (feat: move CIDgravity connector docs to this repo)
     collapsibleSidebar = true
+    multilingualMode = true
