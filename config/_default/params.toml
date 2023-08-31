@@ -5,9 +5,9 @@ titleAddition = "Home"
 description = "Documentation for CIDgravity - a powerful pricing and client management for Filecoin storage providers"
 
 ## Open Graph
-images = ["lotus.png"]
+images = ["cidgravity.png"]
 ogLocale = "en_US"
-domainTLD = "lotus.filecoin.io"
+domainTLD = "docs.cidgravity.com"
 titleHome = "CIDgravity documentation"
 
 ## Twitter Cards
@@ -15,7 +15,6 @@ twitterSite = "@CiDgravity"
 twitterCreator = "@CiDgravity"
 
 ## JSON-LD
-# schemaType = "Person"
 schemaType = "Organization"
 schemaName = "CIDgravity documentation"
 schemaAuthor = "CIDgravity"
@@ -23,10 +22,10 @@ schemaAuthorTwitter = "https://twitter.com/CiDgravity"
 schemaAuthorLinkedIn = "https://www.linkedin.com/company/cidgravity"
 schemaAuthorGitHub = "https://github.com/CIDgravity"
 schemaLocale = "en-US"
-schemaLogo = "lotus.png"
+schemaLogo = "cidgravity.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
-schemaImage = "lotus.png"
+schemaImage = "cidgravity.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
 schemaTwitter = "https://twitter.com/CiDgravity"
@@ -69,7 +68,7 @@ repoHost = "GitHub"
     lazySizes = true
     clipBoard = true
     instantPage = false
-    flexSearch = true
+    flexSearch = false
     darkMode = true
     bootStrapJs = true
     breadCrumb = false 

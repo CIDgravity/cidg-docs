@@ -4,9 +4,7 @@
 .error404 .content,
 .docs.list .content,
 .tutorial.list .content,
-.showcase.list .content,
-.categories.list .content,
-.tags.list .content {
+.showcase.list .content {
   padding-top: 1rem;
   padding-bottom: 3rem;
 }
@@ -132,10 +130,6 @@ body {
       z-index: 1000;
       height: calc(100vh - 4rem);
     }
-
-    .docs-sidebar-top {
-      top: 0;
-    }
   }
 }
 
@@ -179,10 +173,6 @@ body {
     height: calc(100vh - 4rem);
     overflow-y: auto;
   }
-
-  .docs-toc-top {
-    top: 0;
-  }
 }
 
 .docs-content {
@@ -216,15 +206,9 @@ body {
   text-decoration: none;
 }
 
-#TableOfContents ul,
-#toc ul {
+#TableOfContents ul {
   padding-left: 0;
   list-style: none;
-}
-
-#toc a.active {
-  color: $primary;
-  font-weight: 500;
 }
 
 ::selection {

@@ -7,7 +7,7 @@ images: []
 menu:
     application:
         parent: "application-get-started"
-        identifier: "application-overview"
+        identifier: "application-get-started-overview"
 weight: 105
 toc: true
 ---
@@ -19,10 +19,12 @@ You should be familiar with these key concepts related to use the application be
 
 ### Pricing models
 
-A pricing model is a set of rules that will allow you to define your conditions for accepting a deal.
+A pricing model is a set of rules for defining conditions for accepting a transaction.
 
-On CIDgravity, you have a default pricing model, which will be applied regardless of the customer, and the possibility of creating other pricing models to associate them with specific customers
+On CIDgravity, there is a default pricing model, which will be applied regardless of the customer, and the possibility of creating other pricing models 
+to associate them with specific customers
 
 ### Maintenance mode
+Once activated, this is a setting will reject all deals on a miner
 
-This is a parameter that will allow you to reject all deals arriving on your miner
+This applies for storage and retrieval deals

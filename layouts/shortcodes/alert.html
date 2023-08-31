@@ -1,12 +1,23 @@
-<div class="alert alert-{{ with .Get "context" }}{{.}}{{ else }}doks{{ end }} d-flex" role="alert">
-  <div class="flex-shrink-1 alert-icon">{{ with .Get "icon" }}{{.}} {{ end }}</div>
-  {{ with .Get "text"}}
-    <div class="w-100">{{ . | safeHTML }} </div>
-  {{ else }}
-    {{ with .Inner}}
-      <div class="w-100"> {{ . | markdownify}}</div>
+{{ $icon := .Get "icon" }}
+
+  <div class="alert alert-warning d-flex" style="margin-bottom: 1em;" role="alert">
+    <div class="flex-shrink-1 alert-icon">
+      {{ if eq $icon "warning" }} ⚠️​
+      {{ else if eq $icon "success" }} ✅​
+      {{ else if eq $icon "fire" }} ​🔥​
+      {{ else if eq $icon "callout" }} 💬
+      {{ else if eq $icon "tip" }} 💡
+      {{ else }} 👉
+      {{ end }}
+    </div>
+
+    {{ with .Get "text"}}
+      <div class="w-100">{{ . | safeHTML }} </div>
     {{ else }}
-      {{ errorf "No valid text variable or Inner content given"}}
+      {{ with .Inner}}
+        <div class="w-100"> {{ . | markdownify}}</div>
+      {{ else }}
+        {{ errorf "No valid text variable or Inner content given"}}
     {{ end }}
   {{ end}}
 </div>
