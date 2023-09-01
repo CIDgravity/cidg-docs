@@ -5,9 +5,8 @@
 
 [[main]]
   name = "Application"
-  url = "/application/get-started/"
+  url = "/application/get-started/overview"
   weight = 20
-
 
 [[connector]]
   name = "Get started"
@@ -25,17 +24,23 @@
   name = "Get started"
   weight = 20
   identifier = "application-get-started"
-  url = "/application/get-started"
+  url = "/application/get-started/overview"
+
+[[application]]
+  name = "Clients"
+  weight = 21
+  identifier = "application-clients"
+  url = "/application/clients"
 
 [[application]]
   name = "Analytics"
-  weight = 21
+  weight = 22
   identifier = "application-analytics"
   url = "/application/analytics/overview"
 
 [[application]]
   name = "Storage acceptance logic"
-  weight = 22
+  weight = 23
   identifier = "storage-acceptance-logic"
   url = "/application/storage-acceptance-logic/"
 
