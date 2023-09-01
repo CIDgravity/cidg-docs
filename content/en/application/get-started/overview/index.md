@@ -8,7 +8,7 @@ menu:
     application:
         parent: "application-get-started"
         identifier: "application-get-started-overview"
-weight: 105
+weight: 100
 toc: true
 ---
 
