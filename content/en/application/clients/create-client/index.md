@@ -1,13 +1,13 @@
 ---
 title: "Create new client"
 description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
-lead: "This guide describes how you can create the first client in CIDgravity"
+lead: "This guide describes how you can create a new client in CIDgravity"
 draft: false
 images: []
 menu:
     application:
         parent: "application-clients"
-        identifier: "application-client-create-first"
+        identifier: "application-clients-create"
 weight: 101
 toc: true
 ---

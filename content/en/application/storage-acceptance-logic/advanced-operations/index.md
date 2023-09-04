@@ -7,7 +7,7 @@ menu:
     application:
         parent: "storage-acceptance-logic"
         identifier: "storage-acceptance-logic-advanced-operations"
-weight: 102
+weight: 104
 toc: true
 ---
 

@@ -39,16 +39,28 @@
   url = "/application/clients"
 
 [[application]]
-  name = "Analytics"
+  name = "Pricing models"
   weight = 22
-  identifier = "application-analytics"
-  url = "/application/analytics/overview"
+  identifier = "application-pricing-models"
+  url = "/application/pricing-models"
 
 [[application]]
   name = "Storage acceptance logic"
   weight = 23
   identifier = "storage-acceptance-logic"
   url = "/application/storage-acceptance-logic/"
+
+[[application]]
+  name = "Deal filter"
+  weight = 24
+  identifier = "application-deal-filter"
+  url = "/application/deal-filter/overview"
+
+[[application]]
+  name = "Analytics"
+  weight = 25
+  identifier = "application-analytics"
+  url = "/application/analytics/overview"
 
 [[social]]
   name = "GitHub"
