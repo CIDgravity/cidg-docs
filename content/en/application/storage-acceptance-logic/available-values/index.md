@@ -116,3 +116,4 @@ They can also be included in each storage acceptance logic:
 {{< alert icon="success" >}}
 More variables will be available in future versions of CIDgravity
 {{< /alert >}}
+
