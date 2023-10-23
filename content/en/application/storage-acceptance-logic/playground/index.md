@@ -7,7 +7,7 @@ menu:
     application:
         parent: "storage-acceptance-logic"
         identifier: "storage-acceptance-logic-playground"
-weight: 104
+weight: 105
 toc: true
 ---
 
