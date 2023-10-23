@@ -14,9 +14,9 @@ toc: true
 When creating new storage acceptance logic, several variables are offered.
 It is possible to combine them in order to define an even more advanced logic
 
-## Sealing pipeline
+## Sealing pipeline - sector states
 
-These variables correspond to those of the sealing pipeline.
+These variables correspond to those of the sealing pipeline (without errors / failed states).
 
 They are included in the Boost proposals:
 
@@ -29,7 +29,6 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 | WaitDeals | waiting for more pieces (deals) to be added to the sector
 | Packing | sector not in sealStore, and not on chain
 | AddPiece | put deal data (and padding if required) into the sector
-| AddPieceFailed | /
 | GetTicket | generate ticket
 | PreCommit1 | do PreCommit1
 | PreCommit2 | do PreCommit2
@@ -40,7 +39,6 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 | WaitSeed | waiting for seed
 | Committing | compute PoRep
 | CommitFinalize | cleanup sector metadata before submitting the proof (early finalize)
-| CommitFinalizeFailed | /
 | SubmitCommit | send commit message to the chain
 | SubmitCommitAggregate | /
 | CommitAggregateWait | /
@@ -48,14 +46,6 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 | Proving | /
 | Available | proving CC available for SnapDeals
 | FailedUnrecoverable | /
-| SealPreCommit1Failed | /
-| SealPreCommit2Failed | /
-| PreCommitFailed | /
-| ComputeProofFailed | /
-| RemoteCommitFailed | /
-| CommitFailed | /
-| PackingFailed | /
-| FinalizeFailed | /
 | DealsExpired | /
 | RecoverDealIDs | /
 | Faulty | sector is corrupted or gone for some reason
@@ -64,9 +54,7 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 | Terminating | /
 | TerminateWait | /
 | TerminateFinality | /
-| TerminateFailed | /
 | Removing | /
-| RemoveFailed | /
 | Removed | /
 | SnapDealsWaitDeals | snap deals / cc update
 | SnapDealsAddPiece | snap deals / cc update
@@ -79,14 +67,40 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 | UpdateActivating | snap deals / cc update
 | ReleaseSectorKey | snap deals / cc update
 | FinalizeReplicaUpdate | snap deals / cc update
-| SnapDealsAddPieceFailed | /
 | SnapDealsDealsExpired | /
 | SnapDealsRecoverDealIDs | /
+| AbortUpgrade | /
+| ReceiveSector | for external import
+
+## Sealing pipeline - sector states errors
+
+These variables correspond to the failed sector states in sealing pipeline.
+
+They are included in the Boost proposals:
+
+{{< alert icon="tip" >}}
+You can use the "Any error", if you want to create an acceptance logic for any failed sector state, avoiding complex operations
+{{< /alert >}}
+
+| Value | Description
+| --- | --- | --- |
+| Any error | Sum of all sector states in error
+| AddPieceFailed | /
+| CommitFinalizeFailed | /
+| SealPreCommit1Failed | /
+| SealPreCommit2Failed | /
+| PreCommitFailed | /
+| ComputeProofFailed | /
+| RemoteCommitFailed | /
+| CommitFailed | /
+| PackingFailed | /
+| FinalizeFailed | /
+| TerminateFailed | /
+| RemoveFailed | /
+| SnapDealsAddPieceFailed | /
 | ReplicaUpdateFailed | /
 | ReleaseSectorKeyFailed | /
 | FinalizeReplicaUpdateFailed | /
-| AbortUpgrade | /
-| ReceiveSector | for external import
 
 ## Other variables
 
@@ -96,7 +110,8 @@ They can also be included in each storage acceptance logic:
 
 | Value | Description | Unit
 | --- | --- | --- |
-| ReceivedOn | epoch at which the proposal is analyzed by CIDgravity | ChainEpoch
+| ReceivedOnTimeOfDayUTC | datetime utc at which the proposal is analyzed | Datetime
+| ReceivedOnDayOfWeek | day of the week at which the proposal is analysed | Day of week
 
 {{< alert icon="success" >}}
 More variables will be available in future versions of CIDgravity
