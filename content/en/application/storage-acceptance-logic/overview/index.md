@@ -20,10 +20,14 @@ This feature will works only for Online deals, and if the miner is configured to
 
 ## What is a storage acceptance logic ?
 
-It's a set of rules that can be defined to accept or reject a deal. It's similar to pricing models, except that the storage acceptance logic 
-has more to protect and limit the number of deals coming to a miner.
-
-A storage acceptance logic applies in addition to the pricing rules defined in the Pricing models
+It's a set of rules that can be defined to accept or reject deals based on a various set of factors :
+    - Sealing Pipeline State
+    - Time of the day / day time
+    - Fil price (coming soon)
+    - Available disk space (coming soon)
+    - Concurrent downloads (coming soon)
+    
+A storage acceptance logic applies in addition to a pricing model.
 
 The storage acceptance logic accepts folowing parameters : 
 - [`Variables`]({{< relref "../available-values" >}})
@@ -60,10 +64,7 @@ Here is an example of applied JSON logic:
 }
 ```
 
-## When is it applied ?
+## Testing 
 
-Storage acceptance logic is applied after global limits and maintenance mode, but before pricing rules.
-
-In the case where the proposal that arrives does not match the storage acceptance logic, it is automatically rejected and the pricing rules will not apply
-
-If the proposal is rejected, it will be recorded on your dashboards in the `Storage acceptance logic not passed` category.
+Acceptance logic can be tested from the Playground. 
+When simulating a deal proposal from the playground, its possible to simulate the miner's state (Number of concurrent PC1 as an example) at the time you receive the proposal and confirm how the Acceptance logic will behave.
