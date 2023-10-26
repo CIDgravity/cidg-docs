@@ -21,19 +21,19 @@ This feature will works only for Online deals, and if the miner is configured to
 ## What is a storage acceptance logic ?
 
 It's a set of rules that can be defined to accept or reject deals based on a various set of factors :
-    - Sealing Pipeline State
-    - Time of the day / day time
-    - Fil price (coming soon)
-    - Available disk space (coming soon)
-    - Concurrent downloads (coming soon)
+- Sealing Pipeline State
+- Time of the day / day time
+- Fil price (coming soon)
+- Available disk space (coming soon)
+- Concurrent downloads (coming soon)
     
 A storage acceptance logic applies in addition to a pricing model.
 
 The storage acceptance logic accepts folowing parameters : 
-- [`Variables`]({{< relref "../available-values" >}})
-- `Values`
-- [`Advanced operations`]({{< relref "../advanced-operations" >}})
-- [`Comparison signs`]({{< relref "../comparison-signs" >}})
+- [Variables](../available-values)
+- Values
+- [Advanced operations](../advanced-operations)
+- [Comparison signs](../comparison-signs)
 
 ## How does it works ?
 
