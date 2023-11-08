@@ -11,8 +11,8 @@ weight: 104
 toc: true
 ---
 
-Storage acceptances logic also accept operations between variables. They will allow you to combine several 
-of them to create advanced logic that can meet all needs
+The storage acceptances logic also supports operations between variables, enabling you to combine multiple variables to construct advanced logic that can 
+accommodate a wide range of requirements.
 
 ## Supported operations
 
@@ -22,17 +22,16 @@ of them to create advanced logic that can meet all needs
 - `Division`
 
 {{< alert icon="warning" >}}
-All operations only support a maximum of 2 variables. On the other hand, the operations can be chained together to give something like VariableA + (VariableB + VariableC), which is equivalent to VariableA + VariableB + VariableC
+Each operation is limited to a maximum of 2 variables, but you can chain operations together to achieve the desired results. For example, you can create expressions like `VariableA + (VariableB + VariableC)`, which is equivalent to `VariableA + VariableB + VariableC`
 {{< /alert >}}
 
 {{< alert icon="tip" >}}
-In the same way, if you want to do VariableA + VariableB - VariableC, you can add on the same rule, an addition and a subtraction
+To perform operations like VariableA + VariableB - VariableC, you can incorporate both addition and subtraction within the same rule
 {{< /alert >}}
 
 ## How to add an operation to a rule ?
 
-You can by adding by clicking on `⋮` and selecting `Advanced operations`
-
-In the drop-down menu that will appear, you can choose among the operations supported by the storage acceptance logics
+To access advanced operations for storage acceptance logic, you can click on the ellipsis icon (`⋮`) and then select `Advanced operations` from the dropdown menu. 
+This will open a menu where you can choose from a range of operations supported by the storage acceptance logic
 
 ![Add advanced operation to a storage acceptance logic rule](add-advanced-operations.png)
