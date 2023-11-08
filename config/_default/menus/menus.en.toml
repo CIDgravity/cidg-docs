@@ -20,6 +20,12 @@
   identifier = "connector-setup"
   url = "/connector/setup"
 
+[[connector]]
+  name = "Troubleshooting"
+  weight = 30
+  identifier = "connector-troubleshooting"
+  url = "/connector/troubleshooting/overview"
+
 [[application]]
   name = "Get started"
   weight = 20
