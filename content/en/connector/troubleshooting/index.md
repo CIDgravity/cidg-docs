@@ -1,7 +1,7 @@
 ---
-title: "Deal filter return codes"
-description: "When a proposal is analysed by the CIDgravity deal filter, the response can lead to multiple codes."
-lead: "When a proposal is analysed by the CIDgravity deal filter, the response can lead to multiple codes."
+title: "Deal filter response"
+description: "When the CIDgravity deal filter analyzes a proposal, the response can result in multiple codes, each providing valuable information regarding the outcome and reasons behind the analysis."
+lead: "When the CIDgravity deal filter analyzes a proposal, the response can result in multiple codes, each providing valuable information regarding the outcome and reasons behind the analysis."
 draft: false
 images: []
 menu:
@@ -12,17 +12,17 @@ weight: 100
 toc: true
 ---
 
-This section will explain all available return codes to help you understand and find the origin of a problem
-We will only address the case where the proposal is rejected.
+In this section, we will provide a comprehensive overview of all available return codes, specifically focusing on cases where a proposal is rejected. 
+This information will aid in understanding and pinpointing the root causes of rejection issues.
 
 # Available error codes
 
 |Code                       | Explanation |
 |---------------------------|-------------|
 |SERVICE_UNAVAILABLE        | You should try to send your deal later, or contact the provider |
-|INVALID_CLIENT_ADDR        | The client address provided in the proposal has invalid format |
-|CLIENT_NOT_AUTHORIZED      | The client address provided isn't authorized to send deal to this provider |
-|BUSY                       | The provider to which you are trying to send a deal is currently busy (hourly limits reached ...) |
-|START_EPOCH_TOO_EARLY      | The start epoch of the deal sent is too close to now, (refer to the minimum required start epoch in the response) |
-|DEAL_TYPE_NOT_ACCEPTED     | This type of deal is not accepted by the provider |
-|PRICE_TOO_LOW              | This type of deal is accepted by the provider, but the price offered is too low (refer to the minimum required price in the response) |
+|INVALID_CLIENT_ADDR        | The client address provided in the proposal has an invalid format |
+|CLIENT_NOT_AUTHORIZED      | The client address provided isn't authorized to send a deal to this provider |
+|BUSY                       | The provider you are attempting to send a deal to is currently busy, possibly having reached hourly limits, etc. |
+|START_EPOCH_TOO_EARLY      | The start epoch of the deal sent is too close to the current chain epoch. Please refer to the minimum required in the response |
+|DEAL_TYPE_NOT_ACCEPTED     | The provider does not accept this type of deal |
+|PRICE_TOO_LOW              | The provider accepts this type of deal, but the price offered is too low. Refer to the minimum required price in the response |

@@ -11,32 +11,32 @@ weight: 105
 toc: true
 ---
 
-As with pricing rules, it is possible to simulate a storage acceptance logic
-
-This makes it possible to validate that it corresponds in every way to what it must filter before applying it to incoming deals.
+Similar to pricing rules, it is feasible to simulate a storage acceptance logic. 
+This simulation capability enables the validation of the logic's accuracy and alignment with the intended filtering criteria before its actual application to incoming deal proposals.
 
 ## Fill variables
 
-To do this, go to the Playground (Storage > Playground in the side menu)
 
-In the first block, you must fill in all the elements specific to the proposal (client, price, size, start epoch, etc.)
-And in the second block, you can simulate all the values of the sealing pipeline
+To perform this validation, navigate to the `Playground`, accessible through the side menu under `Storage`
+
+In the initial block, input all the relevant details specific to the proposal, such as client information, pricing, data size, start epoch, and other pertinent parameters.
+In the second block, you have the ability to simulate and configure various values pertaining to the sealing pipeline
 
 {{< alert icon="tip" >}}
-There are no limits in the number of items that can be added. You can add new ones with the "Add new value" button
+There are no restrictions on the number of items that can be added. You can seamlessly include additional items by utilizing the `Add new value` button as needed
 {{< /alert >}}
 
 ![Fill variable to simulate a storage acceptance logic](fill-variables-playground.png)
 
 ## Interpret the result
 
-In the event that your proposal is rejected due to the storage acceptance logic applied, this will be displayed in the results box on the right
+In the event that your proposal faces rejection as a consequence of the applied storage acceptance logic, the rejection status will be prominently displayed in the results box located on the right-hand side.
 
 {{< alert icon="tip" >}}
-All variables have been automatically replaced with applied values to help you understand what went wrong
+All variables are automatically substituted with the actual values used in the simulation, which aids in providing a clear understanding of the specific reasons for the rejection, thus facilitating the debugging and troubleshooting process.
 {{< /alert >}}
 
-In the case of a storage acceptance logic which would be equivalent to something like :
+In the case of a storage acceptance logic, which could be conceptualized as something like the following example:
 
 ```json
 {
@@ -61,7 +61,7 @@ In the case of a storage acceptance logic which would be equivalent to something
 }
 ```
 
-The simulation would result in a failure, with the following result on the right screen:
+In the simulation, the outcome would be a failure, and the right-hand screen would display the following result:
 
 ```json
 {
@@ -82,6 +82,7 @@ The simulation would result in a failure, with the following result on the right
 }
 ```
 
-Indeed, this proposal was rejected, because the value specified on the Playground is `PC1 == 7` and the storage acceptance logic requests `PC1 >= 10`
+Certainly, the rejection of this proposal is attributed to the discrepancy between the value set in the Playground, which is `PC1 == 7`, 
+and the stipulated requirement in the storage acceptance logic, which demands `PC1 >= 10`. 
 
-You can perform as much simulation as necessary to define the logic that will work best.
+It's essential to conduct multiple simulations to iteratively refine and establish the most effective logic for your specific use case.
