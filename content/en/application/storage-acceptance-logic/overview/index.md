@@ -12,10 +12,10 @@ weight: 100
 toc: true
 ---
 
-To access this module you can use the sidebar menu under Storage > Acceptance logic
+To access this module, you can navigate through the sidebar menu by selecting `Storage` and then `Acceptance logic`
 
 {{< alert icon="warning" >}}
-This feature will works only for Online deals, and if the miner is configured to use boost node, with version after 2.1.0 !
+This feature will exclusively works for online deals and requires the miner to be configured to utilize Boost node with a version equal or greater than 2.1.0
 {{< /alert >}}
 
 ## What is a storage acceptance logic ?

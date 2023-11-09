@@ -15,6 +15,10 @@ In the acceptance logics storages, you can perform different operations. You can
 
 It is all of these two elements that define an acceptance rule.
 
+Within the storage acceptance logics, various operations can be executed, allowing for the incorporation of comparison operators.
+
+These two constituents collectively constitute the foundation of an acceptance rule.
+
 ## Supported comparison signs
 
 - `==`
@@ -29,5 +33,5 @@ It is all of these two elements that define an acceptance rule.
 - `Is not null`
 
 {{< alert icon="tip" >}}
-Using these comparison signs you can compare values, variables (VariableA < VariableB) or operations (VariableA + VariableB !== VariableC)
+With the utilization of these comparison operators, you have the capability to compare values, variables (e.g., VariableA < VariableB), or even operations (e.g., VariableA + VariableB !== VariableC)
 {{< /alert >}}
