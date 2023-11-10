@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "This guide serves as an introduction to the capability of establishing acceptance rules that are contingent on pipeline sealing status"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 lead: "This guide serves as an introduction to the capability of establishing acceptance rules that are contingent on pipeline sealing status"
 draft: false
 images: []

@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
-lead: "This section will explain how the CIDgravity deal filter works"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+lead: "This section will elucidate the operational mechanics of the CIDgravity deal filter."
 draft: false
 images: []
 menu:
@@ -12,37 +12,44 @@ weight: 100
 toc: true
 ---
 
-The Deal Filter is the main feature of CIDgravity.
+The Deal Filter stands as the central feature within CIDgravity.
 
-This is the component that filters all incoming (storage) and outgoing (retrieval) deals from a miner, based on the entire configuration:
+This component plays a pivotal role in filtering both incoming (storage) and outgoing (retrieval) deals originating from a miner. 
+Its functionality is rooted in the comprehensive configuration set up for this purpose.
 
 - [`Clients`]({{< relref "../../clients/manage-clients" >}})
 - [`Pricing models`]({{< relref "../../pricing-models/manage-pricing-models" >}})
-- [`Storage acceptance logic`]({{< relref "../../storage-acceptance-logic/overview" >}})
+- [`Storage acceptance logics`]({{< relref "../../storage-acceptance-logic/overview" >}})
 
-It's responsible for analyzing all of these elements, to make a decision on the acceptance or rejection of the proposal that arrives.
+Its primary responsibility is to analyze all these elements, facilitating a decision on the acceptance or rejection of incoming proposals.
 
-The decision may be of two different natures:
+The decision outcome is binary:
 
-- `Accept`: the proposal has been accepted because all criterias passed, the deal will be processed by Lotus / Boost
-- `Reject`: the proposal does not meet one of your criteria, it is rejected, and the reason for rejection is specified in the deal filter response
+- `Accept`: The proposal successfully meets all criteria, allowing for processing by Lotus/Boost.
+- `Reject`: The proposal fails to satisfy one or more criteria, leading to rejection. The rejection reason is explicitly specified in the deal filter response.
 
 ## How does it works ?
 
-The proposal is analyse with the folowing steps:
+![How does the CIDgravity deal filter works ?](deal-filter-schema.png)
 
-- Check proposal integrity
-- Identify the client
-- Apply rules for blacklist / client blocked
-- Apply pricing model depending on the client who sent the deal
-- Check if miner maintenance mode is enabled
-- Check start epoch match the sealing buffer requirements
-- Check that the client and / or global rate limits isn't reached
-- Apply storage acceptance logic
+The proposal undergoes a comprehensive analysis through the following steps:
 
-If one these test failed, the proposal is directly rejected. Otherwise, if no one fail, the proposal is accepted and will be processed by the miner
-In case of rejection, multiple error codes can be returned to explain the reason
+- **Check proposal integrity**: verify the integrity of the incoming proposal.
+- **Identify the client**: identify the client associated with the incoming deal.
+- **Apply rules for blacklist / client blocked**: implement rules to check if the client is blacklisted or blocked.
+- **Apply pricing model rules**: dynamically apply the pricing model corresponding to the client sending the deal.
+- **Check maintenance mode**: evaluate whether the miner is currently in maintenance mode.
+- **Check sealing buffer requirements**: Verify if the start epoch aligns with the sealing buffer requirements.
+- **Check rate limits isn't reached**: Ensure that the client and/or global rate limits have not been exceeded.
+- **Apply storage acceptance logic**: dynamically apply the storage acceptance logic defined by the miner.
+
+Upon failure of any of these tests, the proposal is promptly rejected. 
+Conversely, if none of the tests fail, the proposal is accepted and progresses for processing by the miner.
+
+In the instance of rejection, a set of error codes may be returned to elucidate the specific reason for the rejection.
+
+- [`You can find the list of error codes on this page`]({{< relref "../../../connector/troubleshooting" >}})
 
 {{< alert icon="callout" >}}
-Te order is important, because if the test fail, the next step won't be analysed
+The order holds paramount significance, as the sequential nature of these tests dictates that if a test fails, subsequent steps will not be analyzed.
 {{< /alert >}}

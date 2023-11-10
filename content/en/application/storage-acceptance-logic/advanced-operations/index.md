@@ -1,6 +1,6 @@
 ---
 title: "Advanced operations"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 draft: false
 images: []
 menu:
