@@ -32,6 +32,7 @@ To perform operations like VariableA + VariableB - VariableC, you can incorporat
 ## How to add an operation to a rule ?
 
 To access advanced operations for storage acceptance logic, you can click on the ellipsis icon (`⋮`) and then select `Advanced operations` from the dropdown menu. 
+
 This will open a menu where you can choose from a range of operations supported by the storage acceptance logic
 
 ![Add advanced operation to a storage acceptance logic rule](add-advanced-operations.png)

@@ -6,6 +6,7 @@ draft: false
 images: []
 menu:
     application:
+        name: "Manage"
         parent: "application-pricing-models"
         identifier: "application-pricing-models-manage"
 weight: 100

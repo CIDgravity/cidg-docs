@@ -6,6 +6,7 @@ draft: false
 images: []
 menu:
     application:
+        name: "Create new"
         parent: "application-clients"
         identifier: "application-clients-create"
 weight: 101
@@ -16,11 +17,15 @@ You can conveniently access the navigation options within the sidebar under the 
 
 At the top of the page, you'll find the option to initiate the creation of a new client by simply clicking on `Create a new client`
 
-### 1. Select a pricing model
+### 1. Select a pricing model and storage acceptance logic
 
-The initial step in client creation necessitates the selection of the pricing model to be associated with them. 
+The initial step in client creation necessitates the selection of the pricing model and a storage acceptance logic to be associated with them. 
 
-In the absence of an explicitly chosen pricing model, the system will automatically apply the default pricing model.
+{{< alert icon="warning" >}}
+For both the pricing model and acceptance logic, in the absence of user-defined configurations, the system will automatically apply the default settings. 
+
+Consequently, any modifications to the default settings will directly influence the behavior of proposals originating from these clients.
+{{< /alert >}}
 
 ### 2. Fill the identity information
 
@@ -44,7 +49,7 @@ There are no constraints on the quantity of addresses that can be linked to a cl
 
 ### 4. Manage client Peer IDs
 
-n order to identify the customer when new retrieval deals are received, it is imperative to provide all the known Peer IDS associated with the client
+In order to identify the customer when new retrieval deals are received, it is imperative to provide all the known Peer IDS associated with the client
 
 {{< alert icon="warning" >}}
 Please note that for Peer IDs, exclusively the long format (12D format) is supported.
@@ -58,7 +63,9 @@ There are no constraints on the quantity of Peer IDs that can be linked to a cli
 
 ### 5. Storage deal rate
 
-Irrespective of the globally defined limits for the miner, it is feasible to establish limits that are exclusive to this specific client. Once their predefined limits are surpassed, all of the customer's deals will be subject to rejection until a reset is performed.
+Irrespective of the globally defined limits for the miner, it is feasible to establish limits that are exclusive to this specific client. 
+
+Once their predefined limits are surpassed, all of the customer's deals will be subject to rejection until a reset is performed.
 
 {{< alert icon="tip" >}}
 To establish no limits, simply leave both fields set at 0, signifying unrestricted allowances.

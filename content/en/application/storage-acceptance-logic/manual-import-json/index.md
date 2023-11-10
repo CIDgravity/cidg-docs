@@ -5,6 +5,7 @@ draft: false
 images: []
 menu:
     application:
+        name: "Manual import"
         parent: "storage-acceptance-logic"
         identifier: "storage-acceptance-logic-manual-import-json"
 weight: 104

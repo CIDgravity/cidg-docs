@@ -6,6 +6,7 @@ draft: false
 images: []
 menu:
     application:
+        name: "Create new"
         parent: "application-pricing-models"
         identifier: "application-pricing-models-create"
 weight: 101

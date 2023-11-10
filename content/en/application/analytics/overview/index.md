@@ -13,13 +13,13 @@ toc: true
 ---
 
 ## Storage
-This dashboard consolidates comprehensive statistics related to storage deals and can be accessed via the `Storage > Analytics` section in the sidebar.
+This dashboard consolidates comprehensive statistics related to storage deals and can be accessed via the `Storage` > `Analytics` section in the sidebar.
 
 ## Retrieval
-This dashboard consolidates comprehensive statistics related to retrieval deals and can be accessed via the `Retrieval > Analytics` section in the sidebar.
+This dashboard consolidates comprehensive statistics related to retrieval deals and can be accessed via the `Retrieval` > `Analytics` section in the sidebar.
 
 
 ## Miner status
 This dashboard comprehensively assembles all the relevant components related to the status checker, encompassing details about your miner's availability, versions, and more.
 
-- [`More about miner status dashboard`]({{< relref "../miner-status" >}})
+- [More about miner status dashboard]({{< relref "../miner-status" >}})

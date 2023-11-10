@@ -16,12 +16,16 @@ toc: true
 
 Here are the steps you need to follow:
 
-1. Obtain a CIDgravity account by visiting https://cidgravity.com
+1. Obtain a CIDgravity account by visiting [https://cidgravity.com](https://cidgravity.com)
+<br /><br />
+
 2. Set your get-ask prices to 0 and size to the widest range via the Droplet Settings :
     - Price          = 0
     - Verified Price = 0
     - Min Piece Size = 256
     - Max Piece Size = 32G or 64G
+<br /><br />
+
 3. Install the required Python modules `toml` and `requests` using the following command 
 
 ```

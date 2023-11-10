@@ -6,6 +6,7 @@ draft: false
 images: []
 menu:
     application:
+        name: "Manage"
         parent: "application-clients"
         identifier: "application-clients-manage"
 weight: 100
