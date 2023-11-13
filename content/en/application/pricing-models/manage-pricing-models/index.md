@@ -1,32 +1,35 @@
 ---
 title: "Manage pricing models"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
-lead: "This guide describes how you can manage pricing models"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+lead: "This guide provides instructions on managin the pricing models."
 draft: false
 images: []
 menu:
     application:
+        name: "Manage"
         parent: "application-pricing-models"
         identifier: "application-pricing-models-manage"
 weight: 100
 toc: true
 ---
 
-You can navigate in the sidebar under `Storage` > `Pricing`
+To access the pricing section, you can navigate through the sidebar by selecting `Storage` and then proceeding to `Pricing`.
 
 ![Manage pricing models using the pricing models management page](models-list.png)
 
-For each pricing model in the list, there are have several options : 
+Each pricing model listed offers several options:
 
-- **View**: to consult all the rules that make up the pricing model
-- **Edit**: to modify one or more rules
-- **Remove**: to delete it
-- **Set as default**: to set the selected pricing model as the default
+- **View**: Allows you to review all the rules constituting the pricing model
+- **Edit**: Permits modification of one or more rules within the model
+- **Remove**: Enables deletion of the selected pricing model
+- **Set as default**: Establishes the chosen pricing model as the default configuration
 
 {{< alert icon="tip" >}}
-It's not possible to remove the default pricing model, in order to remove it, set another model as default before
+The removal of the default pricing model is restricted. 
+To delete it, first, designate another model as the default and then proceed with the removal of the desired default model.
 {{< /alert >}}
 
 {{< alert icon="warning" >}}
-Also, it's not possible to remove a pricing model attached to a client. Edit the client before, and ensure that no one uses it
+The removal of a pricing model linked to a client is constrained. 
+Prior to attempting removal, edit the associated client details and ensure that it is not currently in use.
 {{< /alert >}}

@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "This guide introduces the functionality to set acceptance rules based on pipeline sealing status"
-lead: "This guide introduces the functionality to set acceptance rules based on pipeline sealing status, such as number of deals in PC1 and more."
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+lead: "This guide serves as an introduction to the capability of establishing acceptance rules that are contingent on pipeline sealing status"
 draft: false
 images: []
 menu:
@@ -12,24 +12,25 @@ weight: 100
 toc: true
 ---
 
-To access this module you can use the sidebar menu under Storage > Acceptance logic
+To access this module, you can navigate through the sidebar menu by selecting `Storage` and then `Acceptance logic`
 
 {{< alert icon="warning" >}}
-This feature will works only for Online deals, and if the miner is configured to use boost node, with version after 2.1.0 !
+This feature will exclusively works for online deals and requires the miner to be configured to utilize Boost node with a version equal or greater than 2.1.0
 {{< /alert >}}
 
 ## What is a storage acceptance logic ?
 
-It's a set of rules that can be defined to accept or reject deals based on a various set of factors :
-- Sealing Pipeline State
-- Time of the day / day time
-- Fil price (coming soon)
-- Available disk space (coming soon)
-- Concurrent downloads (coming soon)
-    
-A storage acceptance logic applies in addition to a pricing model.
+This entails the establishment of a rule-based system for the determination of transaction approval or rejection, contingent on a diverse criterias, which encompasses:
 
-The storage acceptance logic accepts folowing parameters : 
+- Sealing Pipeline State
+- Temporal factors, encompassing both the time of day and daytime considerations.
+- FIL price (to be introduced in the near future)
+- Disk Space Availability (to be introduced in the near future)
+- Concurrent Download Thresholds (to be introduced in the near future)
+
+Furthermore, it is imperative to underline that a storage acceptance algorithm is concurrently applied alongside the pricing model.
+
+The storage acceptance logic accommodates the following parameters:
 - [Variables](../available-values)
 - Values
 - [Advanced operations](../advanced-operations)
@@ -37,9 +38,9 @@ The storage acceptance logic accepts folowing parameters :
 
 ## How does it works ?
 
-When you create a storage acceptance logic on CIDgravity, a logic in JSON format is generated and applied when a proposal arrives
+When crafting a storage acceptance logic within CIDgravity, a JSON-formatted logic is generated and subsequently applied upon the arrival of a proposal. 
 
-Here is an example of applied JSON logic:
+Here is an illustrative example of an applied JSON logic:
 
 ```json
 {
@@ -66,5 +67,8 @@ Here is an example of applied JSON logic:
 
 ## Testing 
 
-Acceptance logic can be tested from the Playground. 
-When simulating a deal proposal from the playground, its possible to simulate the miner's state (Number of concurrent PC1 as an example) at the time you receive the proposal and confirm how the Acceptance logic will behave.
+The acceptance logic can be rigorously tested within the Playground. 
+When simulating a deal proposal from this environment, it is feasible to replicate the miner's state at the moment of proposal reception, which may include variables such as the number of concurrent PC1 deals.
+
+This simulation allows for a comprehensive assessment of how the acceptance logic will respond and behave in a real-world scenario.
+

@@ -1,7 +1,7 @@
 ---
 title : "CIDgravity"
-description: "CIDgravity is a powerful pricing and client management tool for Filecoin storage providers. It allows you to filter your storages and your retrievals deals simply with a UI. This website contains all the information you need to get start with CIDgravity components"
-lead: "CIDgravity is a powerful pricing and client management tool for Filecoin storage providers. It allows you to filter your storages and your retrievals deals simply with a UI. This website contains all the information you need to get start with CIDgravity components"
+description: "CIDgravity is a robust pricing and client management solution designed for Filecoin storage providers. It empowers users to efficiently filter their storage and retrieval deals through an intuitive user interface. This website provides comprehensive information and resources to help you get started with the various components of CIDgravity."
+lead: "CIDgravity is a robust pricing and client management solution designed for Filecoin storage providers. It empowers users to efficiently filter their storage and retrieval deals through an intuitive user interface. This website provides comprehensive information and resources to help you get started with the various components of CIDgravity."
 draft: false
 images: []
 menu:

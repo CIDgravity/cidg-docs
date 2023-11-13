@@ -1,28 +1,29 @@
 ---
 title: "Manual import JSON"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 draft: false
 images: []
 menu:
     application:
+        name: "Manual import"
         parent: "storage-acceptance-logic"
         identifier: "storage-acceptance-logic-manual-import-json"
 weight: 104
 toc: true
 ---
 
-If you are more confortable with JSON format, we offer the possibility to edit and import a storage acceptance logic with this format
+If you are more inclined towards JSON format, we provide the option to modify and import storage acceptance logic in this structure.
 
-To access it, you must, when editing a storage acceptance logic, use the “JSON import” button.
+To access this feature, while editing a storage acceptance logic, simply utilize the `JSON import` button.
 
 ![Acceptance JSON import for a storage acceptance logic](access-json-import-acceptance-logic.png)
 
-A modal will open to display the JSON of the current logical acceptance loaded into the editor
+A modal window will be launched, presenting the JSON representation of the storage acceptance logic that is currently loaded in the editor.
 
 ![Modal JSON import for a storage acceptance logic](modal-json-import.png)
 
-You can edit the JSON directly, copy it, paste a new one, and then refresh the editor by clicking the "Import" button
+You have the ability to directly modify the JSON, copy its contents, insert a new JSON structure, and subsequently update the editor by clicking the `Import` button.
 
 {{< alert icon="warning" >}}
-Be careful with the names of the variables you use. If they are not respected, the import will not be possible
+Please exercise caution when using variable names. Failure to adhere to the specified naming conventions may result in import errors
 {{< /alert >}}

@@ -1,26 +1,26 @@
 ---
 title: "Manage clients"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 lead: "This guide describes how you can manage clients"
 draft: false
 images: []
 menu:
     application:
+        name: "Manage"
         parent: "application-clients"
         identifier: "application-clients-manage"
 weight: 100
 toc: true
 ---
 
-You can navigate in the sidebar under `Clients`
+You can access the navigation menu within the sidebar under the `Clients` section.
 
 ![Manage clients using the client management page](clients-list.png)
 
-On this page, you have an immediate and updated view of the miner's global limits (for storage and for retrieval)
+On this page, you have real-time access to the miner's global limits for both storage and retrieval.
 
-For each customer in the list, different options are offered:
+For each customer listed, various options are available:
 
-- **Edit**: edit all the informations related to a client
-- **Delete**: remove a client
-- **Block / release a client**: using this, you can reject all deals that came from this specific client by also specifying a personalized rejection message which will be sent to them
-
+- **Edit**: You can modify all the information associated with a specific client
+- **Delete**: This option allows you to remove a client from the list
+- **Block / Release a client**: You can use this feature to either reject all deals originating from a particular client or allow them. This action also permits you to specify a - customized rejection message, which will be communicated to the client in case of deal rejection

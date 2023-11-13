@@ -1,80 +1,87 @@
 ---
 title: "Create new client"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 lead: "This guide describes how you can create a new client in CIDgravity"
 draft: false
 images: []
 menu:
     application:
+        name: "Create new"
         parent: "application-clients"
         identifier: "application-clients-create"
 weight: 101
 toc: true
 ---
 
-You can navigate in the sidebar under `Clients`
+You can conveniently access the navigation options within the sidebar under the `Clients` section. 
 
-On the top, you can click on `Create a new client`
+At the top of the page, you'll find the option to initiate the creation of a new client by simply clicking on `Create a new client`
 
-### 1. Select a pricing model
+### 1. Select a pricing model and storage acceptance logic
 
-The first thing you need to do to create a customer is to choose the pricing model you want to apply to it
+The initial step in client creation necessitates the selection of the pricing model and a storage acceptance logic to be associated with them. 
 
-This information is mandatory, even if you want to apply the default pricing model to it.
+{{< alert icon="warning" >}}
+For both the pricing model and acceptance logic, in the absence of user-defined configurations, the system will automatically apply the default settings. 
+
+Consequently, any modifications to the default settings will directly influence the behavior of proposals originating from these clients.
+{{< /alert >}}
 
 ### 2. Fill the identity information
 
-When the pricing model is selected, the first block asks you to provide information to identify your customer
+Once the pricing model has been selected, the initial section prompts you to furnish client identification details.
 
 ![Fill the identity information about the client](identity-infos.png)
 
 ### 3. Manage Filecoin addresses
 
-To identify the customer when new storage deals arrive, you must enter all the Filecoin addresses known to him
+For the purpose of customer identification when new storage deals are initiated, it is imperative to input all the Filecoin addresses associated with the client.
 
 {{< alert icon="tip" >}}
-You can enter the short address (ID address) or the long address. Each time you press enter, we will show you the one you did not enter for verification
+You have the option to input either the short address (ID address) or the long address. Upon each entry, we will display the counterpart address (the one you didn't enter) for verification and confirmation.
 {{< /alert >}}
 
 {{< alert icon="tip" >}}
-There is no limitation on the number of addresses that can be associated with a client
+There are no constraints on the quantity of addresses that can be linked to a client.
 {{< /alert >}}
 
 ![Manage Filecoin addresses for this client](filecoin-addresses.png)
 
 ### 4. Manage client Peer IDs
 
-To identify the customer when new retrieval deals arrive, you must enter all the Peer IDS known to him
+In order to identify the customer when new retrieval deals are received, it is imperative to provide all the known Peer IDS associated with the client
 
 {{< alert icon="warning" >}}
-For Peer IDs, only long format is supported (12D format [...])
+Please note that for Peer IDs, exclusively the long format (12D format) is supported.
 {{< /alert >}}
 
 {{< alert icon="tip" >}}
-There is no limitation on the number of Peer IDs that can be associated with a client
+There are no constraints on the quantity of Peer IDs that can be linked to a client.
 {{< /alert >}}
 
 ![Manage client Peer IDs](client-peer-ids.png)
 
 ### 5. Storage deal rate
 
-Independently of the global clients defined for the miner, it is possible to define clients specific to this client. Once exceeded, all of its deals will be rejected until reset.
+Irrespective of the globally defined limits for the miner, it is feasible to establish limits that are exclusive to this specific client. 
+
+Once their predefined limits are surpassed, all of the customer's deals will be subject to rejection until a reset is performed.
 
 {{< alert icon="tip" >}}
-To set no limits, simply leave both fields at 0
+To establish no limits, simply leave both fields set at 0, signifying unrestricted allowances.
 {{< /alert >}}
 
 ![Manage storage deal rate for this client](storage-limits.png)
 
 ### 6. Start epoch sealing buffer
 
-This parameter, specific to this client, allows you to define a minimum duration for sealing a sector. 
-All deals from this client below this minimum duration will be rejected
+This client-specific parameter empowers you to stipulate a minimum sector-sealing duration. 
+Any deals originating from this client with a duration below this specified minimum will be subject to rejection. 
 
-By default, the miner's global values apply, but you can define one that will only apply to this client
+By default, the miner adheres to its global values, but you have the option to define a distinct value that exclusively applies to this client.
 
 {{< alert icon="warning" >}}
-This value must be expressed in hours
+It's important to express this value in hours
 {{< /alert >}}
 
 ![Define a value for the start epoch sealing buffer](start-epoch-sealing-buffer.png)

@@ -1,7 +1,6 @@
 ---
 title: "Overview"
 description: "The connector is used to route your proposals through CIDgravity in order to apply your acceptance rules."
-lead: "The connector is used to route your proposals through CIDgravity in order to apply your acceptance rules."
 draft: false
 images: []
 menu:
@@ -12,7 +11,8 @@ weight: 105
 toc: true
 ---
 
-This section contains guides to initialize the CIDgravity connector, depending on the type of node you are using. It's a simple python script, which only transits the proposals you receive. 
+This section comprises guides for initializing the CIDgravity connector, tailored to the type of node. 
+The connector is implemented as a straightforward Python script designed to exclusively relay the incoming proposals received.
 
 # Compatibility
 

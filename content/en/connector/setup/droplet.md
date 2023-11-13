@@ -1,13 +1,13 @@
 ---
-title: "Using Boost node"
-description: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Boost node."
-lead: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Boost node."
+title: "Using Droplet node"
+description: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Droplet node."
+lead: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Droplet node."
 draft: false
 images: []
 menu:
     connector:
         parent: "connector-setup"
-        identifier: "connector-setup-boost"
+        identifier: "connector-setup-droplet"
 weight: 210
 toc: true
 ---
@@ -19,7 +19,7 @@ Here are the steps you need to follow:
 1. Obtain a CIDgravity account by visiting [https://cidgravity.com](https://cidgravity.com)
 <br /><br />
 
-2. Set your get-ask prices to 0 and size to the widest range via the BoostUI:
+2. Set your get-ask prices to 0 and size to the widest range via the Droplet Settings :
     - Price          = 0
     - Verified Price = 0
     - Min Piece Size = 256
@@ -33,10 +33,11 @@ sudo apt install python3-toml python3-requests
 ```
 
 # Get Started
+
 1. Install the connector and create the necessary configuration file using
 
 ```
-sudo -i -u "<USER_RUNNING_BOOST_PROCESS>"
+sudo -i -u "<USER_RUNNING_DROPLET_PROCESS>"
 git clone https://github.com/CIDgravity/CIDgravity-X.git
 cd CIDgravity-X
 cp -n cidgravity_storage_connector.toml.sample cidgravity_storage_connector.toml
@@ -53,16 +54,16 @@ nano ./cidgravity_storage_connector.toml
 1. Run the check process 
 
 ```
-./cidgravity_storage_connector.py --check-boost
+./cidgravity_storage_connector.py --check-venus  
 ```
 
 2. Enable "CIDgravity connector"
-Add the following lines to boost config (usually ~/.boost/config.toml) under the [Dealmaking] and [LotusDealmaking] section
+
+Add the following lines to Droplet config (under path `~/.droplet/config.toml` by default) in the [CommonProvider] section (for more details, please refer to documentation [here](https://github.com/ipfs-force-community/droplet/blob/master/docs/en/droplet-configurations.md))
 
 ```
 Filter = "<ABSOLUTE_PATH>/cidgravity_storage_connector.py --reject"
 RetrievalFilter = "<ABSOLUTE_PATH>/cidgravity_storage_connector.py --reject"
-```    
+```
 
-3. Restart boost
-
+3. Restart Droplet

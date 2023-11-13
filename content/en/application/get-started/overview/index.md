@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
-lead: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+lead: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 draft: false
 images: []
 menu:
@@ -12,19 +12,19 @@ weight: 100
 toc: true
 ---
 
-This section contains guides to claim your first miner and creating your default logic in just few minutes.
+This section comprises comprehensive guides that streamline the process of claiming an initial miner and establishing a default logic swiftly and efficiently, typically requiring only a matter of minutes.
 
 ## Key concepts
 You should be familiar with these key concepts related to use the application before moving on to the next page.
 
 ### Pricing models
 
-A pricing model is a set of rules for defining conditions for accepting a transaction.
+A pricing model can be construed as a delineation of algorithmic parameters that systematically dictate the prerequisites for transaction acceptance.
 
-On CIDgravity, there is a default pricing model, which will be applied regardless of the customer, and the possibility of creating other pricing models 
-to associate them with specific customers
+Within the realm of CIDgravity, a rudimentary default pricing model prevails, serving as the baseline framework, operating agnostically of customer attributes. In addition, the platform affords the capability to instantiate bespoke pricing models tailored to individual customers, thus establishing a mechanism for personalized transaction conditions.
 
 ### Maintenance mode
-Once activated, this is a setting will reject all deals on a miner
 
-This applies for storage and retrieval deals
+Upon activation, this setting will systematically reject all deals received by a miner.
+
+This extends to both storage and retrieval deals.

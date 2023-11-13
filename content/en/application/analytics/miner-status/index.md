@@ -1,6 +1,6 @@
 ---
 title: "Miner status dashboard"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 draft: false
 images: []
 menu:
@@ -11,19 +11,17 @@ weight: 101
 toc: true
 ---
 
-This dashboard is only available if the miner status checker option is enabled in the miner settings
+The miner status dashboard is contingent upon the activation of the miner status checker option within the miner's settings
 
 {{< alert icon="tip" >}}
-The status checker service offered by CIDgravity regularly sends false proposals to test the availability of a miner and retrieve essential information
+The status checker service provided by CIDgravity operates by periodically sending mock proposals or requests to a miner to assess its availability and collect crucial information. These simulated requests help in monitoring the miner's responsiveness and ensuring that it remains active and accessible.
 {{< /alert >}}
 
 ## Sealing pipeline chart
 
-To make the evolution of the state of a miner's sealing pipeline more readable, several sector states have been grouped into the same category.
+To enhance the clarity and readability of a miner's sealing pipeline status, certain sector states have been grouped into the following categories:
 
-Here are the groupings and categories available
-
-| Sector state | Chart group
+| Original sector state | Groupped as
 | --- | --- |
 | WaitDeals | WaitDeals
 | Packing | AP
@@ -71,5 +69,5 @@ Here are the groupings and categories available
 | AbortUpgrade | Error
 
 {{< alert icon="tip" >}}
-All sectors states which are not present in the table have been deleted and are not counted on the graph
+Sectors that do not appear in the provided table have been removed and are excluded from the graph's count
 {{< /alert >}}

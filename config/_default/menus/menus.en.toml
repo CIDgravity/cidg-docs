@@ -1,64 +1,69 @@
 [[main]]
   name = "Connector"
   url = "/connector/get-started/overview"
-  weight = 10
+  weight = 100
 
 [[main]]
   name = "Application"
   url = "/application/get-started/overview"
-  weight = 20
+  weight = 200
+
+[[main]]
+  name = "Reference"
+  url = "/references/basics/overview"
+  weight = 300
 
 [[connector]]
   name = "Get started"
-  weight = 20
+  weight = 101
   identifier = "connector-get-started"
   url = "/connector/get-started/overview"
 
 [[connector]]
   name = "Setup"
-  weight = 25
+  weight = 102
   identifier = "connector-setup"
   url = "/connector/setup"
 
-[[connector]]
-  name = "Troubleshooting"
-  weight = 30
-  identifier = "connector-troubleshooting"
-  url = "/connector/troubleshooting/overview"
+[[references]]
+  name = "Basics"
+  weight = 301
+  identifier = "references-basics"
+  url = "/references/basics/overview"
+
+[[references]]
+  name = "Deal filter"
+  weight = 302
+  identifier = "references-deal-filter"
+  url = "/references/deal-filter/overview"
 
 [[application]]
   name = "Get started"
-  weight = 20
+  weight = 201
   identifier = "application-get-started"
   url = "/application/get-started/overview"
 
 [[application]]
   name = "Clients"
-  weight = 21
+  weight = 202
   identifier = "application-clients"
   url = "/application/clients"
 
 [[application]]
   name = "Pricing models"
-  weight = 22
+  weight = 203
   identifier = "application-pricing-models"
   url = "/application/pricing-models"
 
 [[application]]
   name = "Storage acceptance logic"
-  weight = 23
+  weight = 204
   identifier = "storage-acceptance-logic"
   url = "/application/storage-acceptance-logic/"
 
 [[application]]
-  name = "Deal filter"
-  weight = 24
-  identifier = "application-deal-filter"
-  url = "/application/deal-filter/overview"
-
-[[application]]
   name = "Analytics"
-  weight = 25
+  weight = 206
   identifier = "application-analytics"
   url = "/application/analytics/overview"
 

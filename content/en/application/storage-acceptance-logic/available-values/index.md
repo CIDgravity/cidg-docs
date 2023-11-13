@@ -1,6 +1,6 @@
 ---
 title: "Available values"
-description: "CIDgravity application is used to manage your settings, clients and pricing models acceptance rules"
+description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
 draft: false
 images: []
 menu:
@@ -11,17 +11,16 @@ weight: 102
 toc: true
 ---
 
-When creating new storage acceptance logic, several variables are offered.
-It is possible to combine them in order to define an even more advanced logic
+When crafting new storage acceptance logic, you are presented with a variety of variables that you can use. These variables can be combined to formulate more advanced and sophisticated acceptance criteria. 
+
+By leveraging the available variables and operations, you can design intricate and highly customized logic to govern how storage deals are accepted or rejected
 
 ## Sealing pipeline - sector states
 
-These variables correspond to those of the sealing pipeline (without errors / failed states).
-
-They are included in the Boost proposals:
+These variables correspond to the states within the sealing pipeline, excluding errors or failed states
 
 {{< alert icon="tip" >}}
-The applicable unit for sealing pipeline variables is a deal number (integer)
+The unit of measurement for sealing pipeline variables is typically a deal number, represented as an integer.
 {{< /alert >}}
 
 | Value | Description
@@ -74,9 +73,7 @@ The applicable unit for sealing pipeline variables is a deal number (integer)
 
 ## Sealing pipeline - sector states errors
 
-These variables correspond to the failed sector states in sealing pipeline.
-
-They are included in the Boost proposals:
+These variables correspond to the errors and failed states
 
 {{< alert icon="tip" >}}
 You can use the "Any error", if you want to create an acceptance logic for any failed sector state, avoiding complex operations
@@ -104,9 +101,8 @@ You can use the "Any error", if you want to create an acceptance logic for any f
 
 ## Other variables
 
-In addition, variables calculated at the time of receipt of the proposal are available.
-
-They can also be included in each storage acceptance logic:
+In addition to the variables related to the sealing pipeline, we also offers variables that are calculated at the moment when a proposal is received. 
+These dynamic variables can be incorporated into each stages of an storage acceptance logic
 
 | Value | Description | Unit
 | --- | --- | --- |
@@ -114,6 +110,6 @@ They can also be included in each storage acceptance logic:
 | ReceivedOnDayOfWeek | day of the week at which the proposal is analysed | Day of week
 
 {{< alert icon="success" >}}
-More variables will be available in future versions of CIDgravity
+It's noteworthy that additional variables may become available in future versions of CIDgravity
 {{< /alert >}}
 
