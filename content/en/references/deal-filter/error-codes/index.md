@@ -1,14 +1,13 @@
 ---
-title: "Deal filter response"
-description: "When the CIDgravity deal filter analyzes a proposal, the response can result in multiple codes, each providing valuable information regarding the outcome and reasons behind the analysis."
-lead: "When the CIDgravity deal filter analyzes a proposal, the response can result in multiple codes, each providing valuable information regarding the outcome and reasons behind the analysis."
+title: "Error codes"
+description: "This section contains reference information for the CIDgravity services and API."
 draft: false
 images: []
 menu:
-    connector:
-        parent: "connector-troubleshooting"
-        identifier: "connector-error-codes"
-weight: 100
+    references:
+        parent: "references-deal-filter"
+        identifier: "references-deal-filter-error-codes"
+weight: 101
 toc: true
 ---
 

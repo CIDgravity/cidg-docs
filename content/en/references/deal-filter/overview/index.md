@@ -1,13 +1,12 @@
 ---
 title: "Overview"
-description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
-lead: "This section will elucidate the operational mechanics of the CIDgravity deal filter."
+description: "This section contains reference information for the CIDgravity services and API."
 draft: false
 images: []
 menu:
-    application:
-        parent: "application-deal-filter"
-        identifier: "application-deal-filter-overview"
+    references:
+        parent: "references-deal-filter"
+        identifier: "references-deal-filter-overview"
 weight: 100
 toc: true
 ---
@@ -17,9 +16,9 @@ The Deal Filter stands as the central feature within CIDgravity.
 This component plays a pivotal role in filtering both incoming (storage) and outgoing (retrieval) deals originating from a miner. 
 Its functionality is rooted in the comprehensive configuration set up for this purpose.
 
-- [`Clients`]({{< relref "../../clients/manage-clients" >}})
-- [`Pricing models`]({{< relref "../../pricing-models/manage-pricing-models" >}})
-- [`Storage acceptance logics`]({{< relref "../../storage-acceptance-logic/overview" >}})
+- [`Clients`]({{< relref "../../../application/clients/manage-clients" >}})
+- [`Pricing models`]({{< relref "../../../application/pricing-models/manage-pricing-models" >}})
+- [`Storage acceptance logics`]({{< relref "../../../application/storage-acceptance-logic/overview" >}})
 
 Its primary responsibility is to analyze all these elements, facilitating a decision on the acceptance or rejection of incoming proposals.
 
@@ -47,8 +46,6 @@ Upon failure of any of these tests, the proposal is promptly rejected.
 Conversely, if none of the tests fail, the proposal is accepted and progresses for processing by the miner.
 
 In the instance of rejection, a set of error codes may be returned to elucidate the specific reason for the rejection.
-
-[You can find the list of error codes on this page]({{< relref "../../../connector/troubleshooting" >}})
 
 {{< alert icon="callout" >}}
 The order holds paramount significance, as the sequential nature of these tests dictates that if a test fails, subsequent steps will not be analyzed.
