@@ -16,9 +16,9 @@ The Deal Filter stands as the central feature within CIDgravity.
 This component plays a pivotal role in filtering both incoming (storage) and outgoing (retrieval) deals originating from a miner. 
 Its functionality is rooted in the comprehensive configuration set up for this purpose.
 
-- [`Clients`]({{< relref "../../../application/clients/manage-clients" >}})
-- [`Pricing models`]({{< relref "../../../application/pricing-models/manage-pricing-models" >}})
-- [`Storage acceptance logics`]({{< relref "../../../application/storage-acceptance-logic/overview" >}})
+- `Clients`
+- `Pricing models`
+- `Storage acceptance logics`
 
 Its primary responsibility is to analyze all these elements, facilitating a decision on the acceptance or rejection of incoming proposals.
 

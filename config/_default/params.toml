@@ -75,5 +75,5 @@ repoHost = "GitHub"
     highLight = true
     kaTex = false
     progressBar = true
-    collapsibleSidebar = true
+    collapsibleSidebar = false
     multilingualMode = true
