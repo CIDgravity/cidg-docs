@@ -1,6 +1,6 @@
 ---
 title: "Create new client"
-description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
 lead: "This guide describes how you can create a new client in CIDgravity"
 draft: false
 images: []

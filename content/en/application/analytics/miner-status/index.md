@@ -1,6 +1,6 @@
 ---
 title: "Miner status dashboard"
-description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
 draft: false
 images: []
 menu:
@@ -11,63 +11,34 @@ weight: 101
 toc: true
 ---
 
-The miner status dashboard is contingent upon the activation of the miner status checker option within the miner's settings
+When enabling the `Miner Status Check` option, CIDgravity simulates storage deals by periodically sending test proposals. This process measures miner availability and assesses the state of the sealing pipeline.
 
-{{< alert icon="tip" >}}
-The status checker service provided by CIDgravity operates by periodically sending mock proposals or requests to a miner to assess its availability and collect crucial information. These simulated requests help in monitoring the miner's responsiveness and ensuring that it remains active and accessible.
-{{< /alert >}}
+These information are used for : 
 
-## Sealing pipeline chart
+- evaluating in correlation to the miner settings, if the miner is ready to receive new deals from client.
+- providing the miner status dashboard. This dashboard supersedes the default dashboard. It provides a real-time and historical overview of miner availability, balances, sealing pipeline activity, and other pertinent metrics.
+
+To enable this functionality, navigate to `Settings` > `Automatic Miner Status Check`. 
+
+## Sealing pipeline panel
+
+XXX INSERT SEALIGN PIPELINE EXEMPLE HERE
 
 To enhance the clarity and readability of a miner's sealing pipeline status, certain sector states have been grouped into the following categories:
 
-| Original sector state | Groupped as
+| Sector state | Groups
 | --- | --- |
-| WaitDeals | WaitDeals
-| Packing | AP
-| AddPiece | AP
-| AddPieceFailed | Error
-| GetTicket | WaitChain
-| PreCommit1 | PC1
-| PreCommit2 | PC2
-| PreCommitting | WaitChain
-| PreCommitWait | WaitChain
-| SubmitPreCommitBatch | WaitChain
-| PreCommitBatchWait | WaitChain
-| WaitSeed | WaitChain
-| Committing | C1/C2
-| CommitFinalize | C1/C2
-| CommitFinalizeFailed | Error
-| SubmitCommit | WaitChain
-| SubmitCommitAggregate | WaitChain
-| CommitAggregateWait | WaitChain
-| FinalizeSector | FIN
-| FailedUnrecoverable | Error
-| SealPreCommit1Failed | Error
-| SealPreCommit2Failed | Error
-| PreCommitFailed | Error
-| ComputeProofFailed | Error
-| RemoteCommitFailed | Error
-| CommitFailed | Error
-| PackingFailed | Error
-| FinalizeFailed | Error
-| SnapDealsWaitDeals | WaitDeals
-| SnapDealsAddPiece | AP
-| SnapDealsPacking | AP
-| UpdateReplica | RU
-| ProveReplicaUpdate | PR1/PR2
-| SubmitReplicaUpdate | WaitChain
-| WaitMutable | WaitChain
-| ReplicaUpdateWait | WaitChain
-| UpdateActivating | FIN
-| ReleaseSectorKey | FIN
-| FinalizeReplicaUpdate | FIN
-| SnapDealsAddPieceFailed | Error
-| ReplicaUpdateFailed | Error
-| ReleaseSectorKeyFailed | Error
-| FinalizeReplicaUpdateFailed | Error
-| AbortUpgrade | Error
+| WaitDeals | WaitDeals, SnapDealsWaitDeals
+| AP | Packing, AddPiece, SnapDealsAddPiece, SnapDealsPacking
+| Error | CommitFinalizeFailed, FailedUnrecoverable, SealPreCommit1Failed, SealPreCommit2Failed, PreCommitFailed, ComputeProofFailed, RemoteCommitFailed, CommitFailed, PackingFailed, FinalizeFailed, SnapDealsAddPieceFailed, ReplicaUpdateFailed, ReleaseSectorKeyFailed, FinalizeReplicaUpdateFailed, AbortUpgrade
+| WaitChain | GetTicket, PreCommitting, PreCommitWait, SubmitPreCommitBatch, PreCommitBatchWait, WaitSeed, SubmitCommit, SubmitCommitAggregate, CommitAggregateWait, SubmitReplicaUpdate, WaitMutable, ReplicaUpdateWait, ReplicaUpdateWait
+| PC1 | PreCommit1
+| PC2 | PreCommit2
+| C1/C2 | Committing, CommitFinalize
+| FIN | FinalizeSector, UpdateActivating, ReleaseSectorKey, FinalizeReplicaUpdate
+| RU | UpdateReplica
+| PR1/PR2 | ProveReplicaUpdate
 
 {{< alert icon="tip" >}}
-Sectors that do not appear in the provided table have been removed and are excluded from the graph's count
+Sectors that do not appear in the provided table have been removed and are excluded from the graph's count.
 {{< /alert >}}

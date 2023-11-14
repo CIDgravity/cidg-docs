@@ -1,7 +1,7 @@
 ---
 title: "Overview"
-description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
-lead: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
+lead: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
 draft: false
 images: []
 menu:
