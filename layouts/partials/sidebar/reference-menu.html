@@ -1,0 +1,55 @@
+{{ if .Site.Params.options.collapsibleSidebar -}}
+    <ul class="list-unstyled collapsible-sidebar">
+        {{ $currentPage := . -}}
+        {{ range $index, $element := index .Site.Menus "reference" -}}
+        {{- $active := or ($currentPage.IsMenuCurrent "reference" .) ($currentPage.HasMenuCurrent "reference" .) -}}
+        {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ .Identifier }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
+                    {{ .Name }}
+                </button>
+
+                {{ if .HasChildren -}}
+                    <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ .Identifier }}">
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                            {{ range .Children -}}
+                                {{- $active := or ($currentPage.IsMenuCurrent "reference" .) ($currentPage.HasMenuCurrent "reference" .) -}}
+                                {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
+                                <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                            {{ end -}}
+                        </ul>
+                    </div>
+                {{ end -}}
+            </li>
+        {{ end -}}
+    </ul>
+{{ else -}}
+    {{ $currentPage := . -}}
+
+    {{ range index .Site.Menus "reference" -}}
+
+        {{ $numberOfChildrens := 0 }}
+        {{ range .Children -}}
+            {{ $numberOfChildrens = add $numberOfChildrens 1 }}
+        {{ end }}
+
+        {{ if gt $numberOfChildrens 1 -}}
+            <h3 class="h6 text-uppercase">{{ .Name }}</h3>
+            <ul class="list-unstyled">
+                {{ range .Children -}}
+                    {{- $active := or ($currentPage.IsMenuCurrent "reference" .) ($currentPage.HasMenuCurrent "reference" .) -}}
+                    {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
+                    <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                {{ end -}}
+            </ul>
+        {{ else -}}
+            {{- $active := or ($currentPage.IsMenuCurrent "reference" .) ($currentPage.HasMenuCurrent "reference" .) -}}
+            <h3 class="h6 text-uppercase">
+                <a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">
+                    {{ .Name }}
+                </a>
+            </h3>
+        {{ end -}}
+    {{ end -}}
+{{ end -}}
+

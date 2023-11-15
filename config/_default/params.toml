@@ -42,8 +42,8 @@ themeColor = "#fff"
 # Images
 quality = 85
 bgColor = "#fff"
-landscapePhotoWidths = [900, 800, 700, 600, 500]
-portraitPhotoWidths = [800, 700, 600, 500]
+landscapePhotoWidths = [2000, 1500, 1200, 900, 800, 700, 600, 500]
+portraitPhotoWidths = [2000, 1500, 1200, 800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
@@ -75,5 +75,5 @@ repoHost = "GitHub"
     highLight = true
     kaTex = false
     progressBar = true
-    collapsibleSidebar = true
+    collapsibleSidebar = false
     multilingualMode = true

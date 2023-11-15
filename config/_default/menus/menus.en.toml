@@ -1,71 +1,48 @@
 [[main]]
-  name = "Connector"
-  url = "/connector/get-started/overview"
+  name = "Storage providers"
+  url = "/storage-providers/get-started/compatibility"
   weight = 100
 
 [[main]]
-  name = "Application"
-  url = "/application/get-started/overview"
-  weight = 200
-
-[[main]]
   name = "Reference"
-  url = "/references/basics/overview"
+  url = "/reference"
   weight = 300
 
-[[connector]]
+[[storage-providers]]
   name = "Get started"
   weight = 101
-  identifier = "connector-get-started"
-  url = "/connector/get-started/overview"
+  identifier = "storage-providers-get-started"
+  url = "/storage-providers/get-started"
 
-[[connector]]
-  name = "Setup"
+[[storage-providers]]
+  name = "Manage"
   weight = 102
-  identifier = "connector-setup"
-  url = "/connector/setup"
+  identifier = "storage-providers-manage"
+  url = "/storage-providers/manage"
 
-[[references]]
-  name = "Basics"
-  weight = 301
-  identifier = "references-basics"
-  url = "/references/basics/overview"
-
-[[references]]
-  name = "Deal filter"
-  weight = 302
-  identifier = "references-deal-filter"
-  url = "/references/deal-filter/overview"
-
-[[application]]
-  name = "Get started"
-  weight = 201
-  identifier = "application-get-started"
-  url = "/application/get-started/overview"
-
-[[application]]
-  name = "Clients"
-  weight = 202
-  identifier = "application-clients"
-  url = "/application/clients"
-
-[[application]]
-  name = "Pricing models"
-  weight = 203
-  identifier = "application-pricing-models"
-  url = "/application/pricing-models"
-
-[[application]]
-  name = "Storage acceptance logic"
-  weight = 204
-  identifier = "storage-acceptance-logic"
-  url = "/application/storage-acceptance-logic/"
-
-[[application]]
+[[storage-providers]]
   name = "Analytics"
-  weight = 206
-  identifier = "application-analytics"
-  url = "/application/analytics/overview"
+  weight = 103
+  identifier = "storage-providers-analytics"
+  url = "/storage-providers/analytics"
+
+[[reference]]
+  name = "Client error codes"
+  weight = 301
+  identifier = "reference-client-error-codes"
+  url = "/reference/client-error-codes"
+
+[[reference]]
+  name = "Storage deal processing"
+  weight = 302
+  identifier = "reference-storage-deal-processing"
+  url = "/reference/storage-deal-processing"
+
+[[reference]]
+  name = "Retrieval deal processing"
+  weight = 303
+  identifier = "reference-retrieval-deal-processing"
+  url = "/reference/retrieval-deal-processing"
 
 [[social]]
   name = "GitHub"

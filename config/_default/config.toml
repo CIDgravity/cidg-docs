@@ -44,6 +44,9 @@ isPlainText = true
 noUgly = true
 rel  = "sitemap"
 
+[ui]
+  sidebar_menu_compact = true
+  
 [caches]
   [caches.getjson]
     dir = ":cacheDir/:project"
