@@ -12,7 +12,7 @@ weight: 103
 toc: true
 ---
 
-# Requirements
+## Requirements
 
 Here are the steps you need to follow:
 
@@ -32,7 +32,7 @@ Here are the steps you need to follow:
 sudo apt install python3-toml python3-requests
 ```
 
-# Get Started
+## Get Started
 
 1. Install the connector and create the necessary configuration file using
 

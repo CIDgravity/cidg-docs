@@ -15,6 +15,9 @@ toc: true
 Upon your initial account login, you will be presented with a concise instructional guide.
 
 Simply clicking the `Next` button will advance you to the stage to claim a miner. 
+
+## Fill the miner ID
+
 You can input the desired minerID into the provided field to initiate the claim process.
 
 ![Enter the minerID you want to claim](enter-a-miner-id.png)
@@ -44,13 +47,13 @@ In the event that the miner has previously been claimed, either by you or anothe
 Conversely, if the miner remains unclaimed, the procedure will persist, moving forward to the settings.
 {{< /alert >}}
 
-## Create or import from another miner
+## Import or start from scratch
 
 In the presence of additional miners within your account, you will have the option to seamlessly import their pricing models and acceptance logics onto the new miner.
 
 However, if you prefer to initiate it from scratch, you can opt to generate a default pricing model and sample acceptance logics.
 
-## Define global limits
+## Set settings and limits
 
 In the final phase, you gain the capability to fine-tune the miner's settings through various configurations:
 
