@@ -27,7 +27,7 @@ To enable this functionality, navigate to `Settings` > `Automatic Miner Status C
 
 ### Sealine pipeline panel
 
-![Sealine pipeline chart dashboard](sealing-pipeline-chart.png?c=wide)
+{{< figure src="sealing-pipeline-chart.png" alt="Sealine pipeline chart dashboard" width=850 >}}
 
 To enhance the clarity and readability of a miner's sealing pipeline status, certain sector states have been grouped into the following categories:
 
@@ -58,7 +58,7 @@ On this dashboard, you will find important metrics related to the storage market
 - repartition of deal params for both accepted and rejected deals
 - historical view for many metrics
 
-![Storage analytics dashboard](storage-analytics.png?c=wide)
+{{< figure src="storage-analytics.png" alt="Storage analytics dashboard" width=850 >}}
 
 ## Retrieval analytics
 
@@ -69,4 +69,4 @@ On this dashboard, you will find important metrics related to the retrieval mark
 - top 10 peer id for both accepted and rejected retrieval deals
 - historical view for the number of deals (accepted and rejected)
 
-![Retrieval analytics dashboard](retrieval-analytics.png?c=wide)
+{{< figure src="retrieval-analytics.png" alt="Retrieval analytics dashboard" width=700 >}}

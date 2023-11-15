@@ -5,7 +5,7 @@
 
 [[main]]
   name = "Reference"
-  url = "/reference/client-error-codes"
+  url = "/reference"
   weight = 300
 
 [[storage-providers]]

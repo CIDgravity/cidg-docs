@@ -28,7 +28,7 @@ For each deal listed, various options are available:
 - **Simulate in playground**: will load this deal proposal on playground and simulate the storage deal processing on it (valid proposal only)
 - **Inspect acceptance logic**: will display the acceptance logic that failed for this deal (rejected proposal only)
 
-![Storage history](storage-history.png?c=wide)
+{{< figure src="storage-history.png" alt="Storage history" width=700 >}}
 
 ## Retrieval history
 
@@ -37,4 +37,4 @@ You will find a paginated list of all retrieval deals received by the selected m
 
 For each deal listed, you will have the option to Inspect the deal proposal. This will display the entire retrieval proposal received as JSON format
 
-![Retrieval history](retrieval-history.png?c=wide)
+{{< figure src="retrieval-history.png" alt="Retrieval history" width=700 >}}
