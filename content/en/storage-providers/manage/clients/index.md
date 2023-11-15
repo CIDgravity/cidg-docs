@@ -28,8 +28,6 @@ For each customer listed, various options are available:
 
 ## Create new client
 
-You can conveniently access the navigation options within the sidebar under the `Clients` section. 
-
 At the top of the page, you'll find the option to initiate the creation of a new client by simply clicking on `Create a new client`
 
 #### 1. Select a pricing model and storage acceptance logic
@@ -53,7 +51,7 @@ Once the pricing model has been selected, the initial section prompts you to fur
 For the purpose of customer identification when new storage deals are initiated, it is imperative to input all the Filecoin addresses associated with the client.
 
 {{< alert icon="tip" >}}
-You have the option to input either the short address (ID address) or the long address. Upon each entry, we will display the counterpart address (the one you didn't enter) for verification and confirmation.
+You have the option to input either the short address (ID address) or the long address. Upon each entry, we will display the one you didn't enter for verification.
 {{< /alert >}}
 
 {{< alert icon="tip" >}}
@@ -76,27 +74,27 @@ There are no constraints on the quantity of Peer IDs that can be linked to a cli
 
 ![Manage client Peer IDs](client-peer-ids.png)
 
-#### 5. Storage deal rate
+#### 5. Set rate limits
 
-Irrespective of the globally defined limits for the miner, it is feasible to establish limits that are exclusive to this specific client. 
+Irrespective of the global limits for the miner, it is feasible to establish limits only to this specific client. 
 
-Once their predefined limits are surpassed, all of the customer's deals will be subject to rejection until a reset is performed.
+Once their limits are reached, all of the customer's deals will be rejected until a reset is performed.
 
 {{< alert icon="tip" >}}
-To establish no limits, simply leave both fields set at 0, signifying unrestricted allowances.
+For no limits, simply leave both fields set at 0
 {{< /alert >}}
 
 ![Manage storage deal rate for this client](storage-limits.png)
 
 #### 6. Start epoch sealing buffer
 
-This client-specific parameter empowers you to stipulate a minimum sector-sealing duration. 
-Any deals originating from this client with a duration below this specified minimum will be subject to rejection. 
+You can set a specific start epoch sealing buffer for this specific client.
+Any deals from this client with a start epoch below this specified minimum will be rejected. 
 
-By default, the miner adheres to its global values, but you have the option to define a distinct value that exclusively applies to this client.
+By default, if nothing is set for the client, the miner global values will be used.
 
 {{< alert icon="warning" >}}
-It's important to express this value in hours
+The value must be express in hours
 {{< /alert >}}
 
 ![Define a value for the start epoch sealing buffer](start-epoch-sealing-buffer.png)

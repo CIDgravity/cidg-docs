@@ -4,10 +4,10 @@ description: "This section contains reference information for the CIDgravity ser
 draft: false
 images: []
 menu:
-    references:
-        parent: "references-deal-filter"
-        identifier: "references-deal-filter-error-codes"
-weight: 101
+    reference:
+        parent: "reference-client-error-codes"
+        identifier: "reference-client-error-codes-list"
+weight: 100
 toc: true
 ---
 

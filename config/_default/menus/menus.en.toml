@@ -5,7 +5,7 @@
 
 [[main]]
   name = "Reference"
-  url = "/references/basics/overview"
+  url = "/reference/client-error-codes"
   weight = 300
 
 [[storage-providers]]
@@ -25,6 +25,24 @@
   weight = 103
   identifier = "storage-providers-analytics"
   url = "/storage-providers/analytics"
+
+[[reference]]
+  name = "Client error codes"
+  weight = 301
+  identifier = "reference-client-error-codes"
+  url = "/reference/client-error-codes"
+
+[[reference]]
+  name = "Storage deal processing"
+  weight = 302
+  identifier = "reference-storage-deal-processing"
+  url = "/reference/storage-deal-processing"
+
+[[reference]]
+  name = "Retrieval deal processing"
+  weight = 303
+  identifier = "reference-retrieval-deal-processing"
+  url = "/reference/retrieval-deal-processing"
 
 [[social]]
   name = "GitHub"

@@ -12,9 +12,9 @@ weight: 101
 toc: true
 ---
 
-## Manage existing pricing models
+## Manage existing models
 
-To access the pricing section, you can navigate through the sidebar by selecting `Storage` and then proceeding to `Pricing`.
+To access the pricing section, you can navigate through the sidebar by selecting `Storage` and then `Pricing`.
 
 ![Manage pricing models using the pricing models management page](models-list.png)
 
@@ -35,7 +35,7 @@ The removal of a pricing model linked to a client is constrained.
 Prior to attempting removal, edit the associated client details and ensure that it is not currently in use.
 {{< /alert >}}
 
-## Create new pricing model
+## Create new model
 
 You can use sidebar by selecting the `Storage` tab and further navigating to the `Pricing` section.
 
@@ -43,29 +43,29 @@ At the apex, you have the option to initiate the creation of a new model by clic
 
 #### 1. Define a name
 
-For a more granular understanding of the pricing model intricacies, you have the ability to explicitly designate the desired name. 
+For a more granular understanding of the pricing model, you have to set the desired name. 
 As an illustration, you can specify a name such as `All 16 GiB verified deals at 0`
 
 ![Set the pricing model name and the fallback behavior](set-name-and-fallback.png)
 
 #### 2. Define the fallback behavior
 
-In the event that the rules of the specified pricing model fail to align with the incoming deal, there exists the capability to automatically enforce the default model.
+If the rules of the pricing model fail to align with the incoming deal, there exists the capability to automatically use the default model.
 
 {{< alert icon="warning" >}}
-In the scenario where this option is deactivated, the deal undergoes direct rejection subsequent to the evaluation of the associated pricing model. 
-Conversely, with the option enabled, the default model is invoked to facilitate the decision-making process.
+In the scenario where this option is deactivated, the deal undergoes direct rejection when this pricing model has been applied. 
+With this option enabled, the default model is invoked to facilitate the decision-making process.
 {{< /alert >}}
 
 #### 3. Create the rules
 
-For a model to achieve completeness, it necessitates the incorporation of one or more rules designed to be applicable to incoming proposals.
+For a model to achieve completeness, you need to create one or more rules designed to be applicable to incoming proposals.
 
 {{< alert icon="warning" >}}
-The sequential traversal of all rules occurs from top to bottom, and careful attention should be paid to their respective order.
+The rules will be applied from top to bottom, so careful attention should be paid to their respective order.
 {{< /alert >}}
 
-In the rule creation process, multiple elements are at your disposal, and their collective evaluation determines whether the rule is a match :
+In the rule creation process, multiple elements can be use, and their collective evaluation determines whether the rule is a match :
 
 - **Type**: Enables filtering based on the allowed values in the TransferType field.
 - **Verified**: Specifies whether this rule accepts verified, unverified, or both types of deals.

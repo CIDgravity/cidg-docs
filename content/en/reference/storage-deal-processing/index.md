@@ -1,20 +1,17 @@
 ---
-title: "Overview"
-description: "This section contains reference information for the CIDgravity services and API."
+title: "Storage deal processing"
+description: "This section explain how the incomming deals are processed by CIDgravity using clients, pricing and acceptance logics configuration"
 draft: false
 images: []
 menu:
-    references:
-        parent: "references-deal-filter"
-        identifier: "references-deal-filter-overview"
-weight: 100
+    reference:
+        parent: "reference-storage-deal-processing"
+        identifier: "reference-storage-deal-processing-overview"
+weight: 101
 toc: true
 ---
 
-The Deal Filter stands as the central feature within CIDgravity.
-
-This component plays a pivotal role in filtering both incoming (storage) and outgoing (retrieval) deals originating from a miner. 
-Its functionality is rooted in the comprehensive configuration set up for this purpose.
+This component plays a pivotal role in filtering incoming deals using the CIDgravity configuration, such as:
 
 - `Clients`
 - `Pricing models`
@@ -29,7 +26,7 @@ The decision outcome is binary:
 
 ## How does it works ?
 
-![How does the CIDgravity deal filter works ?](deal-filter-schema.png)
+![Storage deal flow in CIDgravity](storage-deal-flow.png)
 
 The proposal undergoes a comprehensive analysis through the following steps:
 
@@ -48,5 +45,5 @@ Conversely, if none of the tests fail, the proposal is accepted and progresses f
 In the instance of rejection, a set of error codes may be returned to elucidate the specific reason for the rejection.
 
 {{< alert icon="callout" >}}
-The order holds paramount significance, as the sequential nature of these tests dictates that if a test fails, subsequent steps will not be analyzed.
+The order is important because if a test fails, subsequent steps will not be analyzed.
 {{< /alert >}}
