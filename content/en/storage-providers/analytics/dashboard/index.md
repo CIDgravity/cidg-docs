@@ -27,7 +27,7 @@ To enable this functionality, navigate to `Settings` > `Automatic Miner Status C
 
 ### Sealine pipeline panel
 
-{{< figure src="sealing-pipeline-chart.png" alt="Sealine pipeline chart dashboard" width=850 >}}
+{{< img src="sealing-pipeline-chart.png" alt="Sealine pipeline chart dashboard" height=1068 >}}
 
 To enhance the clarity and readability of a miner's sealing pipeline status, certain sector states have been grouped into the following categories:
 
