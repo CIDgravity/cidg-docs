@@ -58,7 +58,7 @@ On this dashboard, you will find important metrics related to the storage market
 - repartition of deal params for both accepted and rejected deals
 - historical view for many metrics
 
-{{< figure src="storage-analytics.png" alt="Storage analytics dashboard" >}}
+{{< img src="storage-analytics.png" alt="Storage analytics dashboard" >}}
 
 ## Retrieval analytics
 
@@ -69,4 +69,4 @@ On this dashboard, you will find important metrics related to the retrieval mark
 - top 10 peer id for both accepted and rejected retrieval deals
 - historical view for the number of deals (accepted and rejected)
 
-{{< figure src="retrieval-analytics.png" alt="Retrieval analytics dashboard" >}}
+{{< img src="retrieval-analytics.png" alt="Retrieval analytics dashboard" >}}
