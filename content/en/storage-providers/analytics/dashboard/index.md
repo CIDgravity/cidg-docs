@@ -69,4 +69,4 @@ On this dashboard, you will find important metrics related to the retrieval mark
 - top 10 peer id for both accepted and rejected retrieval deals
 - historical view for the number of deals (accepted and rejected)
 
-{{< figure src="retrieval-analytics.png" alt="Retrieval analytics dashboard >}}
+{{< figure src="retrieval-analytics.png" alt="Retrieval analytics dashboard" >}}
