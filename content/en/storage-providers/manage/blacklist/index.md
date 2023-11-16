@@ -18,7 +18,7 @@ To access the blacklist section, you can navigate through the sidebar by selecti
 
 When arriving on the page, you can find all blacklisted addresses on the right panel
 
-{{< figure src="blacklisted-addresses-list.png" alt="Manage blacklisted addresses" width=700 >}}
+{{< img src="blacklisted-addresses-list.png" alt="Manage blacklisted addresses" >}}
 
 Each blacklisted address listed offers several options:
 
@@ -39,7 +39,7 @@ To append a new address to the blacklist, utilize the form on the left panel.
 
 Be careful, as the address field exclusively supports long addresses.
 
-{{< figure src="add-to-blacklist.png" alt="Add new address to blacklist" width=700 >}}
+{{< img src="add-to-blacklist.png" alt="Add new address to blacklist" >}}
 
 {{< alert icon="warning" >}}
 Blacklisting addresses associated with registered clients is not possible. If the objective is to restrict deals from specific clients, 

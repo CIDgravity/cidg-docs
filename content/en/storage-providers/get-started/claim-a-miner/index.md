@@ -20,7 +20,7 @@ Simply clicking the `Next` button will advance you to the stage to claim a miner
 
 You can input the desired minerID into the provided field to initiate the claim process.
 
-![Enter the minerID you want to claim](enter-a-miner-id.png)
+{{< img src="enter-a-miner-id.png" alt="Enter the minerID you want to claim" >}}
 
 In the subsequent stage, you will need to provide a signature for verifying the miner ownership. 
 The command is pre-populated with all required information as follows:
@@ -38,7 +38,7 @@ It's crucial to bear in mind that the designated friendly name will remain consi
 Any alterations to this name will be applied to everyone utilizing it.
 {{< /alert >}}
 
-![Choose a friendly name for this miner](define-friendly-name.png)
+{{< img src="define-friendly-name.png" alt="Choose a friendly name for this miner" >}}
 
 Once your selection is made, the subsequent step involves simply by clicking the `Next` button.
 
@@ -63,7 +63,7 @@ In the final phase, you gain the capability to fine-tune the miner's settings th
 - **Custom message**: Provides the opportunity to craft a personalized message that will be transmitted to the customer in the event of a deal rejection.
 - **Accept storage deals from unknown clients**: Enables or disables the reception of storage deals from clients not previously registered. If enabled, such deals will be rejected, ensuring that only recognized clients can initiate storage transactions.
 
-![Define the global limits for this miner](set-global-limits.png)
+{{< img src="set-global-limits.png" alt="Define the global limits for this miner" >}}
 
 To complete the process of adding this miner, we will present your unique token, which is essential for configuring the connector.
 

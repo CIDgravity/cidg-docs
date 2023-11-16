@@ -16,7 +16,7 @@ toc: true
 
 You can access the navigation menu within the sidebar under the `Clients` section.
 
-![Manage clients using the client management page](clients-list.png)
+{{< img src="clients-list.png" alt="Manage clients using the client management page" >}}
 
 On this page, you have real-time access to the miner's global limits for both storage and retrieval.
 
@@ -44,7 +44,7 @@ Consequently, any modifications to the default settings will directly influence 
 
 Once the pricing model has been selected, the initial section prompts you to furnish client identification details.
 
-![Fill the identity information about the client](identity-infos.png)
+{{< img src="identity-infos.png" alt="Fill the identity information about the client" >}}
 
 #### 3. Manage Filecoin addresses
 
@@ -58,7 +58,7 @@ You have the option to input either the short address (ID address) or the long a
 There are no constraints on the quantity of addresses that can be linked to a client.
 {{< /alert >}}
 
-![Manage Filecoin addresses for this client](filecoin-addresses.png)
+{{< img src="filecoin-addresses.png" alt="Manage Filecoin addresses for this client" >}}
 
 #### 4. Manage client Peer IDs
 
@@ -72,7 +72,7 @@ Please note that for Peer IDs, exclusively the long format (12D format) is suppo
 There are no constraints on the quantity of Peer IDs that can be linked to a client.
 {{< /alert >}}
 
-![Manage client Peer IDs](client-peer-ids.png)
+{{< img src="client-peer-ids.png" alt="Manage client Peer IDs" >}}
 
 #### 5. Set rate limits
 
@@ -84,7 +84,7 @@ Once their limits are reached, all of the customer's deals will be rejected unti
 For no limits, simply leave both fields set at 0
 {{< /alert >}}
 
-![Manage storage deal rate for this client](storage-limits.png)
+{{< img src="storage-limits.png" alt="Manage storage deal rate for this client" >}}
 
 #### 6. Start epoch sealing buffer
 
@@ -97,4 +97,4 @@ By default, if nothing is set for the client, the miner global values will be us
 The value must be express in hours
 {{< /alert >}}
 
-![Define a value for the start epoch sealing buffer](start-epoch-sealing-buffer.png)
+{{< img src="start-epoch-sealing-buffer.png" alt="Define a value for the start epoch sealing buffer" >}}

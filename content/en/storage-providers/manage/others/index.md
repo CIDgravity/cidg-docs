@@ -18,7 +18,7 @@ This option is applicable to both storage and retrieval deals.
 
 To toggle maintenance mode on or off, utilize the switch located on the top navigation bar.
 
-{{< figure src="maintenance-mode.png" alt="Enable and disable the maintenance mode" width=500 >}}
+{{< img src="maintenance-mode.png" alt="Enable and disable the maintenance mode" >}}
 
 ## Global limits
 
@@ -29,7 +29,7 @@ In the event these limits are exceeded, all deals processed by CIDgravity will b
 
 For configuration of the global limits, navigate to the `Settings` section, specifically under `Global rate limits`.
 
-{{< figure src="global-rate-limits.png" alt="Configure the global rate limits" width=800 >}}
+{{< img src="global-rate-limits.png" alt="Configure the global rate limits" >}}
 
 Various rate limits can be configured:
 
@@ -52,7 +52,7 @@ This option will filter incomming storage deals to give time for sealing of sect
 
 To configure the start epoch sealing buffer, navigate to the `Settings` section, specifically under `Start epoch sealing buffer`.
 
-{{< figure src="start-epoch-sealing-buffer.png" alt="Configure the start epoch sealing buffer" width=600 >}}
+{{< img src="start-epoch-sealing-buffer.png" alt="Configure the start epoch sealing buffer" >}}
 
 For example, if the value set is 24, it means all deals with a `start epoch < current chain epoch - 1880 (number of epochs in 24 hours)` will be rejected
 

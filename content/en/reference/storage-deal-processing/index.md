@@ -26,7 +26,7 @@ The decision outcome is binary:
 
 ## How does it works ?
 
-![Storage deal flow in CIDgravity](storage-deal-flow.png)
+{{< img src="storage-deal-flow.png" alt="Storage deal flow in CIDgravity" >}}
 
 The proposal undergoes a comprehensive analysis through the following steps:
 

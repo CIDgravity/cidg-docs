@@ -68,7 +68,7 @@ Here is an illustrative example of an applied JSON logic:
 
 To manage all existing acceptance logic, you can navigate through the sidebar by selecting `Storage` and then `Acceptance logic`.
 
-![Manage storage acceptance logics using the management page](logics-list.png)
+{{< img src="logics-list.png" alt="Manage storage acceptance logics using the management page" >}}
 
 Each acceptance logic listed offers several options:
 
@@ -238,7 +238,7 @@ To access advanced operations for storage acceptance logic, you can click on the
 
 This will open a menu where you can choose from a range of operations supported by the storage acceptance logic
 
-![Add advanced operation to a storage acceptance logic rule](add-advanced-operations.png)
+{{< img src="add-advanced-operations.png" alt="Add advanced operation to a storage acceptance logic rule" >}}
 
 ## Manual import from JSON
 
@@ -246,11 +246,11 @@ If you are more inclined with JSON format, we provide the option to modify and i
 
 To access this feature, while editing a storage acceptance logic, simply click on `JSON import`.
 
-![Acceptance JSON import for a storage acceptance logic](access-json-import-acceptance-logic.png)
+{{< img src="access-json-import-acceptance-logic.png" alt="Acceptance JSON import for a storage acceptance logic" >}}
 
 A modal window will be opened, showing the JSON representation of the storage acceptance logic that is currently loaded.
 
-![Modal JSON import for a storage acceptance logic](modal-json-import.png)
+{{< img src="modal-json-import.png" alt="Modal JSON import for a storage acceptance logic" >}}
 
 You can directly edit the JSON, copy its contents, insert a new JSON structure, and subsequently update the editor by clicking the `Import` button.
 

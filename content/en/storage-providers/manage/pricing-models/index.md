@@ -16,7 +16,7 @@ toc: true
 
 To access the pricing section, you can navigate through the sidebar by selecting `Storage` and then `Pricing`.
 
-![Manage pricing models using the pricing models management page](models-list.png)
+{{< img src="models-list.png" alt="Manage pricing models using the pricing models management page" >}}
 
 Each pricing model listed offers several options:
 
@@ -46,7 +46,7 @@ At the apex, you have the option to initiate the creation of a new model by clic
 For a more granular understanding of the pricing model, you have to set the desired name. 
 As an illustration, you can specify a name such as `All 16 GiB verified deals at 0`
 
-![Set the pricing model name and the fallback behavior](set-name-and-fallback.png)
+{{< img src="set-name-and-fallback.png" alt="Set the pricing model name and the fallback behavior" >}}
 
 #### 2. Define the fallback behavior
 
@@ -78,4 +78,4 @@ In the evaluation process of a rule, if any single criterion is not met, subsequ
 This sequential evaluation continues until all specified criteria have been examined.
 {{< /alert >}}
 
-![Example of one rule that compose a pricing model](rule-example.png)
+{{< img src="rule-example.png" alt="Example of one rule that compose a pricing model" >}}

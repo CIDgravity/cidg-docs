@@ -19,7 +19,7 @@ Using playground, you can simulate all your criterias's accuracy before its actu
 
 In the initial block, input all the relevant details specific to the proposal, such as client information, pricing, data size, start epoch, and other pertinent parameters.
 
-![Fill the deal proposal details](fill-proposal-details.png)
+{{< img src="fill-proposal-details.png" alt="Fill the deal proposal details" >}}
 
 {{< alert icon="tip" >}}
 For the client address, you can choose between registered clients, or use any Filecoin address
@@ -35,7 +35,7 @@ You can seamlessly include additional items by utilizing the `Add new value` but
 There are no restrictions on the number of items that can be added
 {{< /alert >}}
 
-![Fill variable to simulate a storage acceptance logic](fill-variables-playground.png)
+{{< img src="fill-variables-playground.png" alt="Fill variable to simulate a storage acceptance logic" >}}
 
 ## Analyse the result
 
@@ -45,13 +45,13 @@ If the proposal is accepted, a green success mark will be display on the right.
 
 You will also find the pricing model and the storage acceptance logic used for this deal
 
-![Deal proposal has been accepted](success-accepted.png)
+{{< img src="success-accepted.png" alt="Deal proposal has been accepted" >}}
 
 ### General rejection
 
 If the proposal has been rejected, you will find the reason in the box located on the right
 
-![Deal proposal has been rejected](error-rejected.png)
+{{< img src="error-rejected.png" alt="Deal proposal has been rejected" >}}
 
 ### Acceptance logic rejection
 

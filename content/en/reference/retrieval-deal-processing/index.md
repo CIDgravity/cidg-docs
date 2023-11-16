@@ -20,7 +20,7 @@ The decision outcome is binary:
 
 ## How does it works ?
 
-![Retrieval deal flow in CIDgravity](retrieval-deal-flow.png)
+{{< img src="retrieval-deal-flow.png" alt="Retrieval deal flow in CIDgravity" >}}
 
 The proposal undergoes a comprehensive analysis through the following steps:
 
