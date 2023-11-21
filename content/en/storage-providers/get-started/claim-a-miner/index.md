@@ -1,7 +1,7 @@
 ---
 title: "Claim a miner"
 description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "This guide describes how you start using CIDgravity with a first miner"
+lead: "This guide describes how you start using CIDgravity with a first miner."
 draft: false
 images: []
 menu:
