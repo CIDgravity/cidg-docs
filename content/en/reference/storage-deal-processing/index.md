@@ -37,7 +37,7 @@ When a deal is received and passed by Boost/Venus to CIDgravity, it follows the 
 	- Default pricing model for unknown clients
 	- client pricing model when the client is identified
 	- client pricing model followed by the default pricing model if the "Fallback to default pricing model is set on the client pricing model
-- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode (more detail [here]({{< ref "en/storage-providers/manage/others/index.md#maintenance-mode">}})
+- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode (more detail [here]({{< ref "en/storage-providers/manage/others/index.md" >}})
 - **Start epoch sealing buffer**: Verify if the start epoch aligns with the requirements
 - **Rate limits**: Ensure that the client and/or global rate limits have not been exceeded
 - **Storage acceptance logic**: dynamically apply the storage acceptance logic defined
