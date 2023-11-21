@@ -12,36 +12,29 @@ weight: 203
 toc: true
 ---
 
-To access the blacklist section, you can navigate through the sidebar by selecting `Storage` and then `Blacklist`.
+Access `Storage` > `Blacklist`.
 
-## Manage blacklisted addresses
-
-When arriving on the page, you can find all blacklisted addresses on the right panel
-
-{{< img src="blacklisted-addresses-list.png" alt="Manage blacklisted addresses" >}}
-
-Each blacklisted address listed offers several options:
-
-- **View the comment**: simply by hovering over the information icon
-- **Remove**: remove this address from the blacklist, storage deals will be processed again
-
-{{< alert icon="tip" >}}
-For enhanced clarity, the address has been truncated. However, the complete address can be copied by utilizing the clipboard icon
-{{< /alert >}}
-
-{{< alert icon="tip" >}}
-In the event of a multitude of addresses in the blacklist, a streamlined search functionality is available
-{{< /alert >}}
+When an address is blacklisting any deals form that address are automatically deleted without being evaluated. The client is informed by an unauthorized message.
 
 ## Blacklist new address
 
-To append a new address to the blacklist, utilize the form on the left panel. 
+To append a new address to the blacklist, use the form on the left panel. 
 
-Be careful, as the address field exclusively supports long addresses.
+{{< alert icon="tip" >}}
+The address field exclusively supports long format addresses.
+{{< /alert >}}
 
 {{< img src="add-to-blacklist.png" alt="Add new address to blacklist" >}}
 
 {{< alert icon="warning" >}}
-Blacklisting addresses associated with registered clients is not possible. If the objective is to restrict deals from specific clients, 
-the appropriate option is to block the client [via the client management page](../clients)
+Blacklisting addresses associated with registered clients is not possible. If you want to restrict deals from a specific client, 
+the appropriate option is to block the client from the `Client` page
 {{< /alert >}}
+
+## Manage blacklisted addresses
+
+{{< img src="blacklisted-addresses-list.png" alt="Manage blacklisted addresses" >}}
+
+- **View the comment**: simply by hovering over the information icon
+- **Remove**: remove this address from the blacklist, storage deals will be processed again
+
