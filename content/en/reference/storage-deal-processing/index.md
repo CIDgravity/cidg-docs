@@ -1,6 +1,6 @@
 ---
 title: "Storage deal processing"
-description: "This section explain how the incomming deals are processed by CIDgravity using clients, pricinglimits and acceptance logics configuration"
+description: "This section explain how the incoming deals are processed by CIDgravity using clients, pricing, limits and acceptance logic"
 draft: false
 images: []
 menu:
@@ -45,12 +45,9 @@ When a deal is received and passed by Boost/Venus to CIDgravity, it follows the 
 
 - **Storage acceptance logic**: Dynamically apply the storage acceptance logic defined ([doc]({{< ref "storage-providers/manage/storage-acceptance-logic/index.md)" >}}) )
 
+Upon failure of any of these components, the proposal is directly rejected.
+The proposal must pass all the components to be accepted.
 
-Upon failure of any of these tests, the proposal is promptly rejected. 
-Conversely, if none of the tests fail, the proposal is accepted and progresses for processing by the miner.
-
-In the instance of rejection, a set of error codes may be returned to elucidate the specific reason for the rejection.
-
-{{< alert icon="callout" >}}
-The order is important because if a test fails, subsequent steps will not be analyzed.
-{{< /alert >}}
+In case  the deal is rejected : 
+ - An intenal detailed  decision message is logged in CIDgravity (accessible via the ```history``` page and logged to the CIDgravity connector (on the miner).
+-  A simplified comprehensive error message is sent to the client (through Boost/Venus).

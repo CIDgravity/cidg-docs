@@ -11,7 +11,7 @@ weight: 102
 toc: true
 ---
 
-This component plays a pivotal role in filtering retrieval deals using the `Clients` registered in CIDgravity
+Deals processing is a core component of CIDgravity, most of the features in CIDgravity will impact the acceptance of a deal. Through this article you will understand how all these components will work together to get the best out CIDgravity.
 
 The decision outcome is binary:
 
@@ -22,18 +22,26 @@ The decision outcome is binary:
 
 {{< img src="retrieval-deal-flow.png" alt="Retrieval deal flow in CIDgravity" >}}
 
-The proposal undergoes a comprehensive analysis through the following steps:
+When a deal is received and passed by Boost/Venus to CIDgravity, it follows the workflow below :
 
-- **Proposal integrity**: verify the integrity of the incoming proposal
-- **Client identification**: identify the client associated with the incoming deal
-- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode
-- **Deny list**: Verify if the client peer id is blacklisted / not whitelisted
-- **Rate limits**: Ensure that the client and/or global retrieval rate limits have not been exceeded
+- **Proposal integrity**: verify the integrity of the incoming proposal 
+	- integrity checks
+	- format
+	- value threshold
+	- etc...
+- **Client identification and authorization**: identify the client associated with the incoming deal and grant authorization based on the libP2P address (for graphsync and bitswap, does not apply to HTTP)
 
-Upon failure of any of these tests, the proposal is promptly rejected. 
-Conversely, if none of the tests fail, the proposal is accepted and progresses for processing by the miner.
+- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode ([doc]({{< ref "storage-providers/manage/others/index.md#maintenance-mode" >}}))
 
-In the instance of rejection, a set of error codes may be returned to elucidate the specific reason for the rejection.
+- **Rate limits**: Ensure that the global retrieval rate limit have not been exceeded ([doc]({{< ref "storage-providers/manage/others#global-limits/index.md" >}}) )
+
+
+Upon failure of any of these components, the proposal is directly rejected.
+The proposal must pass all the components to be accepted.
+
+In case  the deal is rejected : 
+ - An intenal detailed  decision message is logged in CIDgravity (accessible via the ```history``` page and logged to the CIDgravity connector (on the miner).
+-  A simplified comprehensive error message is sent to the client (through Boost/Venus).
 
 {{< alert icon="callout" >}}
 The order is important because if a test fails, subsequent steps will not be analyzed.
