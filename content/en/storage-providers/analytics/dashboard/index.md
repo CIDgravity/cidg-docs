@@ -23,7 +23,9 @@ These information are used for :
 - evaluating in correlation to the miner settings, if the miner is ready to receive new deals from client.
 - providing the miner status dashboard. This dashboard supersedes the default dashboard. It provides a real-time and historical overview of miner availability, balances, sealing pipeline activity, and other pertinent metrics.
 
-To enable this functionality, navigate to `Settings` > `Automatic Miner Status Check`. 
+{{< alert icon="tip" >}}
+The Automatic Miner Status Check must be enable for this dashboard being available : `Settings` > `Automatic Miner Status Check`. 
+{{< /alert >}}
 
 ### Sealine pipeline panel
 

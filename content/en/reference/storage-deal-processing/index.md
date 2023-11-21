@@ -49,5 +49,5 @@ Upon failure of any of these components, the proposal is directly rejected.
 The proposal must pass all the components to be accepted.
 
 In case  the deal is rejected : 
- - An intenal detailed  decision message is logged in CIDgravity (accessible via the ```history``` page and logged to the CIDgravity connector (on the miner).
+- An intenal detailed  decision message is logged to CIDgravity (accessible via the [History]({{< ref "storage-providers/analytics/history/index.md" >}})) and logged to the CIDgravity connector (on the miner).
 -  A simplified comprehensive error message is sent to the client (through Boost/Venus).
