@@ -16,4 +16,4 @@ The CIDgravity connector is an unprivileged open source python script. It levera
 
 It does NOT require to open any ports, need access to any Filecoin keys, nor run as a deamon. Its lightweight with an average decision taken in less than 2s (Boost expects the decision to be taken within 30sec).
 
-Jump [here](https://github.com/CIDgravity/CIDgravity-X "Connector") and follow the instructions.
+Jump [here](https://github.com/CIDgravity/CIDgravity-X) and follow the instructions.

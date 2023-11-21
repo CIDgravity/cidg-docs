@@ -11,17 +11,19 @@ weight: 100
 toc: true
 ---
 
-In this section, we will provide a comprehensive overview of all available return codes, specifically focusing on cases where a proposal is rejected. 
-This information will aid in understanding and pinpointing the root causes of rejection issues.
+As a Filecoin client, you receive rejection code when a deal you are trying to place to a storage provider using CIDgravity is rejected..
+ 
+In this section, we will provide a comprehensive overview of all available return codes.
+These codes will not change overtime and are designed to give to clients the ability to build automation.
 
 # Available error codes
 
 |Code                       | Explanation |
 |---------------------------|-------------|
-|SERVICE_UNAVAILABLE        | You should try to send your deal later, or contact the provider |
-|INVALID_CLIENT_ADDR        | The client address provided in the proposal has an invalid format |
-|CLIENT_NOT_AUTHORIZED      | The client address provided isn't authorized to send a deal to this provider |
-|BUSY                       | The provider you are attempting to send a deal to is currently busy, possibly having reached hourly limits, etc. |
-|START_EPOCH_TOO_EARLY      | The start epoch of the deal sent is too close to the current chain epoch. Please refer to the minimum required in the response |
-|DEAL_TYPE_NOT_ACCEPTED     | The provider does not accept this type of deal |
+|SERVICE_UNAVAILABLE        | Miner is temporary unavailable, you should retry sending deals later |
+|INVALID_CLIENT_ADDR        | The client address provided within the proposal has an invalid format |
+|CLIENT_NOT_AUTHORIZED      | The client address provided is not authorized to send a deal to this provider, you should contact the storage provider to be authorized |
+|BUSY                       | The storage provider pipeline is currently full, you should try sending deals later |
+|START_EPOCH_TOO_EARLY      | The storage provider explicitly asks for more time to seal that deal. Please refer to the minimum time required in the response |
+|DEAL_TYPE_NOT_ACCEPTED     | The provider does not accept this type of deal (verified / transport / size / diration / etc... ), either try changing parameters or contact the storage provider.  |
 |PRICE_TOO_LOW              | The provider accepts this type of deal, but the price offered is too low. Refer to the minimum required price in the response |
