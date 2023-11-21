@@ -1,6 +1,6 @@
 ---
 title: "Blacklist"
-description: "CIDgravity application serves as a comprehensive tool for managing settings, clients, and the acceptance rules of pricing models"
+description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
 lead: "This section explain how to implement address or client blacklisting for storage deals"
 draft: false
 images: []

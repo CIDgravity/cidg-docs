@@ -1,7 +1,7 @@
 ---
 title: "Setup Boost connector"
 description: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Boost node."
-lead: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Boost node."
+lead: "To communicate with CIDgravity, a connector needs to be deployed on the miner."
 draft: false
 images: []
 menu:
@@ -11,6 +11,8 @@ menu:
 weight: 102
 toc: true
 ---
+
+The CIDgravity connector is an unprivileged open source python script called by boost on each deal requests.
 
 ## Requirements
 

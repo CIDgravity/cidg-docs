@@ -1,7 +1,7 @@
 ---
 title: "Claim a miner"
 description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "This guide describes how you can claim your first miner to use CIDgravity"
+lead: "This guide describes how you start using CIDgravity with a first miner"
 draft: false
 images: []
 menu:
@@ -12,18 +12,19 @@ weight: 101
 toc: true
 ---
 
-Upon your initial account login, you will be presented with a concise instructional guide.
+Get ready onboarding deals with CIDgravity in less than 5 min. All you need is a valid github account and being able to prove the miner ownership by signing a challenge (remove access to the miner)
 
-Simply clicking the `Next` button will advance you to the stage to claim a miner. 
+Connect to the [CIDgravity app](https://app.cidgravity.com) and follow the onboarding instructions. This will guide you through the the few steps to setup the initial configuration. 
 
 ## Fill the miner ID
 
-You can input the desired minerID into the provided field to initiate the claim process.
+Enter the minerID you wish to use to start the claiming process.
 
 {{< img src="enter-a-miner-id.png" alt="Enter the minerID you want to claim" >}}
 
-In the subsequent stage, you will need to provide a signature for verifying the miner ownership. 
-The command is pre-populated with all required information as follows:
+In the next step, you will need to sign a challenge message with the worker key to confirm miner ownership.
+
+The command is generated with all required information as follows:
 
 ```shell
 lotus wallet sign [MINER_ADDRESS] [GENERATED_CHALLENGE]
@@ -31,11 +32,12 @@ lotus wallet sign [MINER_ADDRESS] [GENERATED_CHALLENGE]
 
 ## Define a friendly name
 
-When the signature has been verified, you will be prompted to set a friendly name for the miner.
+The friendly name is utilized throughout the entire app for easy identification of a miner.
+It can be modified later through the ```settings```.
 
 {{< alert icon="warning" >}}
-It's crucial to bear in mind that the designated friendly name will remain consistent across all users who claim this miner. 
-Any alterations to this name will be applied to everyone utilizing it.
+The friendly name is attached to a the miner and will remain consistent across all users who claim this miner.
+Any alterations to this name will reflect to every users.
 {{< /alert >}}
 
 {{< img src="define-friendly-name.png" alt="Choose a friendly name for this miner" >}}
@@ -43,32 +45,29 @@ Any alterations to this name will be applied to everyone utilizing it.
 Once your selection is made, the subsequent step involves simply by clicking the `Next` button.
 
 {{< alert icon="success" >}}
-In the event that the miner has previously been claimed, either by you or another user, the process will terminate at this step. 
-Conversely, if the miner remains unclaimed, the procedure will persist, moving forward to the settings.
+If the miner already exists in CIDgravity (previously successfully claimed by you or someone else). The claimed process is ending here.
+We recommend to verify the miner connectivity by running an end to end connectivity check :  ```Help Center``` / ```Diagnosys```
 {{< /alert >}}
 
-## Import or start from scratch
+## Import settings from another miner (optional)
 
-In the presence of additional miners within your account, you will have the option to seamlessly import their pricing models and acceptance logics onto the new miner.
+If you already manage another miner with CIDgravity, you can directly import its settings.
 
-However, if you prefer to initiate it from scratch, you can opt to generate a default pricing model and sample acceptance logics.
+## Initial settings (optional)
 
-## Set settings and limits
-
-In the final phase, you gain the capability to fine-tune the miner's settings through various configurations:
-
-- **Number of storage deals per hour**: Specifies the maximum allowable number of storage deals within a given hour, across all clients.
-- **Cumulative storage deal size per hour**: Dictates the cumulative storage deal capacity allotted per hour, measured in Gigabytes (GiB) per hour.
-- **Retrieval deals per hour**: Sets the maximum count of retrieval deals sanctioned within a single hour, encompassing all clients.
-- **Custom message**: Provides the opportunity to craft a personalized message that will be transmitted to the customer in the event of a deal rejection.
-- **Accept storage deals from unknown clients**: Enables or disables the reception of storage deals from clients not previously registered. If enabled, such deals will be rejected, ensuring that only recognized clients can initiate storage transactions.
+- **Number of storage deals per hour**: The maximum number of storage deals accepted over the last 60 minutes, across all clients.
+- **Cumulative storage deal size per hour**: The maximum cumulative storage deal size (GiB) accepted over the last 60 minutes.
+- **Retrieval deals per hour**: The maximum number of igraphsync retrieval deals accepted over the last 60 minutes, across all clients.
+- **Custom message**: A personalized message that will be appended to rejection message sent to clients (e.g. "you can contact us at me@mydomain")
+- **Accept storage deals from unknown clients**: Enables or disables the reception of storage deals from  clients not previously created. If disabled, such deals will be rejected, ensuring that only recognized clients can initiate storage transactions.
 
 {{< img src="set-global-limits.png" alt="Define the global limits for this miner" >}}
 
-To complete the process of adding this miner, we will present your unique token, which is essential for configuring the connector.
+## Connector token
 
-Additionally, you will have the option to initiate an end-to-end connectivity test once the connector is configured.
+The last screen presents the connector token needed to configure the CIDgravity connector on the miner.
+This token is also accessible from the ```Settings``` page.
 
 {{< alert icon="tip" >}}
-Rest assured, in case you didn't save the token, you can retrieve it at any time within the Settings menu.
+Finaly you will have the option to initiate an end-to-end connectivity test once the connector is configured.
 {{< /alert >}}
