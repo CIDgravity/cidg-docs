@@ -7,7 +7,7 @@ menu:
     storage-providers:
         parent: "storage-providers-analytics"
         identifier: "storage-providers-analytics-history"
-weight: 101
+weight: 301
 toc: true
 ---
 

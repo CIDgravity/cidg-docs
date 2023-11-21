@@ -7,7 +7,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-playground"
-weight: 104
+weight: 204
 toc: true
 ---
 

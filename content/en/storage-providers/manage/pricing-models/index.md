@@ -8,7 +8,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-pricing"
-weight: 101
+weight: 201
 toc: true
 ---
 

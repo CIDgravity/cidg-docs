@@ -7,7 +7,7 @@ menu:
     storage-providers:
         parent: "storage-providers-analytics"
         identifier: "storage-providers-analytics-dashboard"
-weight: 100
+weight: 300
 toc: true
 ---
 

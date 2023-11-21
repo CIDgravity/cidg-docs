@@ -7,7 +7,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-permissions-and-users"
-weight: 107
+weight: 206
 toc: true
 ---
 

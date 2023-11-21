@@ -8,7 +8,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-blacklist"
-weight: 103
+weight: 203
 toc: true
 ---
 

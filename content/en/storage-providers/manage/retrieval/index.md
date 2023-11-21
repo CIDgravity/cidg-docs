@@ -7,7 +7,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-retrieval"
-weight: 106
+weight: 205
 toc: true
 ---
 

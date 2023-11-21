@@ -8,7 +8,7 @@ menu:
     storage-providers:
         parent: "storage-providers-manage"
         identifier: "storage-providers-manage-acceptance-logic"
-weight: 102
+weight: 202
 toc: true
 ---
 
