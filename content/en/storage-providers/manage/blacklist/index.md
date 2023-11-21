@@ -14,7 +14,7 @@ toc: true
 
 Access `Storage` > `Blacklist`.
 
-When an address is blacklisting any deals form that address are automatically deleted without being evaluated. The client is informed by an unauthorized message.
+When an address is blacklisted any deals form that address are automatically deleted without being evaluated. The client is informed by an unauthorized message.
 
 ## Blacklist new address
 
