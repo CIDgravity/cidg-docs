@@ -12,7 +12,7 @@ weight: 101
 toc: true
 ---
 
-Get ready onboarding deals with CIDgravity in less than 5 min. All you need is a valid github account and being able to prove the miner ownership by signing a challenge (remove access to the miner)
+Get ready onboarding deals with CIDgravity in less than 5 min. All you need is a valid github account and being able to prove the miner ownership by signing a challenge (remote access to the miner)
 
 Connect to the [CIDgravity app](https://app.cidgravity.com) and follow the onboarding instructions. This will guide you through the the few steps to setup the initial configuration. 
 
@@ -27,7 +27,7 @@ In the next step, you will need to sign a challenge message with the worker key 
 The command is generated with all required information as follows:
 
 ```shell
-lotus wallet sign [MINER_ADDRESS] [GENERATED_CHALLENGE]
+lotus wallet sign [WORKER_ADDRESS] [ONETIME_CHALLENGE]
 ```
 
 ## Define a friendly name
@@ -36,17 +36,15 @@ The friendly name is utilized throughout the entire app for easy identification 
 It can be modified later through the ```settings```.
 
 {{< alert icon="warning" >}}
-The friendly name is attached to a the miner and will remain consistent across all users who claim this miner.
-Any alterations to this name will reflect to every users.
+The friendly name is attached to the miner and will remain consistent across all users who claim this miner.
+changing this name will reflect to every users.
 {{< /alert >}}
 
 {{< img src="define-friendly-name.png" alt="Choose a friendly name for this miner" >}}
 
-Once your selection is made, the subsequent step involves simply by clicking the `Next` button.
-
 {{< alert icon="success" >}}
-If the miner already exists in CIDgravity (previously successfully claimed by you or someone else). The claimed process is ending here.
-We recommend to verify the miner connectivity by running an end to end connectivity check :  ```Help Center``` / ```Diagnosys```
+If the miner already exists in CIDgravity (previously successfully claimed by you or someone else), the claiming process is ending here.
+We recommend to verify the miner connectivity by running an end to end connectivity check :  ```Help Center``` / ```Diagnosis```
 {{< /alert >}}
 
 ## Import settings from another miner (optional)
@@ -57,17 +55,17 @@ If you already manage another miner with CIDgravity, you can directly import its
 
 - **Number of storage deals per hour**: The maximum number of storage deals accepted over the last 60 minutes, across all clients.
 - **Cumulative storage deal size per hour**: The maximum cumulative storage deal size (GiB) accepted over the last 60 minutes.
-- **Retrieval deals per hour**: The maximum number of igraphsync retrieval deals accepted over the last 60 minutes, across all clients.
-- **Custom message**: A personalized message that will be appended to rejection message sent to clients (e.g. "you can contact us at me@mydomain")
-- **Accept storage deals from unknown clients**: Enables or disables the reception of storage deals from  clients not previously created. If disabled, such deals will be rejected, ensuring that only recognized clients can initiate storage transactions.
+- **Retrieval deals per hour**: The maximum number of graphsync retrieval deals accepted over the last 60 minutes, across all clients.
+- **Custom message**: A personalized message that will be appended to rejection message sent to clients (e.g. "you can contact us at me@mydomain.wyz")
+- **Accept storage deals from unknown clients**: Enable or disable the storage deals from clients not previously created. If disabled, such deals will be rejected, ensuring that only recognized clients data are stored.
 
 {{< img src="set-global-limits.png" alt="Define the global limits for this miner" >}}
 
 ## Connector token
 
-The last screen presents the connector token needed to configure the CIDgravity connector on the miner.
+The last screen presents the token needed to configure the CIDgravity connector on the miner.
 This token is also accessible from the ```Settings``` page.
 
 {{< alert icon="tip" >}}
-Finaly you will have the option to initiate an end-to-end connectivity test once the connector is configured.
+You will have the option to initiate an end-to-end connectivity test once the connector is configured.
 {{< /alert >}}
