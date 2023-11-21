@@ -11,29 +11,30 @@ weight: 206
 toc: true
 ---
 
-## Claim multiple miners
+## Managing multiple miners
 
-A CIDgravity account boasts the capability to efficiently manage multiple miners, providing users with seamless toggling between them.
+A CIDgravity user can manage multiple miners, providing users with seamless switching between them.
 
-To claim new miner, you can navigate to the `My Addresses` section located under your profile picture in the top navigation bar
+To claim new miner, you can navigate to the `My Addresses` section located under your profile picture in the top navigation bar.
 
 {{< img src="list-of-claimed-addresses.png" alt="List of my claimed addresses" >}}
 
 To initiate the claiming process for a new address, simply click on `Claim a new address`
 
-This action will redirect you to a series of steps. For a comprehensive overview of these steps, [you can conveniently refer to this link.](../../get-started/claim-a-miner)
+Click here for more info in the [standard claiming process]({{< ref "storage-providers/get-started/claim-a-miner/index.md" >}})
+
+Up to 10 miners can be amanaged by the same account. If you are looking to manage more miners. Reach out to us. 
 
 ## Manage user permissions
 
-The concurrent management of a miner by multiple users is facilitated within the system. 
+Multiple users can manage the same miner. Each user will have to claim the miner individually. Any option and setting are attached to a miner. Changes from one user will immediately apply.
 
-To see and manage the users with access to a particular miner, navigate to the `My Addresses` section situated under your profile picture in the top navigation bar.
+All users accessing a miner have the same rights level.
 
-Simply click on the key icon associated with the desired miner to review permissions. 
-This action triggers the opening of a modal displaying a comprehensive list of users and their respective access privileges.
+### Remove access rights
+
+User access rights can be removed by 
+	- navigating to `My Addresses` section under your profile picture in the top navigation bar.
+	- clicking on the key icon associated with the desired miner to review permissions. 
 
 {{< img src="list-of-users.png" alt="List of users who manage a specific miner" >}}
-
-{{< alert icon="tip" >}}
-You can easily revoke access for undesired users by clicking on the trash icon adjacent to their email address
-{{< /alert >}}
