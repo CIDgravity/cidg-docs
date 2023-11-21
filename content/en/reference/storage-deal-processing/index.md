@@ -30,17 +30,21 @@ When a deal is received and passed by Boost/Venus to CIDgravity, it follows the 
 	- value threshold
 	- etc...
 - **Client identification and authorization**: identify the client associated with the incoming deal and grant authorization based on :
-	- Acceptance deals from unknown clients
-	- Client is blocked (set on the ```Client``` page)
-	- Blacklist
+	- Deal acceptance from unknown clients
+	- Client is blocked (more details on [client]({{< ref "storage-providers/manage/clients/index.md#manage-existing-clients" >}}) )
+	- Blacklist (more details on [blacklists]({{< ref "storage-providers/manage/blacklist" >}}) )
+
 - **Pricing model**: confirm the pricing is in line with the client pricing model :
 	- Default pricing model for unknown clients
-	- client pricing model when the client is identified
-	- client pricing model followed by the default pricing model if the "Fallback to default pricing model is set on the client pricing model
-- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode (more detail [here]({{< ref "storage-providers/manage/others/index.md#maintenance-mode" >}}))
-- **Start epoch sealing buffer**: Verify if the start epoch aligns with the requirements
-- **Rate limits**: Ensure that the client and/or global rate limits have not been exceeded
-- **Storage acceptance logic**: dynamically apply the storage acceptance logic defined
+	- Client pricing model when the client is identified
+	- Client pricing model followed by the default pricing model if the "Fallback to default pricing model is set on the client pricing model
+- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode (more details on [maintenance mode]({{< ref "storage-providers/manage/others/index.md#maintenance-mode" >}}))
+- **Start epoch sealing buffer**: Verify if the start epoch is respected (more details on [start epoch sealing buffer]({{< ref "storage-providers/manage/others#start-epoch-sealing-buffer" >}}) )
+
+- **Rate limits**: Ensure that the client and/or global rate limits have not been exceeded (more details on [global limits]({{< ref "storage-providers/manage/others#global-limits" >}}) )
+
+- **Storage acceptance logic**: Dynamically apply the storage acceptance logic defined (more details on [storage acceptance logic]({{< ref "storage-providers/manage/storage-acceptance-logic)" >}}) )
+
 
 Upon failure of any of these tests, the proposal is promptly rejected. 
 Conversely, if none of the tests fail, the proposal is accepted and progresses for processing by the miner.
