@@ -11,13 +11,16 @@ weight: 204
 toc: true
 ---
 
-To access this module, you can navigate through the sidebar menu by selecting `Storage` and then `Playground`
+CIDgravity offers an infinite array of options to manage your acceptance criteria. It can be challenging to foresee how all these parameters will interact. To address this, we introduce the playground, which aids in validating the entire storage deals pipeline. It lets yous imulate the pipeline states and send dummy proposals to the CIDgravity engine and get detailled result.
 
-Using playground, you can simulate all your criterias's accuracy before its actual application to incoming deal proposals.
+You can either access the playground directly from :
+- the side bar : `Storage` > `Playground`
+- any past proposals from the `History`. If so the playground will be automatically populated with the proposal's values.
+
 
 ## Fill deal proposal details
 
-In the initial block, input all the relevant details specific to the proposal, such as client information, pricing, data size, start epoch, and other pertinent parameters.
+In the initial block, input all the proposal information, such as client address, pricing, data size, start epoch, ...
 
 {{< img src="fill-proposal-details.png" alt="Fill the deal proposal details" >}}
 
@@ -27,9 +30,11 @@ For the client address, you can choose between registered clients, or use any Fi
 
 ## Fill acceptance logic details
 
-In the second block, you have the ability to simulate and configure various values related to the sealing pipeline
+In the second block, you have the ability to simulate and configure various values related to the sealing pipeline state
 
 You can seamlessly include additional items by utilizing the `Add new value` button as needed
+
+Lets say you want to simulate what happen when you send a proposal when there is already 20 ongoing PC1. Simply select the PC1 and set its value to 16.
 
 {{< alert icon="tip" >}}
 There are no restrictions on the number of items that can be added
@@ -43,23 +48,19 @@ There are no restrictions on the number of items that can be added
 
 If the proposal is accepted, a green success mark will be display on the right.
 
-You will also find the pricing model and the storage acceptance logic used for this deal
+You will also get the information of the matching pricing model and storage acceptance logic.
 
 {{< img src="success-accepted.png" alt="Deal proposal has been accepted" >}}
 
 ### General rejection
 
-If the proposal has been rejected, you will find the reason in the box located on the right
+If the proposal has been rejected, you will find the reason in the box located on the right.
 
 {{< img src="error-rejected.png" alt="Deal proposal has been rejected" >}}
 
 ### Acceptance logic rejection
 
-In the event that your proposal faces rejection as a consequence of the applied storage acceptance logic, the rejection status will be prominently displayed in the results box located on the right-hand side.
-
-{{< alert icon="tip" >}}
-All variables are automatically substituted with the actual values used in the simulation, which aids in providing a clear understanding of the specific reasons for the rejection, thus facilitating the debugging and troubleshooting process.
-{{< /alert >}}
+In the event the proposal is rejected. The matching acceptance logic detailled resolution will be displayed. Need some practice but it's very powerful for understanding and troubleshooting acceptance logic.
 
 For example, using the following storage acceptance logic:
 
@@ -108,4 +109,4 @@ Will result in proposal to be rejected and the right-hand screen would display t
 ```
 
 The rejection of this proposal is attributed to the mismatch between the value set in the Playground, which is `PC1 == 7`, 
-and the stipulated requirement in the acceptance logic, which is `PC1 >= 10`.
+and the requirement in the acceptance logic, which is `PC1 >= 10`.

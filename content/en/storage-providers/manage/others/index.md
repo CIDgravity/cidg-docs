@@ -26,8 +26,8 @@ To toggle maintenance mode on or off, utilize the switch located on the top navi
 Limits serve as a protective measure for the miner, preventing the sealing pipeline to be overloaded. 
 
 Limits are implemented at 2 levels : 
-	- Global limits apply accross all clients. Any accepted deals from any clients will be counted in the same bucket. If that bucket exceed the limit, nor more deals are accepted. 	
-	- Client limits only apply to a specific client. All deals of that client are counted to evaluat if new deals should be accepted. When a limit is set on a client; both the client rate limit and the global rate limit are evaluated.
+- Global limits apply accross all clients. Any accepted deals from any clients will be counted in the same bucket. If that bucket exceed the limit, nor more deals are accepted. 	
+- Client limits only apply to a specific client. All deals of that client are counted to evaluat if new deals should be accepted. When a limit is set on a client; both the client rate limit and the global rate limit are evaluated.
 
 {{< alert icon="warning" >}}
 The global limits should be set to the maximum ingestion capacity of the miner.
