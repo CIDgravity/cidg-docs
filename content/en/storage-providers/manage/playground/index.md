@@ -11,16 +11,16 @@ weight: 204
 toc: true
 ---
 
-CIDgravity offers an infinite array of options to manage your acceptance criteria. It can be challenging to foresee how all these parameters will interact. To address this, we introduce the playground, which aids in validating the entire storage deals pipeline. It lets yous imulate the pipeline states and send dummy proposals to the CIDgravity engine and get detailled result.
+CIDgravity offers infinite  options to manage your acceptance criteria. It can be challenging to foresee how all these parameters will interact. To address this, we introduce the playground, which aids in validating the entire storage deals pipeline. It lets yous imulate the pipeline states and send dummy proposals to the CIDgravity engine and get detailled result.
 
 You can either access the playground directly from :
 - the side bar : `Storage` > `Playground`
-- any past proposals from the `History`. If so the playground will be automatically populated with the proposal's values.
+- the `History` by clicking on any proposal, the playground will be automatically populated with the proposal's values.
 
 
-## Fill deal proposal details
+## Deal proposal details
 
-In the initial block, input all the proposal information, such as client address, pricing, data size, start epoch, ...
+Input all the proposal information, such as client address, pricing, data size, start epoch, ...
 
 {{< img src="fill-proposal-details.png" alt="Fill the deal proposal details" >}}
 
@@ -30,11 +30,11 @@ For the client address, you can choose between registered clients, or use any Fi
 
 ## Fill acceptance logic details
 
-In the second block, you have the ability to simulate and configure various values related to the sealing pipeline state
+You have the ability to simulate and configure various values related to the sealing pipeline state
 
 You can seamlessly include additional items by utilizing the `Add new value` button as needed
 
-Lets say you want to simulate what happen when you send a proposal when there is already 20 ongoing PC1. Simply select the PC1 and set its value to 16.
+Lets say you want to simulate what happen when a proposal arrived and there are already 20 ongoing PC1. Simply select the PC1 and set its value to 20.
 
 {{< alert icon="tip" >}}
 There are no restrictions on the number of items that can be added
@@ -60,7 +60,7 @@ If the proposal has been rejected, you will find the reason in the box located o
 
 ### Acceptance logic rejection
 
-In the event the proposal is rejected. The matching acceptance logic detailled resolution will be displayed. Need some practice but it's very powerful for understanding and troubleshooting acceptance logic.
+In the event the proposal is rejected. The matching acceptance logic detailled resolution will be displayed. That requires some practice but it's very powerful for understanding and troubleshooting acceptance logic.
 
 For example, using the following storage acceptance logic:
 
@@ -87,7 +87,7 @@ For example, using the following storage acceptance logic:
 }
 ```
 
-Will result in proposal to be rejected and the right-hand screen would display the following result:
+The playground will display the following result:
 
 ```json
 {
@@ -108,5 +108,5 @@ Will result in proposal to be rejected and the right-hand screen would display t
 }
 ```
 
-The rejection of this proposal is attributed to the mismatch between the value set in the Playground, which is `PC1 == 7`, 
+The rejection reason is attributed to the mismatch between the value set in the Playground, which is `PC1 == 7`, 
 and the requirement in the acceptance logic, which is `PC1 >= 10`.
