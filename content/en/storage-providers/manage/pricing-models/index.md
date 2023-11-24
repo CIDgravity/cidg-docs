@@ -1,7 +1,7 @@
 ---
 title: "Pricing"
 description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "This guide provides instructions on managin the pricing models."
+lead: "This guide provides instructions on managing pricing models."
 draft: false
 images: []
 menu:
@@ -12,9 +12,31 @@ weight: 201
 toc: true
 ---
 
-## Manage existing models
+Access `Storage` > `Pricing`.
 
-To access the pricing section, you can navigate through the sidebar by selecting `Storage` and then `Pricing`.
+A pricing model is a group of rules where each rules associate a price to certains types of deals.
+
+When a new deal proposal is reaching the pricing engine, the rules engine look for the first matching pricing rules.
+Rules are processed top to bottom.
+
+Once a rule match : 
+- The rule engine stop processing the rule set.
+- the price is verified, and one of the folowing decision is taken :
+	- If the price within the client proposal is below the price : the deal is definitely rejected with a message informing the client of the correct price.
+	- If the price is equal or above the rule price. The deal successfully passed the pricing engine and the deal is proceseds by the next CIDgravity modules (Maintenance Mode / Acceptance logic / etc ...)
+
+If no rules match but the "Fallback on default is set": The deal is processed against the default pricing
+If no rules match and the "Fallback on default is unset": The deal is rejected
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+## Manage existing models
 
 {{< img src="models-list.png" alt="Manage pricing models using the pricing models management page" >}}
 
