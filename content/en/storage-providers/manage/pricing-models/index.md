@@ -23,7 +23,7 @@ Rules are processed top to bottom.
 
 ## Flow chart
 
-```goat
+```goat {style="width: 25em"}
                     .---------------.
                     | Deal proposal |
                     '--------+------'
