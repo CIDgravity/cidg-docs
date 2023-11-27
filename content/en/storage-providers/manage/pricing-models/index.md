@@ -24,9 +24,9 @@ Rules are processed top to bottom.
 ## Flow chart
 
 ```goat
-                    +---------------+
+                    .---------------.
                     | Deal proposal |
-                    +--------+------+
+                    '--------+------'
                              |
                       +------+-------+
                       | Match client |
@@ -55,19 +55,19 @@ Rules are processed top to bottom.
               Yes       No         No      Yes            |
                |        |          |        |             |
                |        v          v        +-------------+
-               |     +---------------+
+               |     .---------------.
                |     | Deal rejected |
-               |     +---------------+
+               |     '---------------'
                v
    +----------------+
    | Price accepted |
    +--------+-------+
             |
             v
-+----------------------+
+.----------------------.
 | Process next         |
 | CIDgravity component |
-+----------------------+
+'----------------------'
 ```
 
 ## Default pricing model
