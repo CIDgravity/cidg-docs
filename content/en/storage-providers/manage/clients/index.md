@@ -62,7 +62,7 @@ There are no constraints on the quantity of Peer IDs that can be linked to a cli
 
 ### Rate limits
 
-It's possible to specify client specific limits, keep in mind this is an additional limit to a client, it does not override the global limits. More information on [limits]({{< ref "storage-providers/manage/others/index.md#global-limits" >}})
+It's possible to specify client specific limits, keep in mind this is an additional limit to a client, it does not override the global limits. More information on [limits]({{< ref "storage-providers/manage/others/index.md#limits" >}})
 
 {{< alert icon="tip" >}}
 To disable client specific limits, set it to 0.
