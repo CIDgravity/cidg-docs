@@ -31,19 +31,19 @@ When a deal is received and passed by Boost/Venus to CIDgravity, it follows the 
 	- etc...
 - **Client identification and authorization**: identify the client associated with the incoming deal and grant authorization based on :
 	- Deal acceptance from unknown clients
-	- Client is blocked ([doc]({{< ref "storage-providers/manage/clients/index.md#manage-existing-clients/index.md" >}}) )
+	- Client is blocked ([doc]({{< ref "storage-providers/manage/clients/index.md#manage-existing-clients" >}}) )
 	- Blacklist ([doc]({{< ref "storage-providers/manage/blacklist/index.md" >}}) )
 
 - **Pricing model**: confirm the pricing is in line with the client pricing model :
 	- Default pricing model for unknown clients
 	- Client pricing model when the client is identified
 	- Client pricing model followed by the default pricing model if the "Fallback to default pricing model is set on the client pricing model
-- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode ([doc]({{< ref "storage-providers/manage/others/index.md#maintenance-mode" >}}))
-- **Start epoch sealing buffer**: Verify if the start epoch is respected ([doc]({{< ref "storage-providers/manage/others#start-epoch-sealing-buffer/index.md" >}}) )
+- **Maintenance mode**: evaluate whether the miner is currently in maintenance mode ([doc]({{< ref "storage-providers/manage/others/#maintenance-mode" >}}))
+- **Start epoch sealing buffer**: Verify if the start epoch is respected ([doc]({{< ref "storage-providers/manage/others/#start-epoch-sealing-buffer" >}}) )
 
-- **Rate limits**: Ensure that the client and/or global rate limits have not been exceeded ([doc]({{< ref "storage-providers/manage/others#global-limits/index.md" >}}) )
+- **Rate limits**: Ensure that the client and/or global rate limits have not been exceeded ([doc]({{< ref "storage-providers/manage/others/#global-limits" >}}) )
 
-- **Storage acceptance logic**: Dynamically apply the storage acceptance logic defined ([doc]({{< ref "storage-providers/manage/storage-acceptance-logic/index.md)" >}}) )
+- **Storage acceptance logic**: Dynamically apply the storage acceptance logic defined ([doc]({{< ref "storage-providers/manage/storage-acceptance-logic/index.md" >}}) )
 
 Upon failure of any of these components, the proposal is directly rejected.
 The proposal must pass all the components to be accepted.

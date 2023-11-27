@@ -62,7 +62,7 @@ There are no constraints on the quantity of Peer IDs that can be linked to a cli
 
 ### Rate limits
 
-It's possible to specify client specific limits, keep in mind this is an additional limit to a client, it does not override the global limits. More information on [limits]({{< ref "storage-providers/manage/others#global-limits" >}})
+It's possible to specify client specific limits, keep in mind this is an additional limit to a client, it does not override the global limits. More information on [limits]({{< ref "storage-providers/manage/others/#global-limits" >}})
 
 {{< alert icon="tip" >}}
 To disable client specific limits, set it to 0.
@@ -77,7 +77,7 @@ Any deals from this client with a start epoch below this specified minimum will 
 
 By default, if nothing is set for the client, the miner global values will be used.
 
-[start epoch sealing buffer]({{< ref "storage-providers/manage/others#start-epoch-sealing-buffer" >}})
+[start epoch sealing buffer]({{< ref "storage-providers/manage/others/#start-epoch-sealing-buffer" >}})
 
 {{< alert icon="warning" >}}
 The value must be express in hours
