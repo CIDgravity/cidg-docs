@@ -20,6 +20,9 @@ There is no limit on the number of rules per pricing model.
 When a new deal proposal is reaching the pricing engine, the rules engine look for the first matching pricing rule, verify the price and exit with a decision.
 Rules are processed top to bottom.
 
+
+## Flow chart
+
 ```goat
                      +-----------------+
                      |                 |
@@ -83,26 +86,14 @@ Rules are processed top to bottom.
 |                        |
 +------------------------+
 ```
-test
-```goat
-      .               .                .               .--- 1          .-- 1     / 1
-     / \              |                |           .---+            .-+         +
-    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
-   +     +        |       |        |       |    ---+            ---+          +
-  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
- /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
- 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
-
-```
 
 ## Default pricing model
 
-Is a special pricing applying to :
-	- Deals from Filecoin address not attached to any registered clients.
-	- Any client with no specific pricing model set.
+It's a special pricing applying to :
+- Deals from Filecoin address not attached to any registered clients.
+- Any client with no specific pricing model set.
 
-The default pricing model cannot be removed. Set another pricing model as default first to enable deletion.
-The "Fallback to default pricing model" setting is ignored when a pricing is set as the default pricing model.
+The default pricing model cannot be removed, first set another pricing model as default before deletion.
 
 ## Create new model
 
@@ -118,11 +109,14 @@ As an illustration, you can specify a name such as `All 16 GiB verified deals at
 #### 2. Fallback behavior
 
 This feature is interesting, when a specific client, have a specific pricing or specific type of deals on top of what you offer by default.
+
 The incoming deal is first evaluated against the client pricing model, if no rules match, it's evaluated against the default pricing model. 
+
+The "Fallback to default pricing model" setting is ignored when a pricing is set as the default pricing model.
 
 #### 3. Rules creation
 
-To match a rule, a deal needs first to fill all conditions except the price, then the price is compared. 
+To match a rule, a deal needs first to fill all conditions except the price, then the price is compared.
 
 - **Type**: Deal TransferType : graphSync, HTTP, libP2P, etc, offline ...
 - **Verified**: Verified(Fil+) or unverified deals
