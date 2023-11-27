@@ -28,12 +28,53 @@ Once a rule match :
 If no rules match but the "Fallback on default is set": The deal is processed against the default pricing
 If no rules match and the "Fallback on default is unset": The deal is rejected
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+```goat
+                       +-----------------+
+                       |                 |
+                       |  Deal proposal  |
+                       |                 |
+                       +--------+--------+
+                                |
+                                |
+                                v
+                      +-------------------+
+                      |                   |
+                      |  Matching Client  |
+                      |                   |
+       v              +--+--------------+-+
+                         |              |
+                       Found        Not Found
+                         |              |
+                         v              v
+ +-----------------------------+ +------------------------------+
+ |                             | |                              |
+ |  Processing Client Pricing  | |  Processing Default Pricing  |
+ |                             | |                              |
+ +-----------------------+-----+ +------+-----------------------+
+                         |              |
+                         |              |
+Rules Engine             |              |
+                         |              |
+                         v              v
+                       +------------------+
+                       |                  |
+                       |  Matching rules  |
+                       |                  |
+                       +------------------+
+
+                 Found              Not Found
+
+
+         Is Deal price >= Rule price     is Fallback to default pricing
+
+
+          Yes              No               No            Yes
+
+                        Reject           Reject
+       Pricing accepting
+
+
+       Process next CIDgravity Component
 ```
 
 ## Manage existing models
