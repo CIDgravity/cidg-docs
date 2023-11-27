@@ -72,12 +72,8 @@ To disable client specific limits, set it to 0.
 
 ### Start epoch sealing buffer
 
-You can set a specific start epoch sealing buffer per client.
-Any deals from this client with a start epoch below this specified minimum will be rejected. 
-
-By default, if nothing is set for the client, the miner global values will be used.
-
-[start epoch sealing buffer]({{< ref "storage-providers/manage/others/index.md#start-epoch-sealing-buffer" >}})
+This setting overrides the global start epoch sealing buffer.
+Any deals from this client with a start epoch below this specified minimum will be rejected. More information on the [start epoch sealing buffer]({{< ref "storage-providers/manage/others/index.md#start-epoch-sealing-buffer" >}})
 
 {{< alert icon="warning" >}}
 The value must be express in hours
@@ -85,17 +81,10 @@ The value must be express in hours
 
 {{< img src="start-epoch-sealing-buffer.png" alt="Define a value for the start epoch sealing buffer" >}}
 
-## Manage existing clients
+## Block a client
+
+This feature start rejecting all deals from a specific client. 
+
+A custom message is concatenated to the rejection message sent back to the client.
 
 You can access the navigation menu within the sidebar under the `Clients` section.
-
-{{< img src="clients-list.png" alt="Manage clients using the client management page" >}}
-
-On this page, you have real-time access to the miner's global limits for both storage and retrieval.
-
-For each customer listed, various options are available:
-
-- **Edit**: You can modify all the information associated with a specific client
-- **Delete**: This option allows you to remove a client from the list
-- **Block / Release a client**: You can use this feature to either reject all deals originating from a particular client or allow them. This action also permits you to specify a - customized rejection message, which will be communicated to the client in case of deal rejection
-
