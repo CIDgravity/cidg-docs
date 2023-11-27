@@ -1,7 +1,7 @@
 ---
 title: "Clients"
 description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "This guide describes how you can manage clients"
+lead: "Group address under a client, apply custom pricing, specific acceptance criterias, priority, and get advanced insight on clients activity."
 draft: false
 images: []
 menu:
@@ -11,6 +11,7 @@ menu:
 weight: 200
 toc: true
 ---
+
 
 ## Manage existing clients
 
