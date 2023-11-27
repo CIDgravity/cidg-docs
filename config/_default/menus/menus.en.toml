@@ -1,6 +1,6 @@
 [[main]]
   name = "Storage providers"
-  url = "/storage-providers/get-started/compatibility"
+  url = "/storage-providers/get-started/claim-a-miner/"
   weight = 100
 
 [[main]]
