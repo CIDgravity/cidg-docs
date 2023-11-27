@@ -15,8 +15,10 @@ toc: true
 Access: `Storage` > `Acceptance logic`
 
 {{< alert icon="warning" >}}
-This feature will exclusively works for ONLINE deals and requires the miner to be configured with Boost >= 2.1.0
+This feature only works for ONLINE deals and requires Boost >= 2.1.0
 {{< /alert >}}
+
+With Acceptance logic the miner can be configured to accept deals based on simple, combined or computed states of sectors in the sealing pipeline but also time of the day, Filecoin price, etc....
 
 ## Definition
 
@@ -27,19 +29,17 @@ A storage acceptance logic is a rule-based system for the determination of trans
 - FIL price (to be introduced in the near future)
 - Concurrent Download Thresholds (to be introduced in the near future)
 
-Furthermore, it is imperative to underline that a storage acceptance algorithm is concurrently applied alongside the pricing model.
+Acceptance logic is the last component of the CIDgravity acceptance process, it occurs after the pricing validation (for more information on how proposals are processed : [reference]({{< ref "reference/storage-deal-processing/index.md" >}}).
 
-The storage acceptance logic accommodates the following parameters:
-- `Variables`
-- `Values`
-- `Advanced operations`
-- `Comparison signs`
+Like a pricing model, an acceptance logic can be :
+- attached to clients
+- defined as default and apply to storage proposal from unregistered clients or for clients without acceptance logic defined.
 
-## How does it works ?
+## How it works
 
-When crafting a storage acceptance logic within CIDgravity, a JSON-formatted logic is generated and applied upon the arrival of a proposal. 
+CIDgravity implements [JSON-formatted logic](https://jsonlogic.com/). 
 
-Here is an illustrative example of an applied JSON logic:
+Here is an illustrative example of a CIDgravity JSON logic:
 
 ```json
 {
@@ -64,39 +64,20 @@ Here is an illustrative example of an applied JSON logic:
 }
 ```
 
-## Manage existing logics
+The storage acceptance logic accommodates the following components:
+- `Variables`: sector state, date, etc...
+- `Values`: integer, time, day of the week
+- `Advanced operations`: +, -, *, /
+- `Comparison signs`: >, <, =, any, contains, etc...
 
-To manage all existing acceptance logic, you can navigate through the sidebar by selecting `Storage` and then `Acceptance logic`.
-
-{{< img src="logics-list.png" alt="Manage storage acceptance logics using the management page" >}}
-
-Each acceptance logic listed offers several options:
-
-- **View**: Allows you to review the logic and all associated clients
-- **Edit**: Permits modification of the logic that will be applied on incomming deals
-- **Remove**: Enables deletion of the selected logic
-- **Set as default**: Establishes the chosen acceptance logic as the default configuration
-
-{{< alert icon="tip" >}}
-By default, upon claiming a new miner, you will receive 5 sample acceptance logics tailored for various use cases. 
-
-These serve as a source of inspiration, allowing you to either use them directly, or edit them according to your preferences.
-{{< /alert >}}
-
-## Create new logic
-
-### Available values
-
-When crafting new storage acceptance logic, you are presented with a variety of variables that you can use. These variables can be combined to formulate more advanced acceptance criteria. 
-
-By leveraging the variables and operations, you can design highly customized logic to define how storage deals are accepted or rejected
+### Variables
 
 #### Sealing pipeline - sector states
 
 These variables correspond to the states within the sealing pipeline, excluding errors or failed states
 
 {{< alert icon="tip" >}}
-This variables are express as a number of deal, represented as an integer.
+Theses variables are expressed in number of sectors, represented as an integer.
 {{< /alert >}}
 
 | Value | Description
@@ -152,7 +133,7 @@ This variables are express as a number of deal, represented as an integer.
 These variables correspond to the errors and failed states
 
 {{< alert icon="tip" >}}
-You can use the "Any error", if you want to create an acceptance logic for any failed sector state, avoiding complex operations
+"Any error" is an aggregate of all sectors in error, helpful for simplifying acceptance logics
 {{< /alert >}}
 
 | Value | Description
@@ -177,7 +158,7 @@ You can use the "Any error", if you want to create an acceptance logic for any f
 
 #### Other variables
 
-In addition to the variables related to the sealing pipeline, we also offers variables that are calculated when a proposal is received. 
+CIDgravity also offers variables that are calculated when a proposal is received. 
 These dynamic variables can be incorporated into each stages
 
 | Value | Description | Unit
@@ -189,13 +170,11 @@ These dynamic variables can be incorporated into each stages
 Additional variables may become available in future versions of CIDgravity
 {{< /alert >}}
 
-### Comparison signs
+### Available values
 
-Within the storage acceptance logics, various operations can be executed, allowing for the incorporation of comparison operators.
+Values are filled when creating a JSoN logic. The value type is enforced by the JSON logic editor (integer, date, time, etc...)
 
-These two constituents collectively constitute the foundation of an acceptance rule.
-
-#### Supported signs
+### Supported Comparison signs
 
 - `==`
 - `<=`
@@ -214,8 +193,9 @@ With these comparison operators, you can compare values, variables (e.g., Variab
 
 ### Advanced operations
 
-The storage acceptances logic also supports operations between variables, enabling you to combine multiple variables to construct advanced logic that can 
-fit a wide range of requirements.
+The storage acceptances logic also supports operations between variables, enabling the combination of multiple variables to construct advanced logic that can fit a wide range of requirements.
+
+Like: `(PC1 + AP) < 16`
 
 #### Supported operations
 
@@ -225,39 +205,51 @@ fit a wide range of requirements.
 - `Division`
 
 {{< alert icon="warning" >}}
-Each operation is limited to a maximum of 2 variables, but you can chain operations together to achieve the desired results. For example, you can create expressions like `VariableA + (VariableB + VariableC)`, which is equivalent to `VariableA + VariableB + VariableC`
+Each operation is limited to a maximum ofi 2 elements, but operations can be combined to cover more complex operations.
+For example, to sum 3 elements : `VariableA + (VariableB + VariableC)`
 {{< /alert >}}
 
-{{< alert icon="tip" >}}
-To perform operations like VariableA + VariableB - VariableC, you can incorporate both addition and subtraction within the same rule
-{{< /alert >}}
+#### Access advanced operations
 
-#### How to add an advanced operation ?
+Click on the ellipsis icon (`⋮`) and then select `Advanced operations` from the dropdown menu. 
 
-To access advanced operations for storage acceptance logic, you can click on the ellipsis icon (`⋮`) and then select `Advanced operations` from the dropdown menu. 
-
-This will open a menu where you can choose from a range of operations supported by the storage acceptance logic
+This will open a menu where supported operations are available.
 
 {{< img src="add-advanced-operations.png" alt="Add advanced operation to a storage acceptance logic rule" >}}
 
 ## Manual import from JSON
 
-If you are more inclined with JSON format, we provide the option to modify and import storage acceptance logic using this format.
+To facilitate manipulating, editing and sharing JSON logic, CIDgravity implements a `JSON import` button evailable when edition a JSON logic.
 
-To access this feature, while editing a storage acceptance logic, simply click on `JSON import`.
+It allows to easily export to clipboard and import JSON logic.
 
 {{< img src="access-json-import-acceptance-logic.png" alt="Acceptance JSON import for a storage acceptance logic" >}}
 
-A modal window will be opened, showing the JSON representation of the storage acceptance logic that is currently loaded.
-
 {{< img src="modal-json-import.png" alt="Modal JSON import for a storage acceptance logic" >}}
 
-You can directly edit the JSON, copy its contents, insert a new JSON structure, and subsequently update the editor by clicking the `Import` button.
+Edit the JSON, copy its contents, insert a new JSON structure, and subsequently update the editor by clicking the `Import` button.
 
 {{< alert icon="warning" >}}
-Please be careful when using variable names. Failure to adhere to the specified naming conventions may result in import errors
+Import will fail if variable names are invalid (case sensitive).
 {{< /alert >}}
 
-## Simulate
+## Manage existing logics
 
-To simulate a storage acceptance logic, [you can use the playground.](../playground)
+{{< img src="logics-list.png" alt="Manage storage acceptance logics using the management page" >}}
+
+Each acceptance logic listed offers several options:
+
+- View
+- Edit
+- Remove
+- Set as default
+
+{{< alert icon="tip" >}}
+Claiming a new miner will automatically create sample acceptance logics, they can be used as it is, deleted, edited.
+{{< /alert >}}
+
+## Testing
+
+Acceptance logic can be tested and troubleshooted from the [Playground]
+
+To simulate a storage acceptance logic, [you can use the playground.]({{< ref "storage-providers/manage/playground/index.md" >}})
