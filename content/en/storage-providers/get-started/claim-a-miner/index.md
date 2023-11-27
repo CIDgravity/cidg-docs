@@ -16,6 +16,14 @@ Get ready onboarding deals with CIDgravity in less than 5 min. All you need is a
 
 Connect to the [CIDgravity app](https://app.cidgravity.com) and follow the onboarding instructions. This will guide you through the the few steps to setup the initial configuration. 
 
+## Compatibility matrix
+
+|Node           |Supported|
+|---------------|---------|
+|boost          | ✅      |
+|droplet(venus) | ✅      |
+|lotus-markets  | ❌      |
+
 ## Fill the miner ID
 
 Enter the minerID you wish to use to start the claiming process.
