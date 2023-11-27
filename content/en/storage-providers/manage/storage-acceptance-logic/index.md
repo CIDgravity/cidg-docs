@@ -1,7 +1,7 @@
 ---
 title: "Storage acceptance logic"
 description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "This guide serves as an introduction to the capability of establishing acceptance rules that are contingent on pipeline sealing status"
+lead: "Control deal acceptance based on the realtime state of the sealing pipeline"
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ weight: 202
 toc: true
 ---
 
-To access this module, you can navigate through the sidebar menu by selecting `Storage` and then `Acceptance logic`
+Access: `Storage` > `Acceptance logic`
 
 {{< alert icon="warning" >}}
 This feature will exclusively works for ONLINE deals and requires the miner to be configured with Boost >= 2.1.0

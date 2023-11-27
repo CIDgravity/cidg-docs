@@ -15,19 +15,18 @@ Access: `Retrieval` > `Deny list`
 
 Filter retrievability over HTTP and graphsync. By applying a blacklisting or whitelisting logic to **peer IDs**.
 
-{{< alert icon="warning" >}}
-Changes are applied after clicking the "Apply" button.
-{{< /alert >}}
-
 ### Blacklist / Whitelist
 
-Select Blacklist and choose which ID or client to blacklist. Retrieval will be allowed to any other IDs.
+- Blacklist mode : Choose which ID or client to blacklist. Retrieval will be allowed to any other IDs.
+- Whitelist mode : only the selected ID and clients will be able to retrieve content.
 
-Select Whitelist only the selected ID and clients will be able to retrieve content.
+When adding a new peer ID, you have the option to choose between one of the registered client peer IDs or input a completely new peer ID
 
 {{< img src="deny-list-blacklist.png" alt="Deny list blacklisted peer ids" >}}
 
-When adding a new peer ID to the blacklist, you have the option to choose between one of the registered client peer IDs or input a completely new peer ID
+{{< alert icon="warning" >}}
+Changes are applied after clicking the "Apply" button.
+{{< /alert >}}
 
 ## Booster bitswap
 
