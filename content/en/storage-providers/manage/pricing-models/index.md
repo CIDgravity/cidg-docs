@@ -36,11 +36,11 @@ If no rules match and the "Fallback on default is unset": The deal is rejected
                      +--------+--------+
                               |
                               v
-                      +---------------+
-                      |               |
-                      |  Match client |
-                      |               |
-                      +--+----------+-+
+                      +----------------+
+                      |                |
+                      |  Match client  |
+                      |                |
+                      +--+----------+--+
                          |          |                 +-------+
                        Found    Not Found             |       |
                          |          |                 |       |
@@ -90,6 +90,17 @@ If no rules match and the "Fallback on default is unset": The deal is rejected
 |  CIDgravity component  |
 |                        |
 +------------------------+
+```
+test
+```goat
+      .               .                .               .--- 1          .-- 1     / 1
+     / \              |                |           .---+            .-+         +
+    /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2
+   +     +        |       |        |       |    ---+            ---+          +
+  / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3
+ /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +
+ 1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4
+
 ```
 
 ## Manage existing models
