@@ -29,52 +29,67 @@ If no rules match but the "Fallback on default is set": The deal is processed ag
 If no rules match and the "Fallback on default is unset": The deal is rejected
 
 ```goat
-                       +-----------------+
-                       |                 |
-                       |  Deal proposal  |
-                       |                 |
-                       +--------+--------+
-                                |
-                                |
-                                v
-                      +-------------------+
-                      |                   |
-                      |  Matching Client  |
-                      |                   |
-       v              +--+--------------+-+
-                         |              |
-                       Found        Not Found
-                         |              |
-                         v              v
- +-----------------------------+ +------------------------------+
- |                             | |                              |
- |  Processing Client Pricing  | |  Processing Default Pricing  |
- |                             | |                              |
- +-----------------------+-----+ +------+-----------------------+
-                         |              |
-                         |              |
-Rules Engine             |              |
-                         |              |
-                         v              v
-                       +------------------+
-                       |                  |
-                       |  Matching rules  |
-                       |                  |
-                       +------------------+
-
-                 Found              Not Found
-
-
-         Is Deal price >= Rule price     is Fallback to default pricing
-
-
-          Yes              No               No            Yes
-
-                        Reject           Reject
-       Pricing accepting
-
-
-       Process next CIDgravity Component
+                     +-----------------+
+                     |                 |
+                     |  Deal proposal  |
+                     |                 |
+                     +--------+--------+
+                              |
+                              v
+                      +---------------+
+                      |               |
+                      |  Match client |
+                      |               |
+                      +--+----------+-+
+                         |          |                 +-------+
+                       Found    Not Found             |       |
+                         |          |                 |       |
+                         v          v                 v       |
+  +--------------------------+ +---------------------------+  |
+  |                          | |                           |  |
+  |  Process Client Pricing  | |  Process Default Pricing  |  |
+  |                          | |                           |  |
+  +----------------------+---+ +----+----------------------+  |
+                         |          |                         |
+                         v          v                         |
+                      +----------------+                      |
+                      |                |                      |
+                      |  Match  rules  |                      |
+                      |                |                      |
+                      +--+----------+--+                      |
+                         |          |                         |
+                       Found    Not Found                     |
+                         |          |                         |
+                         v          v                         |
+           +-----------------+ +-------------------+          |
+           |                 | |                   |          |
+           |  Is Deal price  | |  Is Fallback to   |          |
+           |  >= Rule price  | |  default pricing  |          |
+           |                 | |                   |          |
+           +-+-----------+---+ +----+-----------+--+          |
+             |           |          |           |             |
+            Yes          No         No         Yes            |
+             |           |          |           |             |
+             |           v          v           +-------------+
+             |       +-----------------+
+             |       |                 |
+             |       |  Deal rejected  |
+             |       |                 |
+             |       +-----------------+
+             v
+   +------------------+
+   |                  |
+   |  Price accepted  |
+   |                  |
+   +---------+--------+
+             |
+             v
++------------------------+
+|                        |
+|  Process next          |
+|  CIDgravity component  |
+|                        |
++------------------------+
 ```
 
 ## Manage existing models
