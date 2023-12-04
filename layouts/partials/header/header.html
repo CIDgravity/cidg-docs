@@ -70,14 +70,22 @@
                   {{ range .Children -}}
                   {{- $active = eq .Name $current.Title -}}
                     <li>
-                      <a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+                      {{ if eq .Name "API" }}
+                        <a class="dropdown-item{{ if $active }} active{{ end }}" target="_blank" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+                      {{ else }}
+                        <a class="dropdown-item{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}"{{ if $active }} aria-current="true"{{ end }}>{{ .Name }}</a>
+                      {{ end -}}
                     </li>
                   {{ end -}}
                 </ul>
               </li>
             {{ else }}
               <li class="nav-item">
-                <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                {{ if eq .Name "API" }}
+                  <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" target="_blank" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                {{ else }}
+                  <a class="nav-link ps-0 py-1{{ if $active }} active{{ end }}" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+                {{ end -}}
               </li>
             {{ end }}
           {{ end -}}
