@@ -2,11 +2,19 @@
   name = "Storage providers"
   url = "/storage-providers/get-started/claim-a-miner/"
   weight = 100
+  external = false
 
 [[main]]
   name = "Reference"
   url = "/reference"
   weight = 300
+  external = false
+
+[[main]]
+  name = "API"
+  url = "https://service.cidgravity.com/docs"
+  weight = 500
+  external = true
 
 [[storage-providers]]
   name = "Get started"
