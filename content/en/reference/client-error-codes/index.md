@@ -11,7 +11,9 @@ weight: 100
 toc: true
 ---
 
-As a Filecoin client, you receive rejection code when a deal you are trying to place to a storage provider using CIDgravity is rejected.
+As a Filecoin client, you receive unified rejection code when :
+ - a deal you are trying to place to a storage provider using CIDgravity is rejected (using boost or any clients)
+ - calling our API to verify miner availability
  
 In this section, we will provide a comprehensive overview of all available return codes.
 These codes will not change overtime and are designed to give to clients the ability to build automation.
@@ -27,3 +29,4 @@ These codes will not change overtime and are designed to give to clients the abi
 |START_EPOCH_TOO_EARLY      | The storage provider explicitly asks for more time to seal that deal. Please refer to the minimum time required in the response |
 |DEAL_TYPE_NOT_ACCEPTED     | The provider does not accept this type of deal (verified / transport / size / diration / etc... ), either try changing parameters or contact the storage provider |
 |PRICE_TOO_LOW              | The provider accepts this type of deal, but the price offered is too low. Refer to the minimum required price in the response |
+|PIECE_CID_DUPLICATED       | This provider has already received a deal from your address with the piece CID (API only)|
