@@ -11,26 +11,25 @@ weight: 100
 toc: true
 ---
 
-The File Information API provides essential details about files onboarded to the Filecoin network via the CIDgravity Gateway. This API is intended exclusively for clients utilizing the CIDgravity Gateway to store files on Filecoin.
+The File Information API provides essential details about files onboarded to the Filecoin network via the CIDgravity Gateway. This API is intended exclusively for clients using the CIDgravity Gateway to store files on Filecoin.
 
 Note: These API endpoints require access to the CIDgravity Gateway for communication. Without this access, the API cannot be used.
 
-## File Info
-The File Information endpoint allows you to retrieve the current status and details of files or folders that have been uploaded to the CIDgravity Gateway for onboarding to Filecoin. This API supports both individual files and folders, providing relevant information about their storage state and retrievability.
+## Endpoints description
 
-### File vs. Folder Handling
+<details open>
+ <summary><code>POST</code> <code><b>/file-info</b></code> <code>(Get element metadata)</code></summary>
+
+This endpoint allows you to retrieve the current status and details of files or folders that have been uploaded to the CIDgravity Gateway for onboarding to Filecoin. This API supports both individual files and folders, providing relevant information about their storage state and retrievability.
+
+###  File vs. Folder Handling
 - **Files**: When querying a file, the returned state and details apply only to that specific file.
   
 - **Folders**: When querying a folder, the API returns a state representing the folder as a whole, which is an aggregated view of the states of all its sub-elements (i.e., files and subfolders within it).
 
 This distinction is important because a folder can contain multiple files, each with its own storage state and deal status. The folder's overall state is a combined representation of the status of its contents, providing a single, comprehensive view of the entire folder's state on Filecoin.
 
-#### Creating new/overwriting existing stubs & proxy configs
-
-<details>
- <summary><code>POST</code> <code><b>/file-info</b></code> <code>(retrieve  element metadata)</code></summary>
-
-##### Parameters
+### Parameters
 > | **Name**  | **Type**  | **Description**                                                                                       |
 > |----------------|-----------|-------------------------------------------------------------------------------------------------------|
 > | `filePath`     | required `string`  | The path to the file or folder to be queried.                                                          |
@@ -38,7 +37,7 @@ This distinction is important because a folder can contain multiple files, each 
 > |                |           | - `False`: Returns basic information such as the CID of the element.                                   |
 > |                |           | - `True`: Returns detailed information including the file’s state, retrievable copies, and deal data.   |
 
-##### Responses
+### Responses
 > | **Field**                    | **Type**    | **Description**                                                                                         |
 > |------------------------------|-------------|---------------------------------------------------------------------------------------------------------|
 > | `success`                    | `boolean`   | Indicates whether the request was successful (`true` or `false`).                                        |
@@ -86,7 +85,7 @@ This distinction is important because a folder can contain multiple files, each 
 > | `published`    | The deal has been published and is visible on the Filecoin network.                                                |
 > | `active`       | The deal is active and the file is being stored as per the terms of the deal.   
 
-##### Example cURL
+### Example cURL
 > ```bash
 > $ curl -s -X POST http://localhost:9011/file-info -d '{"filePath": "/myfile"}' | jq .
 > ```
@@ -94,8 +93,8 @@ This distinction is important because a folder can contain multiple files, each 
 #### Response (Success):
 > ```json
 > {
->  "success": true,
->  "result": {
+>   "success": true,
+>   "result": {
 >     "file": {
 >       "cid": "QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn"
 >     }
