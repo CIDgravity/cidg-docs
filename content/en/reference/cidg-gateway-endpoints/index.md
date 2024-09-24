@@ -22,7 +22,7 @@ Note: These API endpoints require access to the CIDgravity Gateway for communica
 
 This endpoint allows you to retrieve the current status and details of files or folders that have been uploaded to the CIDgravity Gateway for onboarding to Filecoin. This API supports both individual files and folders, providing relevant information about their storage state and retrievability.
 
-###  File vs. Folder Handling
+**File vs. Folder Handling**
 - **Files**: When querying a file, the returned state and details apply only to that specific file.
   
 - **Folders**: When querying a folder, the API returns a state representing the folder as a whole, which is an aggregated view of the states of all its sub-elements (i.e., files and subfolders within it).
@@ -85,7 +85,8 @@ This distinction is important because a folder can contain multiple files, each 
 > | `published`    | The deal has been published and is visible on the Filecoin network.                                                |
 > | `active`       | The deal is active and the file is being stored as per the terms of the deal.   
 
-### Example cURL
+### Example
+#### Request (cURL)
 > ```bash
 > $ curl -s -X POST http://localhost:9011/file-info -d '{"filePath": "/myfile"}' | jq .
 > ```
