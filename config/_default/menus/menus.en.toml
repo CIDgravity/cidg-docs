@@ -5,6 +5,12 @@
   external = false
 
 [[main]]
+  name = "Nextcloud users"
+  url = "/nextcloud-users/filecoin/requirements/"
+  weight = 200
+  external = false
+
+[[main]]
   name = "Reference"
   url = "/reference"
   weight = 300
@@ -33,6 +39,12 @@
   weight = 103
   identifier = "storage-providers-analytics"
   url = "/storage-providers/analytics"
+
+[[nextcloud-users]]
+  name = "Filecoin"
+  weight = 200
+  identifier = "nextcloud-users-filecoin"
+  url = "/nextcloud-users/filecoin"
 
 [[reference]]
   name = "Client error codes"

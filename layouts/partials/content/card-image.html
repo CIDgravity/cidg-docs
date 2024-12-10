@@ -5,18 +5,23 @@
 
 {{ $image := .Resources.GetMatch (printf "**%s" (index .Params.images 0)) }}
 {{ if not $image -}}
+  {{ warnf "Image not found: %s for page %s" (index .Params.images 0) .File.Path }}
   {{ $image = resources.Get (printf "%s%s" "images/" site.Params.defaultImage) }}
 {{ end -}}
 
-{{ $webp := printf "%s%s" $fillImage " webp" }}
-{{ $image = $image.Resize $webp}}
+{{ if $image -}}
+  {{ $webp := printf "%s%s" $fillImage " webp" }}
+  {{ $image = $image.Resize $webp }}
 
-{{ $lqip := $image.Resize site.Params.lqipWidth -}}
+  {{ $lqip := $image.Resize site.Params.lqipWidth -}}
 
-<img
-  class="card-img-top img-fluid lazyload blur-up"
-  src="{{ $lqip.Permalink }}"
-  data-src="{{ $image.Permalink }}"
-  width="{{ $image.Width }}"
-  height="{{ $image.Height }}"
-  alt="{{ .Title }}">
+  <img
+    class="card-img-top img-fluid lazyload blur-up"
+    src="{{ $lqip.Permalink }}"
+    data-src="{{ $image.Permalink }}"
+    width="{{ $image.Width }}"
+    height="{{ $image.Height }}"
+    alt="{{ .Title }}">
+{{ else -}}
+  {{ warnf "Fallback image also missing for page %s" .File.Path }}
+{{ end -}}

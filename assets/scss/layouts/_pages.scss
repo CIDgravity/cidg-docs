@@ -47,3 +47,13 @@ p.meta {
 .page-link:hover {
   text-decoration: none;
 }
+
+/* Set the default body text color for light mode */
+:root {
+  --bs-body-color: #000000; /* Black for light mode */
+}
+
+/* Set the default body text color for dark mode */
+[data-dark-mode] {
+  --bs-body-color: #ffffff; /* White for dark mode */
+}

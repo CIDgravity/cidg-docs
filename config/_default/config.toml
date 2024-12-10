@@ -7,6 +7,7 @@ enableGitInfo = false
 enableRobotsTXT = true
 paginate = 7
 rssLimit = 10
+logLevel = "DEBUG"
 
 # Multilingual
 defaultContentLanguage = "en"
@@ -91,3 +92,11 @@ rel  = "sitemap"
   [[module.mounts]]
     source = "node_modules/@hyas/images/layouts"
     target = "layouts"
+
+
+[markup]
+  [markup.highlight]
+    noClasses = false    # Use CSS classes for styling (recommended for custom styling)
+    style = "monokai"    # Choose a theme (see list below)
+    lineNos = true       # Enable line numbers
+

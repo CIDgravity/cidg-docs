@@ -1,11 +1,8 @@
-<div class="ratio ratio-{{ with .Get "ratio" }}{{.}}{{ end }}">
-  <video{{ with .Get "attributes" }} {{ . | safeHTMLAttr }}{{ end }}>
-    {{ with .Get "webm-src" -}}
-    <source src="{{ . | relURL }}" type="video/webm">
-    {{ end -}}
-    {{ with .Get "mp4-src" -}}
-    <source src="{{ . | relURL }}" type="video/mp4">
-    {{ end -}}
-    Sorry, your browser doesn't support embedded videos.
-  </video>
-</div>
+{{- $ratioClass := .Get "ratio" -}}
+{{- $attributes := .Get "attributes" -}}
+{{- $width := .Get "width" | default "640" -}}
+<video class="video-player {{ $ratioClass }}" {{ $attributes }} style="max-width: {{ $width }}px; height: auto;">
+  <source src="{{ .Get "src" }}" type="video/mp4">
+  Your browser does not support embedded videos.
+</video>
+
