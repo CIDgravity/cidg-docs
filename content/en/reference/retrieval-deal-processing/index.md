@@ -11,6 +11,8 @@ weight: 102
 toc: true
 ---
 
+## Retrieval filtering only apply to Boost and Venus, Curio doesn't implement deal filtering on retrieval
+
 Deals processing is a core component of CIDgravity, most of the features in CIDgravity will impact the acceptance of a deal. Through this article you will understand how all these components will work together to get the best out CIDgravity.
 
 The decision outcome is binary:

@@ -13,6 +13,8 @@ toc: true
 
 Access: `Retrieval` > `Deny list`
 
+## Only apply to Boost, Curio-market doesn't implemment deal filtering on retrieval.
+
 Filter retrievability over HTTP and graphsync. By applying a blacklisting or whitelisting logic to **peer IDs**.
 
 ### Blacklist / Whitelist

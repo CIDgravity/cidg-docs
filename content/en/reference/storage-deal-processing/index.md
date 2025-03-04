@@ -15,12 +15,12 @@ Deals processing is a core component of CIDgravity, most of the features in CIDg
 
 The decision outcome is binary:
 
-- `Accept`: The proposal successfully meets all criteria, allowing for processing by Boost/Venus.
+- `Accept`: The proposal successfully meets all criteria, allowing for processing by Curio,Boost/Venus.
 - `Reject`: The proposal fails to satisfy one or more criteria, leading to rejection. The rejection reason is explicitly specified in the deal filter response.
 
 ## How does it works ?
 
-When a deal is received and passed by Boost/Venus to CIDgravity, it follows the workflow below :
+When a deal is received and passed by Curio,Boost/Venus to CIDgravity, it follows the workflow below :
 
 {{< img src="storage-deal-flow.png" alt="Storage deal flow in CIDgravity" >}}
 
@@ -50,4 +50,4 @@ The proposal must pass all the components to be accepted.
 
 In case  the deal is rejected : 
 - An intenal detailed  decision message is logged to CIDgravity (accessible via the [History]({{< ref "storage-providers/analytics/history/index.md" >}})) and logged to the CIDgravity connector (on the miner).
--  A simplified comprehensive error message is sent to the client (through Boost/Venus).
+-  A simplified comprehensive error message is sent to the client (through Curio,Boost/Venus).

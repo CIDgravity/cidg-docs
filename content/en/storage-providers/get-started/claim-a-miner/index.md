@@ -20,6 +20,7 @@ Connect to the [CIDgravity app](https://app.cidgravity.com) and follow the onboa
 
 |Node           |Supported|
 |---------------|---------|
+|curio-market   | ✅      |
 |boost          | ✅      |
 |droplet(venus) | ✅      |
 |lotus-markets  | ❌      |
@@ -69,9 +70,9 @@ If you already manage another miner with CIDgravity, you can directly import its
 
 {{< img src="set-global-limits.png" alt="Define the global limits for this miner" >}}
 
-## Connector token
+## CIDgravity token
 
-The last screen presents the token needed to configure the CIDgravity connector on the miner.
+The last screen presents the token needed to configure the CIDgravity on the miner.
 This token is also accessible from the ```Settings``` page.
 
 {{< alert icon="tip" >}}

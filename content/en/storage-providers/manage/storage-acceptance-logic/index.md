@@ -15,7 +15,7 @@ toc: true
 Access: `Storage` > `Acceptance logic`
 
 {{< alert icon="warning" >}}
-This feature only apply to ONLINE deals with Boost >= 2.1.0
+This feature only apply to ONLINE deals with Boost >= 2.1.0 or Curio
 {{< /alert >}}
 
 With Acceptance logic the miner can be configured to accept deals based on simple, combined or computed states of sectors in the sealing pipeline but also time of the day, Filecoin price, etc....
@@ -72,7 +72,49 @@ The storage acceptance logic is based on the following components:
 
 ### Variables
 
-#### Sealing pipeline - sector states
+#### Curio specific
+
+##### Sealing pipeline - Deal states
+
+These variables correspond to the states of the deals within the sealing pipeline, excluding errors or faulty states.
+
+{{< alert icon="tip" >}}
+Theses variables are expressed in number of deals, represented as an integer.
+{{< /alert >}}
+
+| Value | Description
+| --- | --- | --- |
+| Waiting download (accepted)| Deals that have been accepted but not yet downloaded (online + offline deals)
+| Downloading| Online deals that are actually downloading|
+| Publishing | Online deals that are downloaded but not published onChain yet
+| Sealing | Deals in the sealing pipeline not proving yet
+
+##### Sealing pipeline - Sector states
+
+These variables correspond to the states of the task within the sealing pipeline; tasks are grouped by states : running, pending or failed.
+
+{{< alert icon="tip" >}}
+Theses variables are expressed in number of tasks, represented as an integer.
+{{< /alert >}}
+
+| Value | Description
+| --- | --- |
+ANY running tasks|Sum of all running tasks|
+ANY pending tasks|Sum of all pending tasks|
+ANY failed tasks|Sum of all failed tasks|
+SDR||
+Trees||
+PrecommitMsg||
+WaitSeed||
+PoRep||
+CommitMsg||
+Encode||
+Prove||
+Submit||
+MoveStorage||
+
+#### Boost specific
+##### Sealing pipeline - sector states
 
 These variables correspond to the states within the sealing pipeline, excluding errors or faulty states.
 
@@ -128,7 +170,7 @@ Theses variables are expressed in number of sectors, represented as an integer.
 | AbortUpgrade | /
 | ReceiveSector | for external import
 
-#### Sealing pipeline - sector states errors
+##### Sealing pipeline - sector states errors
 
 These variables correspond to number of sectors in error.
 

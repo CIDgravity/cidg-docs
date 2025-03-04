@@ -1,7 +1,7 @@
 ---
-title: "Setup CIDgravity connector"
-description: "This guide outlines the essential steps required to configure the CIDgravity connector in conjunction with a Boost node."
-lead: "To communicate with CIDgravity, a connector needs to be deployed on the miner markets node (boost / dropplet)."
+title: "Setup CIDgravity connectivity"
+description: "This guide outlines the essential steps required to configure CIDgravity in conjunction with the market node (Curio-market, boost, dropplet)."
+lead: "To communicate with CIDgravity, a connector needs to be deployed on the miner markets node (boost / dropplet). Curio is natively integrating with CIDgravity, the CIDgravity connector is not needed."
 draft: false
 images: []
 menu:
@@ -11,6 +11,12 @@ menu:
 weight: 102
 toc: true
 ---
+
+## For Curio
+
+Only the CIDgravity token is needed to setup the connectivity
+
+## For Boost and Dropplet
 
 The CIDgravity connector is an unprivileged open source python script. It leverages the standard dealFilter hooks called on each deal request.
 
