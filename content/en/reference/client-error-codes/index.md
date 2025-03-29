@@ -30,3 +30,4 @@ These codes will not change overtime and are designed to give to clients the abi
 |DEAL_TYPE_NOT_ACCEPTED     | The provider does not accept this type of deal (verified / transport / size / diration / etc... ), either try changing parameters or contact the storage provider |
 |PRICE_TOO_LOW              | The provider accepts this type of deal, but the price offered is too low. Refer to the minimum required price in the response |
 |PIECE_CID_DUPLICATED       | This provider has already received a deal from your address with the piece CID (API only)|
+|UNSUPPORTED_TRANSFER_PROTOCOL       | The provider does not support the protocol used to send the proposal (e.g., Curio Server does not support libp2p and GraphSync) |
