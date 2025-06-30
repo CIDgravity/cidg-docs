@@ -8,7 +8,7 @@ menu:
     nextcloud-users:
         parent: "nextcloud-users-filecoin"
         identifier: "nextcloud-users-filecoin-requirements"
-weight: 201
+weight: 200
 toc: true
 ---
 
