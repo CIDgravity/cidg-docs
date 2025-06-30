@@ -1,3 +1,16 @@
+--- 
+title: "Installation" 
+description: "CIDgravity as a Netcloud service"
+lead: "This guide describes how you configure Nextcloud CIDgravity app in order to onboard data to Filecoin." 
+draft: false 
+images: [] 
+menu: 
+   nextcloud-users: 
+       parent: "nextcloud-users-filecoin" 
+       identifier: "nextcloud-users-filecoin-installation" 
+weight: 201 
+toc: true
+---
 # CIDGravity Nextcloud Installation Guide
 
 Below are step-by-step images documenting the CIDGravity Nextcloud installation process.
