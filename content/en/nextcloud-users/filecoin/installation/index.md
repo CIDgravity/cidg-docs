@@ -1,7 +1,8 @@
 --- 
 title: "Installation" 
 description: "CIDgravity as a Netcloud service"
-lead: "This guide describes how you configure Nextcloud CIDgravity app in order to onboard data to Filecoin." 
+lead: "This guide describes how you configure Nextcloud CIDgravity app in order to onboard data to Filecoin.
+Below are step-by-step images documenting the CIDGravity Nextcloud installation process."
 draft: false 
 images: [] 
 menu: 
@@ -11,156 +12,126 @@ menu:
 weight: 201 
 toc: true
 ---
-# CIDGravity Nextcloud Installation Guide
+## 1. Create your CIDGravity Account
 
-Below are step-by-step images documenting the CIDGravity Nextcloud installation process.
-
----
-
-## Create your CIDGravity Account
-
-### Step 1
-![Step 1](img/install_01.png)  
-*Description: Please use a web browser to access https://nextcloud.twinquasar.io*
+### 1.1 Please use a web browser to access https://nextcloud.twinquasar.io
+[![Step 1](img/install_01.png)](img/install_01.png)
 
 ---
 
-### Step 2
-![Step 2](img/install_02.png)  
-*Description: Click on the Register link*
+### 1.2 Click on the Register link
+[![Step 2](img/install_02.png)](img/install_02.png)
 
 ---
 
-### Step 3
-![Step 3](img/install_03.png)  
-*Description: Enter your email address and click the request verification link*
+### 1.3 Enter your email address and click the request verification link
+[![Step 3](img/install_03.png)](img/install_03.png)
 
 ---
 
-### Step 4
-![Step 4](img/install_04.png)  
-*Description: Copy/Paste the verification code you received by mail and click the Verify link*
+### 1.4 Copy/Paste the verification code you received by mail and click the Verify link
+[![Step 4](img/install_04.png)](img/install_04.png)
 
 ---
 
-### Step 5
-![Step 5](img/install_05.png)  
-*Description: Please confirm your login name, full name and password and then click the create account button*
+### 1.5 Please confirm your login name, full name and password and then click the create account button
+[![Step 5](img/install_05.png)](img/install_05.png)
 
 ---
 
-### Step 6
-![Step 6](img/install_06.png)  
-*Description: Your account has been created and you're logged, you can log off and leave this page*
+### 1.6 Your account has been created and you're logged, you can log off and leave this page
+[![Step 6](img/install_06.png)](img/install_06.png)
 
 ---
 
-## Configure your dedicated Nextcloud instance to act as a relay to CIDGravity nextcloud server
+## 2. Configure your dedicated Nextcloud instance to act as a relay to CIDGravity nextcloud server
 
-### Step 7
-![Step 7](img/install_07.png)  
-*Description: Create an admin login and password and click the install link*
-
----
-
-### Step 8
-![Step 8](img/install_08.png)  
-*Description: You may skip default recommanded apps, they are not required*
+### 2.1 Create an admin login and password and click the install link
+[![Step 7](img/install_07.png)](img/install_07.png)
 
 ---
 
-### Step 9
-![Step 9](img/install_09.png)  
-*Description: Click to the Apps menu top right of the screen*
+### 2.2 You may skip default recommanded apps, they are not required
+[![Step 8](img/install_08.png)](img/install_08.png)
 
 ---
 
-### Step 10
-![Step 10](img/install_10.png)  
-*Description: Click the Disabled apps menu on the left menu*
+### 2.3 Click to the Apps menu top right of the screen*
+[![Step 9](img/install_09.png)](img/install_09.png)
 
 ---
 
-### Step 11
-![Step 11](img/install_11.png)  
-*Description: Click the Enable button on the right of the External storage support app*
+### 2.4 Click the Disabled apps menu on the left menu
+[![Step 10](img/install_10.png)](img/install_10.png)
 
 ---
 
-### Step 12
-![Step 12](img/install_12.png)  
-*Description: Click the search app menu on the left*
+### 2.5 Click the Enable button on the right of the External storage support app
+[![Step 11](img/install_11.png)](img/install_11.png)
 
 ---
 
-### Step 13
-![Step 13](img/install_13.png)  
-*Description: Top right you may search for cidgravity app*
+### 2.6 Click the search app menu on the left
+[![Step 12](img/install_12.png)](img/install_12.png)
 
 ---
 
-### Step 14
-![Step 14](img/install_14.png)  
-*Description: Click the download and enable link right to the CIDgravity - IPFS/Filecoin external storage app*
+### 2.7 Top right you may search for cidgravity app
+[![Step 13](img/install_13.png)](img/install_13.png)
 
 ---
 
-### Step 15
-![Step 15](img/install_15.png)  
-*Description: Click on the Administration settings in top right menu*
+### 2.8 Click the download and enable link right to the CIDgravity - IPFS/Filecoin external storage app
+[![Step 14](img/install_14.png)](img/install_14.png)
 
 ---
 
-### Step 16
-![Step 16](img/install_16.png)  
-*Description: Click on the External storage link in the Administration panel within the left menu*
+### 2.9 Click on the Administration settings in top right menu
+[![Step 15](img/install_15.png)](img/install_15.png)
 
 ---
 
-### Step 17
-![Step 17](img/install_17.png)  
-*Description: fill the Folder Name field and the login/password field with the credentials you've setup on https://nextcloud.twinquasar.io. You may select the "All people" checkbox to allow other users of your nextcloud instance to access the CIDGravity external storage and then click on the validation button on the right of the external storage settings box*
+### 2.10 Click on the External storage link in the Administration panel within the left menu
+[![Step 16](img/install_16.png)](img/install_16.png)
 
 ---
 
-### Step 18
-![Step 18](img/install_18.png)  
-*Description: Nextcloud ask for the password of current account to allow change of administration settings*
+### 2.11 fill the Folder Name field and the login/password field with the credentials you've setup on https://nextcloud.twinquasar.io. You may select the "All people" checkbox to allow other users of your nextcloud instance to access the CIDGravity external storage and then click on the validation button on the right of the external storage settings box
+[![Step 17](img/install_17.png)](img/install_17.png)
 
 ---
 
-### Step 19
-![Step 19](img/install_19.png)  
-*Description: A green arrow appears on the left of the box to confirm authentication and access to CIDGravity external storage was a success*
-
-## Try to upload a file and to access CIDGravity metadata for file storage
+### 2.12 Nextcloud ask for the password of current account to allow change of administration settings
+[![Step 18](img/install_18.png)](img/install_18.png)
 
 ---
 
-### Step 20
-![Step 20](img/install_20.png)  
-*Description: Click the Files menu top left of the screen*
+### 2.13 A green arrow appears on the left of the box to confirm authentication and access to CIDGravity external storage was a success
+[![Step 19](img/install_19.png)](img/install_19.png)
+
+## 3. Try to upload a file and to access CIDGravity metadata for file storage
 
 ---
 
-### Step 21
-![Step 21](img/install_21.png)  
-*Description: Enter the CIDGravity external storage clicking on the Folder name you've setup in the external storage admnistration panel*
+### 3.1 Click the Files menu top left of the screen
+[![Step 20](img/install_20.png)](img/install_20.png)
 
 ---
 
-### Step 22
-![Step 22](img/install_22.png)  
-*Description: Click to the new link and upload files sub menu in order you choose a local file to be uploaded on the external storage*
+### 3.2 Enter the CIDGravity external storage clicking on the Folder name you've setup in the external storage admnistration panel
+[![Step 21](img/install_21.png)](img/install_21.png)
 
 ---
 
-### Step 23
-![Step 23](img/install_23.png)  
-*Description: Once the document is uploaded you may cick on the dots link on the right and select Open details in the sub menu*
+### 3.3 Click to the new link and upload files sub menu in order you choose a local file to be uploaded on the external storage
+[![Step 22](img/install_22.png)](img/install_22.png)
 
 ---
 
-### Step 24
-![Step 24](img/install_24.png)  
-*Description: You may consult the CIDGravity metadata, CID, Status, Replication*
+### 3.4 Once the document is uploaded you may cick on the dots link on the right and select Open details in the sub menu
+[![Step 23](img/install_23.png)](img/install_23.png)
+
+---
+
+### 3.5 You may consult the CIDGravity metadata, CID, Status, Replication
+[![Step 24](img/install_24.png)](img/install_24.png)
