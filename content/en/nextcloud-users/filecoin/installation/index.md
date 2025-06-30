@@ -1,7 +1,7 @@
 ---
 title: "Installation"
-description: "CIDGravity as a Nextcloud service"
-lead: "This guide describes how to configure the CIDGravity app for Nextcloud to onboard data to Filecoin. Below are step-by-step screenshots documenting the installation process."
+description: "CIDgravity as a Nextcloud service"
+lead: "This guide describes how to configure the CIDgravity app for Nextcloud to onboard data to Filecoin. Below are step-by-step screenshots documenting the installation process."
 draft: false
 images: []
 menu:
@@ -12,7 +12,7 @@ weight: 201
 toc: true
 ---
 
-## 1. Create Your CIDGravity Account
+## 1. Create Your CIDgravity Account
 
 ### 1.1 Open the Registration Page
 
@@ -65,7 +65,7 @@ Set a username and password, then click **Install**.
 
 ### 2.2 Skip Recommended Apps
 
-They are not required for CIDGravity.  
+They are not required for CIDgravity.  
 <a href="img/install_08.png" target="_blank"><img src="img/install_08.png" alt="Step 8" width="640"></a>
 
 ---
@@ -92,16 +92,16 @@ Click the **Enable** button next to the app.
 
 ---
 
-### 2.7 Search for the "CIDGravity" App
+### 2.7 Search for the "CIDgravity" App
 
 Use the top-right search bar.  
 <a href="img/install_13.png" target="_blank"><img src="img/install_13.png" alt="Step 13" width="640"></a>
 
 ---
 
-### 2.8 Install the CIDGravity App
+### 2.8 Install the CIDgravity App
 
-Click **Download and Enable** next to "CIDGravity – IPFS/Filecoin External Storage".  
+Click **Download and Enable** next to "CIDgravity – IPFS/Filecoin External Storage".  
 <a href="img/install_14.png" target="_blank"><img src="img/install_14.png" alt="Step 14" width="640"></a>
 
 ---
