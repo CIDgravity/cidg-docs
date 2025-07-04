@@ -2,5 +2,16 @@
     "GitHooks.hooksDirectory": "/home/florian/CIDgravity/cidg-docs/.git/hooks",
     "prettier.bracketSameLine": true,
     "prettier.requireConfig": true,
-    "prettier.useTabs": true
+    "prettier.useTabs": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/.retool_types/**": true,
+        "**/*tsconfig.json": true,
+        ".cache": true,
+        "retool.config.json": true
+    }
 }
