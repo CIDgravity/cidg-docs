@@ -5,8 +5,8 @@
   external = false
 
 [[main]]
-  name = "Nextcloud users"
-  url = "/nextcloud-users/filecoin/requirements/"
+  name = "Nextcloud"
+  url = "/nextcloud/get-started/requirements/"
   weight = 200
   external = false
 
@@ -40,11 +40,17 @@
   identifier = "storage-providers-analytics"
   url = "/storage-providers/analytics"
 
-[[nextcloud-users]]
-  name = "Filecoin"
-  weight = 200
-  identifier = "nextcloud-users-filecoin"
-  url = "/nextcloud-users/filecoin"
+[[nextcloud]]
+  name = "Get started"
+  weight = 201
+  identifier = "nextcloud-get-started"
+  url = "/nextcloud/get-started"
+
+[[nextcloud]]
+  name = "Advanced users"
+  weight = 202
+  identifier = "nextcloud-advanced-users"
+  url = "/nextcloud/advanced-users"
 
 [[reference]]
   name = "Client error codes"

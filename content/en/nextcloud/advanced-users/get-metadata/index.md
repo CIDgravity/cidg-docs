@@ -1,65 +1,49 @@
 ---
 title: "Get metadata"
-description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "File Metadata contains, all information related to files or folders state on Filecoin and retrievability."
+description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
 draft: false
 images: []
 menu:
-    nextcloud-users:
-        parent: "nextcloud-users-filecoin"
-        identifier: "nextcloud-users-filecoin-get-metadata"
-weight: 203
+    nextcloud:
+        parent: "nextcloud-advanced-users"
+        identifier: "nextcloud-advanced-users-get-metadata"
+weight: 103
 toc: true
 ---
 
 ### Requirement
 
-To access file or folder metadata, you need the `fileId`. The `fileId` is a unique identifier provided by Nextcloud when interacting with its WebDAV server. There are 3 ways to fetch the metadata:
+To access file or folder metadata, you need the `filePath`. The `filePath` is a path where the file is located on Nextcloud when interacting with its WebDAV server. There are 3 ways to fetch the metadata:
 
 #### Option 1: Nextcloud WebApp
 
 When browsing your Files, you can extract the fileId from the URL
 
-{{< img src="get-fileid.png" alt="Get fileId From URI" >}}
+{{< img src="get-filepath.png" alt="Get filePath From URI" >}}
+
+To get the entire filePath, you will need to add the fileName after the URI
+In my example, the filePath will be
+
+```
+/PublicFilecoin/Documentation/01.jpg
+```
 
 #### Option 2: Fetching File Metadata Using HTTP Headers
 
-When you copy, create, or move a file in Nextcloud, the `OC-FileId` is sent in the response headers.
+When you copy, create, or move a file in Nextcloud, the `filePath` is equals to the path where you want to store the file.
 
 ##### Example:
 
 ```bash
 curl -siu ‘<YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD>’ \
 -T <PATH_OF_LOCAL_FILE_TO_UPLOAD> \
-"https://nextcloud.twinquasar.io/remote.php/dav/files/<YOUR_NEXTCLOUD_USERNAME>/Public%20Filecoin/"
+"https://nextcloud.twinquasar.io/remote.php/dav/files/<YOUR_NEXTCLOUD_USERNAME>/PublicFilecoin/"
 ```
 
-The headers returned will include something like:
+In this example the filePath will be :
 
 ```
-OC-FileId: 1234567890
-```
-
-#### Option 3: Fetching File Metadata Using a WebDAV `PROPFIND` Query
-
-You can make a WebDAV query with a curl request to fetch the fileId.
-
-##### Example Curl Command:
-
-```bash
-curl -su '<YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD>’ \
--X PROPFIND \
--H "Depth: 0" \
--d '<?xml version="1.0"?><d:propfind xmlns:d="DAV:" xmlns:oc="http://owncloud.org/ns"><d:prop><oc:fileid/></d:prop></d:propfind>' \
-"https://nextcloud.twinquasar.io/remote.php/dav/files/<YOUR_NEXTCLOUD_USERNAME>/Public%20Filecoin/<FILE_PATH>“
-```
-
-The response contains the fileId “oc:fileid”
-
-**Hint : you can use the command xmllint to extract that value**
-
-```
-xmllint --xpath "//*[local-name()='fileid']/text()" -
+/PublicFilecoin/<LOCAL_FILE_NAME_TO_UPLOAD_WITH_EXTENSION>
 ```
 
 ### get-file-metadata API call
@@ -79,15 +63,18 @@ Deals provide resilience by distributing file storage across multiple providers,
 You can track the status of a file or folder tree in real-time using the following request:
 
 ```bash
-curl -u '<YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD>' \
--X GET "https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity_gateway/get-file-metadata?fileId=<FILE_ID>"
+curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file-metadata \
+  -u <YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD> \        
+  -H "OCS-APIRequest: true" \
+  -H "Content-Type: application/json" \
+  -d '{"filePath": "<FILE_PATH>'
 ```
 
 | Component                   | Description                                 |
 |-----------------------------|---------------------------------------------|
 | `<YOUR_NEXTCLOUD_USERNAME>` | Your Nextcloud username for authentication. |
 | `<YOUR_NEXTCLOUD_PASSWORD>` | Your Nextcloud password for authentication. |
-| `fileId`                    | The unique identifier of the file           |
+| `<FILE_PATH>`                  | The path of the uploaded file               |
 
 ### Response Format
 
@@ -166,35 +153,81 @@ The API returns a detailed response containing file metadata.
   "success": true,
   "metadata": {
     "file": {
-      "cid": "QmYLX2WS5Yb2SsUe8iL53osM9Wgx5xFpTrtr4QiN5nouxH",
+      "cid": "bafybeidq6kdr4nclzhx3fdmosiivwuqoz5gtqr46564ycbxgekli7rvb2m",
+      "path": "/nextcloud-1/florianruen/Documentation",
+      "file": "01.jpg",
       "details": {
         "groups": [
           {
-            "pieceCid": "baga6ea4seaqlne54hvmeopx2yh335nay2oyae4crwpqqyosscwdz5tw7lix32pa",
+            "pieceCid": "baga6ea4seaqb2krvlu7waw267c7opqh6xb5bvjxcjwc5un764wq34jtignehygq",
             "deals": [
               {
+                "provider": "f03084393",
+                "endEpoch": 6599307,
+                "dealId": 119988252,
+                "isRetrievable": true,
+                "state": "active"
+              },
+              {
                 "provider": "f010479",
-                "endEpoch": 5968776,
-                "dealId": 97326078,
+                "endEpoch": 6599308,
+                "dealId": 119988665,
+                "isRetrievable": true,
+                "state": "active"
+              },
+              {
+                "provider": "f0187709",
+                "endEpoch": 6599308,
+                "dealId": 119998759,
+                "isRetrievable": false,
+                "state": "active"
+              },
+              {
+                "provider": "f02639429",
+                "endEpoch": 6599308,
+                "dealId": 119996721,
+                "isRetrievable": true,
+                "state": "active"
+              },
+              {
+                "provider": "f020378",
+                "endEpoch": 6599311,
+                "dealId": 119993466,
+                "isRetrievable": false,
+                "state": "active"
+              },
+              {
+                "provider": "f03134685",
+                "endEpoch": 6599311,
+                "dealId": 119998032,
                 "isRetrievable": true,
                 "state": "active"
               },
               {
                 "provider": "f0717969",
-                "endEpoch": 5968776,
-                "dealId": 97529013,
+                "endEpoch": 6602250,
+                "dealId": 120141573,
+                "isRetrievable": false,
+                "state": "active"
+              },
+              {
+                "provider": "f01249",
+                "endEpoch": 6602250,
+                "dealId": 120136227,
                 "isRetrievable": true,
                 "state": "active"
               }
             ],
             "state": "offloaded",
-            "retrievableCopies": 8
+            "retrievableCopies": 5
+          },
+          {
+            "state": "writable",
+            "retrievableCopies": 0
           }
         ],
-        "state": "offloaded",
-        "retrievableCopies": 8,
-        "expirationEpoch": 5971777,
-        "expirationTimestamp": 1777459710
+        "state": "staging",
+        "retrievableCopies": 0
       }
     }
   }

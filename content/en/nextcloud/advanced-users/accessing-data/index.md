@@ -1,14 +1,13 @@
 ---
 title: "Accessing Data"
-description: "CIDgravity application serves as a comprehensive tool for managing and monitoring of : clients, pricing, acceptance criterias, avalability and activity."
-lead: "There are different ways to access your data"
+description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
 draft: false
 images: []
 menu:
-    nextcloud-users:
-        parent: "nextcloud-users-filecoin"
-        identifier: "nextcloud-users-filecoin-accessing-data"
-weight: 204
+    nextcloud:
+        parent: "nextcloud-advanced-users"
+        identifier: "nextcloud-advanced-users-accessing-data"
+weight: 104
 toc: true
 ---
 

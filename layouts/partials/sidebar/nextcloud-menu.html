@@ -1,8 +1,8 @@
 {{ if .Site.Params.options.collapsibleSidebar -}}
     <ul class="list-unstyled collapsible-sidebar">
         {{ $currentPage := . -}}
-        {{ range $index, $element := index .Site.Menus "nextcloud-users" -}}
-        {{- $active := or ($currentPage.IsMenuCurrent "nextcloud-users" .) ($currentPage.HasMenuCurrent "nextcloud-users" .) -}}
+        {{ range $index, $element := index .Site.Menus "nextcloud" -}}
+        {{- $active := or ($currentPage.IsMenuCurrent "nextcloud" .) ($currentPage.HasMenuCurrent "nextcloud" .) -}}
         {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
             <li class="mb-1">
                 <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#section-{{ .Identifier }}" aria-expanded="{{ if $active }}true{{ else }}false{{ end }}">
@@ -13,7 +13,7 @@
                     <div class="collapse{{ if $active }} show{{ end }}" id="section-{{ .Identifier }}">
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                             {{ range .Children -}}
-                                {{- $active := or ($currentPage.IsMenuCurrent "nextcloud-users" .) ($currentPage.HasMenuCurrent "nextcloud-users" .) -}}
+                                {{- $active := or ($currentPage.IsMenuCurrent "nextcloud" .) ($currentPage.HasMenuCurrent "nextcloud" .) -}}
                                 {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
                                 <li><a class="docs-link rounded{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                             {{ end -}}
@@ -26,7 +26,7 @@
 {{ else -}}
     {{ $currentPage := . -}}
 
-    {{ range index .Site.Menus "nextcloud-users" -}}
+    {{ range index .Site.Menus "nextcloud" -}}
 
         {{ $numberOfChildrens := 0 }}
         {{ range .Children -}}
@@ -37,13 +37,13 @@
             <h3 class="h6 text-uppercase">{{ .Name }}</h3>
             <ul class="list-unstyled">
                 {{ range .Children -}}
-                    {{- $active := or ($currentPage.IsMenuCurrent "nextcloud-users" .) ($currentPage.HasMenuCurrent "nextcloud-users" .) -}}
+                    {{- $active := or ($currentPage.IsMenuCurrent "nextcloud" .) ($currentPage.HasMenuCurrent "nextcloud" .) -}}
                     {{- $active = or $active (eq $currentPage.Section .Identifier) -}}
                     <li><a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">{{ .Name }}</a></li>
                 {{ end -}}
             </ul>
         {{ else -}}
-            {{- $active := or ($currentPage.IsMenuCurrent "nextcloud-users" .) ($currentPage.HasMenuCurrent "nextcloud-users" .) -}}
+            {{- $active := or ($currentPage.IsMenuCurrent "nextcloud" .) ($currentPage.HasMenuCurrent "nextcloud" .) -}}
             <h3>
                 <a class="docs-link{{ if $active }} active{{ end }}" href="{{ .URL | relURL }}">
                     {{ .Name }}
