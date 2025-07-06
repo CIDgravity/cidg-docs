@@ -6,24 +6,22 @@ images: []
 menu:
   nextcloud:
     parent: "nextcloud-advanced-users"
-    identifier: "nextcloud-advanced-users-offload"
+    identifier: "nextcloud-advanced-users-offload-data-to-filecoin"
 weight: 102
 toc: true
 ---
 
-Once everything is configured, you can start offloading files to **Filecoin** using various methods. This includes the **Web Interface**, **Nextcloud apps**, **WebDAV integration**, or programmatically using **Rclone**, **Node.js**, **Golang**, or **Python**.
+Once everything is configured, you can start offloading files to Filecoin using various methods. This includes tools such as Web Interface, Nextcloud apps, or programmatically using Rclone, Node.js, Golang, or Python.
 
----
 
-### Using the Nextcloud Web Interface
+## Using the Nextcloud Web Interface
 
 The simplest way to upload files is via the **Nextcloud WebUI**. Just drag and drop your file.
 
 {{< img src="drop-file.jpg" alt="Upload a File with Nextcloud" >}}
 
----
 
-### Using Nextcloud Mobile/Desktop Apps
+## Using Nextcloud apps
 
 Nextcloud provides native apps that support file synchronization and upload across platforms:
 
@@ -32,9 +30,8 @@ Nextcloud provides native apps that support file synchronization and upload acro
 
 🔗 [Download Nextcloud Apps](https://nextcloud.com/files/)
 
----
 
-### Using Windows WebDAV Integration
+## Using Windows file explorer
 
 Windows supports WebDAV natively through the "Map Network Drive" feature.
 
@@ -47,9 +44,8 @@ Windows supports WebDAV natively through the "Map Network Drive" feature.
 3. Authenticate with your Nextcloud credentials.
 4. Upload files into `/Public Filecoin`.
 
----
 
-### Using macOS Finder (WebDAV)
+## Using macOS Finder
 
 1. Open **Finder**
 2. Press `Cmd + K` to open the **Connect to Server** window
@@ -63,19 +59,18 @@ Windows supports WebDAV natively through the "Map Network Drive" feature.
 
 {{< video src="macos-native.mp4" attributes="controls" width="960" >}}
 
----
 
-### Using Rclone (Command-Line Tool)
+## Using Rclone
 
 [Rclone](https://rclone.org/) is a versatile tool for syncing and managing remote storage.
 
-#### Install Rclone:
+### Install
 
 ```bash
 curl https://rclone.org/install.sh | sudo bash
 ```
 
-#### Configure Rclone for Nextcloud:
+### Configure
 
 ```bash
 rclone config
@@ -91,27 +86,26 @@ rclone config
 * Confirm config: `y`
 * Quit: `q`
 
-#### Example: List folders
+### List folders
 
 ```bash
 rclone lsd cidgravity:
 ```
 
-#### Example: Sync a local folder to Filecoin
+### Sync a local folder to Filecoin
 
 ```bash
 rclone sync /local/path "cidgravity:/Public Filecoin/"
 ```
 
-#### Example: Mount the directory
+### Mount the directory
 
 ```bash
 rclone mount "cidgravity:/Public Filecoin/" /mnt/filecoin --vfs-cache-mode writes &
 ```
 
----
 
-### Using Node.js
+## Using Node.js
 
 ```javascript
 import * as webdav from "webdav";
@@ -133,9 +127,8 @@ async function uploadFile() {
 uploadFile();
 ```
 
----
 
-### Using Golang
+## Using Golang
 
 ```go
 package main
@@ -169,9 +162,8 @@ func main() {
 }
 ```
 
----
 
-### Using Python
+## Using Python
 
 ```python
 from webdav3.client import Client
@@ -186,9 +178,8 @@ client = Client(options)
 client.upload_sync(remote_path="/file.txt", local_path="<LOCAL_FILE_PATH>")
 ```
 
----
 
-### With Any WebDAV-Compatible App
+## Using any WebDAV compatible app
 
 You can also offload files using any third-party app that supports WebDAV.
 

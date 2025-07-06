@@ -6,42 +6,41 @@ images: []
 menu:
   nextcloud:
     parent: "nextcloud-get-started"
-    identifier: "nextcloud-get-started-usage"
+    identifier: "nextcloud-get-started-add-new-files"
 weight: 104
 toc: true
 ---
 
 Once your CIDgravity storage is set up in Nextcloud, you can easily upload files and view their IPFS metadata. 
 
-Here’s how to get started.
 
-### Open the Files Menu
+### Open the files Menu
 
 From the main dashboard, click the **Files** icon in the top-left corner. This will open your file manager in Nextcloud. 
 
 <img src="img/install_20.png" alt="Open files menu" width="640">
 
-### Enter the CIDgravity Folder
+### Enter the configured folder
 
-Locate and click the folder name you created earlier when configuring external storage (e.g., `IPFS Storage`). 
+Locate and click the folder name you created earlier when configuring external storage (e.g., `IPFS Vault`). 
 
 This is where files will be stored and pinned to IPFS. 
 
 <img src="img/install_21.png" alt="Enter CIDgravity folder" width="640">
 
-### Upload a File
+### Upload a file
 
 To upload a file, click the **+ New** button and choose **Upload file** from the dropdown. Select any file from your device to begin the upload. 
 
 <img src="img/install_22.png" alt="Upload file" width="640">
 
-### Open File Details
+### Open file details
 
 Once your file is uploaded, click the **three dots (⋯)** next to the file name and select **Open details**. This will open a sidebar with additional metadata. 
 
 <img src="img/install_23.png" alt="Open file details" width="640">
 
-### View CIDgravity Metadata
+### Check metadata
 
 In the details panel, you’ll see IPFS-related metadata including:
 

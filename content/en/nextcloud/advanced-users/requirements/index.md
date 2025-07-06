@@ -26,7 +26,7 @@ For more information on these advanced features and pricing, visit [CIDgravity P
 Before starting, ensure the following prerequisites are met:
 
 1. Create an account by [reading this documentation]({{< ref "nextcloud/get-started/create-account/index.md" >}})
-2. Understanding what is a CID on Filecoin by [reading this documentation]({{< ref "nextcloud/get-started/requirements/index.md#what-is-a-cid-content-identifier" >}})
+2. Understanding what is a CID on Filecoin by [reading this documentation]({{< ref "nextcloud/get-started/requirements/index.md#understand-what-is-a-cid" >}})
 3. Follow the documentation below to get the WebDAV URL
 
 ## Get the WebDAV URL for your account:
