@@ -21,25 +21,23 @@ You can transparently browse the files through Nextcloud. Nextcloud retrieves th
 Using our Nextcloud instance provides high bandwidth and low latency leveraging features, like **Sharding** or **Bandwidth Aggregation**. 
 However, you can also leverage any public IPFS gateway or set up your own IPFS node to gain direct access to the data.
 
-### With Public IPFS Gateways
+### With public IPFS Gateways
 
-Any file with `retrievableCopies >= 1` can be browsed via public IPFS gateways. Simply replace `<CID>` with your file's CID.
+Any file with `retrievableCopies >= 1` can be browsed via public IPFS gateways. 
 
-#### Example Public Gateway URL:
+Simply replace `<CID>` with your file's CID.
 
 ```
 https://gateway.pinata.cloud/ipfs/<CID>
 ```
 
-{{< img src="access-from-piniata" alt="Browse from Pinata" >}}
+{{< img src="access-from-pinata" alt="Browse from Pinata" >}}
 
 ### With Kubo Desktop
 
 Any file with `retrievableCopies >= 1` can be accessed using public IPFS gateways. Simply replace `<CID>` with your file's CID.
 
 Kubo Desktop provides an intuitive interface for accessing IPFS data.
-
-#### Steps:
 
 1. Open Kubo Desktop.
 2. Use the CID to fetch your file directly

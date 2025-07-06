@@ -11,28 +11,25 @@ weight: 103
 toc: true
 ---
 
-### Requirement
+## Retrieve the path of the file
 
-To access file or folder metadata, you need the `filePath`. The `filePath` is a path where the file is located on Nextcloud when interacting with its WebDAV server. There are 3 ways to fetch the metadata:
+To access file or folder metadata, you need the path. The `filePath` is a path where the file is located on Nextcloud when interacting with its WebDAV server. There are 2 ways to fetch the metadata:
 
-#### Option 1: Nextcloud WebApp
+### Using Nextcloud WebApp
 
-When browsing your Files, you can extract the fileId from the URL
+When browsing your Files, you can extract the `filePath` from the URL
 
 {{< img src="get-filepath.png" alt="Get filePath From URI" >}}
 
-To get the entire filePath, you will need to add the fileName after the URI
-In my example, the filePath will be
+To get the entire `filePath`, you will need to add the name of the file after the URI. In my example, the value will be
 
 ```
 /PublicFilecoin/Documentation/01.jpg
 ```
 
-#### Option 2: Fetching File Metadata Using HTTP Headers
+### Using curl
 
 When you copy, create, or move a file in Nextcloud, the `filePath` is equals to the path where you want to store the file.
-
-##### Example:
 
 ```bash
 curl -siu ‘<YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD>’ \
@@ -40,19 +37,18 @@ curl -siu ‘<YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD>’ \
 "https://nextcloud.twinquasar.io/remote.php/dav/files/<YOUR_NEXTCLOUD_USERNAME>/PublicFilecoin/"
 ```
 
-In this example the filePath will be :
+In this example the `filePath` will be :
 
 ```
 /PublicFilecoin/<LOCAL_FILE_NAME_TO_UPLOAD_WITH_EXTENSION>
 ```
 
-### get-file-metadata API call
-
+## API call to get file metadata
 
 The main information are : 
-- file.cid
-- file.details.state
-- file.details.retrievableCopies
+- `metadata.file.cid`
+- `metadata.file.details.state`
+- `metadata.file.details.retrievableCopies`
 
 When pulling metadata from a folder, the returned information aggregates all subfolders and files within that folder. This means that querying the top-level folder provides a comprehensive view of the entire dataset, including all contained subfolders and their respective files.
 
@@ -78,7 +74,7 @@ curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file
 
 ### Response Format
 
-### Top-level Fields
+#### Top-level Fields
 
 | Field Name | Type    | Description                                                 |
 |------------|---------|-------------------------------------------------------------|
@@ -87,16 +83,19 @@ curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file
 
 * * *
 
-### Metadata -  (Inside `metadata`)
+#### Metadata
+
+The file details are located inside `metadata`
 
 | Field Name     | Type   | Description                                                          |
 |----------------|--------|----------------------------------------------------------------------|
 | `file.cid`     | string | The CID of the file or folder used to locate it on IPFS or Filecoin. |
 | `file.details` | object | Contains detailed storage and replication metadata.                  |
 
-* * *
+##### File Details
 
-### File Details - (Inside `metadata.file.details`)
+The file details are located inside `metadata.file.details`
+
 
 | Field Name                   | Type    | Description                                                                           |
 |------------------------------|---------|---------------------------------------------------------------------------------------|
@@ -121,9 +120,10 @@ curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file
 |                              |         | \- `"reload"` - The group is reloading for further action.                            |
 | `groups[].retrievableCopies` | integer | Number of retrievable copies in this group on Filecoin.                               |
 
-* * *
+##### Deal Details
 
-### Deal Details (Inside `metadata.file.details.groups[].deals`)
+The deal details are located inside `metadata.file.details.groups[].deals`
+
 
 | Field Name      | Type    | Description                                                         |
 |-----------------|---------|---------------------------------------------------------------------|
@@ -136,7 +136,8 @@ curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file
 |                 |         | \- `"published"` - Deal has been published.                         |
 |                 |         | \- `"active"` - Deal is active and ongoing.                         |
 
-### File states Overview
+##### File states Overview
+
 | State               | Condition                                                                                                                                                                       | Interpretation                                                                                                                   |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | Staging             | At least one group is still in a state that indicates it is not ready for storage operations. This could be a group in states such as `"writable"`, `"full"`, or `"VRCARDone"`. | The file is in the early stage of preparation and hasn't yet started transferring or being offloaded to storage (IPFS/Filecoin). |
@@ -144,7 +145,7 @@ curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file
 | Partially offloaded | All groups have at least one active storage deal.                                                                                                                               | Some groups are already offloaded or engaged with Filecoin storage deals, but the offloading is incomplete across all groups.    |
 | Offloaded           | All groups have fully offloaded their data to the storage network, and no further action is required.                                                                           | The file is now completely stored and all storage deals (or copies) are confirmed.                                               |
 
-#### Response Example
+##### Response Example
 
 The API returns a detailed response containing file metadata.
 

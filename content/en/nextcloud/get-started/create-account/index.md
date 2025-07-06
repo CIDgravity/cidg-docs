@@ -13,7 +13,7 @@ toc: true
 
 To connect CIDgravity with your own **Nextcloud instance** and start storing files on **IPFS**, you’ll first need to create an account on the Twin Quasar Nextcloud server.
 
-### Open the Registration Page
+### Open the registration page
 
 Start by opening a browser and visiting the following registration URL [https://nextcloud.twinquasar.io](https://nextcloud.twinquasar.io)
 
@@ -27,20 +27,20 @@ On the login page, locate and click the **Register** link to begin setting up a 
 
 <img src="img/install_02.png" alt="Click register" width="640">
 
-### Enter Your Email Address
+### Enter your e-mail address
 
 Provide your email address to receive a verification code. This email will also be used for account recovery and notifications. 
 
 <img src="img/install_03.png" alt="Enter email address" width="640">
 
-### Verify Your Email
+### Verify your email
 
 Check your inbox for the code, then return to the page to enter it. Click **Verify** to continue.
 This step ensures your email is valid and accessible. 
 
 <img src="img/install_04.png" alt="Verify email" width="640">
 
-### Complete the Registration
+### Complete
 
 Now finish setting up your account by choosing a **username**, **full name**, and a secure **password**.
 Click **Create Account** to complete the process and access your Nextcloud instance. 
