@@ -1,13 +1,13 @@
 ---
-title: "Offload data to Filecoin"
+title: "3rd parties apps"
 description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
 draft: false
 images: []
 menu:
   nextcloud:
     parent: "nextcloud-advanced-users"
-    identifier: "nextcloud-advanced-users-offload-data-to-filecoin"
-weight: 102
+    identifier: "nextcloud-advanced-users-third-parties-app"
+weight: 202
 toc: true
 ---
 
@@ -18,8 +18,7 @@ Once everything is configured, you can start offloading files to Filecoin using 
 
 The simplest way to upload files is via the **Nextcloud WebUI**. Just drag and drop your file.
 
-{{< img src="drop-file.jpg" alt="Upload a File with Nextcloud" >}}
-
+<img src="drop-file.jpg" alt="Upload a File with Nextcloud" width="640">
 
 ## Using Nextcloud apps
 
@@ -177,11 +176,3 @@ options = {
 client = Client(options)
 client.upload_sync(remote_path="/file.txt", local_path="<LOCAL_FILE_PATH>")
 ```
-
-
-## Using any WebDAV compatible app
-
-You can also offload files using any third-party app that supports WebDAV.
-
-📚 Explore compatible apps:
-👉 [WebDAV on Wikipedia](https://en.wikipedia.org/wiki/WebDAV)
