@@ -6,7 +6,7 @@
 
 [[main]]
   name = "Nextcloud"
-  url = "/nextcloud/get-started/requirements/"
+  url = "/nextcloud/get-started/overview/"
   weight = 200
   external = false
 

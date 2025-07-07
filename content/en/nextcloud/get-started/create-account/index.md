@@ -7,42 +7,28 @@ menu:
   nextcloud:
     parent: "nextcloud-get-started"
     identifier: "nextcloud-get-started-create-account"
-weight: 102
+weight: 103
 toc: true
 ---
 
-To connect CIDgravity with your own **Nextcloud instance** and start storing files on **IPFS**, you’ll first need to create an account on the Twin Quasar Nextcloud server.
+To connect CIDgravity with your own **Nextcloud instance** and start storing files on **IPFS**, you’ll first need to create an account on CIDgravity.
 
-### Open the registration page
+{{< alert icon="info" >}}
+With your account, you get 25 GB of free storage. Need more space? Upgrade easily by [following this simple procedure.]({{< ref "nextcloud/get-started/add-more-capacity/index.md" >}})
+{{< /alert >}}
 
-Start by opening a browser and visiting the following registration URL [https://nextcloud.twinquasar.io](https://nextcloud.twinquasar.io)
+### Open the registration page and verify your e-mail address
 
-This is where you’ll begin the account creation process. 
-
-<img src="img/install_01.png" alt="Open registration page" width="640">
-
-### Click on **Register**
-
-On the login page, locate and click the **Register** link to begin setting up a new account. 
-
-<img src="img/install_02.png" alt="Click register" width="640">
-
-### Enter your e-mail address
+Start by opening a browser and visiting the following URL [https://nextcloud.twinquasar.io](https://nextcloud.twinquasar.io/index.php/apps/registration/)
 
 Provide your email address to receive a verification code. This email will also be used for account recovery and notifications. 
 
-<img src="img/install_03.png" alt="Enter email address" width="640">
+<img src="img/install_03.png" alt="Click register" width="640">
 
-### Verify your email
-
-Check your inbox for the code, then return to the page to enter it. Click **Verify** to continue.
-This step ensures your email is valid and accessible. 
-
-<img src="img/install_04.png" alt="Verify email" width="640">
-
-### Complete
+### Fill account details
 
 Now finish setting up your account by choosing a **username**, **full name**, and a secure **password**.
 Click **Create Account** to complete the process and access your Nextcloud instance. 
 
 <img src="img/install_05.png" alt="Complete registration" width="640">
+

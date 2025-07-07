@@ -1,13 +1,13 @@
 ---
-title: "Get metadata"
+title: "API integrations"
 description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
 draft: false
 images: []
 menu:
     nextcloud:
         parent: "nextcloud-advanced-users"
-        identifier: "nextcloud-advanced-users-get-metadata"
-weight: 103
+        identifier: "nextcloud-advanced-users-api-integration"
+weight: 203
 toc: true
 ---
 
