@@ -1,5 +1,5 @@
 ---
-title: "API integrations"
+title: "API integration"
 description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
 draft: false
 images: []
@@ -60,10 +60,10 @@ You can track the status of a file or folder tree in real-time using the followi
 
 ```bash
 curl -X POST https://nextcloud.twinquasar.io/ocs/v2.php/apps/cidgravity/get-file-metadata \
-  -u <YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD> \        
+  -u <YOUR_NEXTCLOUD_USERNAME>:<YOUR_NEXTCLOUD_PASSWORD> \
   -H "OCS-APIRequest: true" \
   -H "Content-Type: application/json" \
-  -d '{"filePath": "<FILE_PATH>'
+  -d '{"filePath": "<FILE_PATH>"}'
 ```
 
 | Component                   | Description                                 |

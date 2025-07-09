@@ -1,7 +1,7 @@
 ---
 title: "Add more capacity"
 description: "CIDgravity can be easily setup with Nextcloud to store your files on IPFS"
-lead: "When your storage limit is reached, you can upgrade your subscription to access additional space."
+lead: "When your storage limit is reached, you can upgrade your subscription to extend your available storage capacity."
 draft: false
 images: []
 menu:
@@ -12,11 +12,9 @@ weight: 106
 toc: true
 ---
 
-## Go to subscription page
+## Visit subscription page
 
-On the top navigation bar, click on **"Subscription"** to navigate to the subscription page.
-
-<img src="img/subscription-page.png" alt="Subscription page" width="640">
+Visit CIDgravity subscription: [https://nexcloud.twinquasar.io/index.php/apps/subscription/](https://nexcloud.twinquasar.io/index.php/apps/subscription)
 
 ## Select new capacity
 
