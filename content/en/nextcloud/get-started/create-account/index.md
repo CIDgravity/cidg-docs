@@ -14,7 +14,7 @@ toc: true
 To connect CIDgravity with your own **Nextcloud instance** and start storing files on **IPFS**, you’ll first need to create an account on CIDgravity.
 
 {{< alert icon="info" >}}
-With your account, you get 25 GB of free storage. Need more space? Upgrade easily by [following this simple procedure.]({{< ref "nextcloud/get-started/add-more-capacity/index.md" >}})
+With your account, you get 2 GB of free storage. Need more space? Upgrade easily by [following this simple procedure.]({{< ref "nextcloud/get-started/add-more-capacity/index.md" >}})
 {{< /alert >}}
 
 ### Open the registration page and verify your e-mail address

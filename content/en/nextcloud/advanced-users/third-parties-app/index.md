@@ -29,7 +29,6 @@ Nextcloud provides native apps that support file synchronization and upload acro
 
 🔗 [Download Nextcloud Apps](https://nextcloud.com/files/)
 
-
 ## Using Windows file explorer
 
 Windows supports WebDAV natively through the "Map Network Drive" feature.
@@ -42,7 +41,6 @@ Windows supports WebDAV natively through the "Map Network Drive" feature.
    ```
 3. Authenticate with your Nextcloud credentials.
 4. Upload files into `/Public Filecoin`.
-
 
 ## Using macOS Finder
 
@@ -57,7 +55,6 @@ Windows supports WebDAV natively through the "Map Network Drive" feature.
 5. Drag files into `/Public Filecoin`
 
 {{< video src="macos-native.mp4" attributes="controls" width="960" >}}
-
 
 ## Using Rclone
 
@@ -103,7 +100,6 @@ rclone sync /local/path "cidgravity:/Public Filecoin/"
 rclone mount "cidgravity:/Public Filecoin/" /mnt/filecoin --vfs-cache-mode writes &
 ```
 
-
 ## Using Node.js
 
 ```javascript
@@ -125,7 +121,6 @@ async function uploadFile() {
 }
 uploadFile();
 ```
-
 
 ## Using Golang
 
@@ -160,7 +155,6 @@ func main() {
     log.Println("Upload successful!")
 }
 ```
-
 
 ## Using Python
 

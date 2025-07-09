@@ -1,7 +1,7 @@
 ---
 title: "Setup CIDgravity app"
 description: "Connect CIDgravity to your Nextcloud instance and start storing files on IPFS."
-lead: "The CIDgravity app is the component allowing your Nextcloud instance to talk to Filecoin."
+lead: "The CIDgravity app is the component allowing your Nextcloud instance to communicate with Filecoin."
 draft: false
 images: []
 menu:
@@ -57,18 +57,13 @@ In the sidebar, find the **External Storage** section under **Administration** t
 <img src="img/install_16.png" alt="External storage settings" width="640">
 <br /><br />
 
-Create a new storage entry by entering a folder name (e.g., `IPFS Vault`), and provide your credentials from [https://nextcloud.twinquasar.io](https://nextcloud.twinquasar.io). You can also check **All users** if you want others to access it.
+Create a new storage entry by entering a folder name (e.g., `Filecoin`), and provide your credentials from [https://nextcloud.twinquasar.io](https://nextcloud.twinquasar.io). You can also check **All users** if you want others to access it.
 
 Click the ✅ checkmark to save the configuration. 
 
 <img src="img/install_17.png" alt="Enter IPFS credentials" width="640">
 <br /><br />
 
-For security reasons, Nextcloud will ask you to confirm your admin password before applying any changes to the storage configuration. 
-
-<img src="img/install_18.png" alt="Confirm with password" width="640">
-<br /><br />
-
-If everything is correctly configured, you’ll see a green checkmark or arrow next to the storage entry. This confirms the IPFS storage is active and accessible. 
+If everything is correctly configured, you’ll see a green checkmark. This confirms the IPFS storage is active and accessible. 
 
 <img src="img/install_19.png" alt="Green arrow success" width="640">
